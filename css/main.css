@@ -198,11 +198,27 @@ html{
     }
 
     .waitingPage{
+        position: absolute;
+        width: 100%;
+        height: 100%;
         bottom: 100% !important;
+        -webkit-transition: all .8s ease-in-out;
+           -moz-transition: all .8s ease-in-out;
+            -ms-transition: all .8s ease-in-out;
+             -o-transition: all .8s ease-in-out;
+                transition: all .8s ease-in-out;
     }
 
     .passedPage{
+        position: absolute;
+        width: 100%;
+        height: 100%;
         bottom: -100% !important;
+        -webkit-transition: all .8s ease-in-out;
+           -moz-transition: all .8s ease-in-out;
+            -ms-transition: all .8s ease-in-out;
+             -o-transition: all .8s ease-in-out;
+                transition: all .8s ease-in-out;
     }
 /*///// END WRAPPERS STYLING /////*/
 
@@ -276,76 +292,63 @@ html{
 
 
 
-/*///// INTRO ANIMATION /////*/
-    #animationHolder{
+/*///// WELCOME PAGE /////*/
+    #welcomeLogo{
         position: absolute;
-        width: 100%;
-        height: 100%;
-    }
-
-    #fakeIntro{
-        position: absolute;
-        width: 768px;
-        height: 512px;
+        width: 600px;
+        height: 205px;
         margin: auto;
-        top: 0; right: 0; left: 0; bottom: 0;
-    }
-
-    #fakeIntro .titleMask{
-        position: absolute;
-        width: 100%;
-        height: 50px;
-        margin: auto;
-        top: 0; bottom: 0;
+        top: 0; bottom: 0; left: 0; right: 0;
         overflow: hidden;
     }
-
-    #fakeIntro img{
-        width: 100%;
-    }
-    
-    #fakeIntro .titleTests{
-        position: relative;
-        margin: 0;
-        text-align: center;
-        color: #ecf1f9;
-        font-size: 2.4em;
-        -webkit-transition: all .5s ease-in-out;
-        -o-transition: all .5s ease-in-out;
-        transition: all .5s ease-in-out;
-    }
-
-    .pushTitle{
-        margin-top: -1.4em !important;
-    }
-
+        #welcomeLogo img{
+            width: 100%;
+            -webkit-transition: all .4s ease-in-out;
+               -moz-transition: all .4s ease-in-out;
+                -ms-transition: all .4s ease-in-out;
+                 -o-transition: all .4s ease-in-out;
+                    transition: all .4s ease-in-out;
+        }
 
     #startWeb{
         position: absolute;
         width: 70px;
-        height: 50px;
+        height: 30px;
         margin: auto;
         right: 0; left: 0;
-        bottom: 0;
+        bottom: 70px;
 
         font-size: 1.5em;
         color: #edf1fa;
         cursor: pointer;
-        -webkit-transition: all .6s ease;
-        -o-transition: all .6s ease;
-        transition: all .6s ease;
+        overflow: hidden;
     }
+        #startWeb p{
+            margin: 0;
+            -webkit-transition: all .4s ease-in-out;
+               -moz-transition: all .4s ease-in-out;
+                -ms-transition: all .4s ease-in-out;
+                 -o-transition: all .4s ease-in-out;
+                    transition: all .4s ease-in-out;
+        }
 
     #startWeb:hover{
         color: #e8545e;
 
-        -webkit-animation: keepUp 1.4s cubic-bezier(.76,0,.21,1) infinite !important;
-           -moz-animation: keepUp 1.4s cubic-bezier(.76,0,.21,1) infinite !important;
-            -ms-animation: keepUp 1.4s cubic-bezier(.76,0,.21,1) infinite !important;
-             -o-animation: keepUp 1.4s cubic-bezier(.76,0,.21,1) infinite !important;
-                animation: keepUp 1.4s cubic-bezier(.76,0,.21,1) infinite !important;
+        -webkit-animation: keepUp .4s cubic-bezier(.76,0,.21,1) infinite !important;
+           -moz-animation: keepUp .4s cubic-bezier(.76,0,.21,1) infinite !important;
+            -ms-animation: keepUp .4s cubic-bezier(.76,0,.21,1) infinite !important;
+             -o-animation: keepUp .4s cubic-bezier(.76,0,.21,1) infinite !important;
+                animation: keepUp .4s cubic-bezier(.76,0,.21,1) infinite !important;
     }
-/*///// END INTRO ANIMATION /////*/
+
+    .pushWelcomeLogo{
+        margin-top: 205px !important;
+    }
+    .pushStartWeb{
+        margin-top: 30px !important;
+    }
+/*///// END WELCOME PAGE /////*/
 
 
 /*///// QUESTION MASTER /////*/

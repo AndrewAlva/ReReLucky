@@ -28,16 +28,35 @@ jQuery(document).ready(function($) {
 			luckyBody.classList.add("dayTimeFontColor");
 			luckyBody.style.backgroundColor = "#edf1fa";
 		}
+	// END COLOURS ON TIME
 
 
-		
-	// END BACKGROUND COLOUR
+	// NAVIGATION FLOW
+		// INTRO
+			$('#startWeb').click(function() {
+				$('.welcomeLogoToPush').addClass('pushWelcomeLogo');
+				$('.welcomeStartToPush').addClass('pushStartWeb');
 
-	$("#startWeb").click(function() {
-		$('#titleTest1').toggleClass('pushTitle');
-	});
+				setTimeout(function(){
+					$('#welcomePage').addClass('passedPage');
+					$('#welcomePage').removeClass('currentPage');				
+					$('#welcomePage').addClass('notHere');
 
-	$(document).click(function() {
-		$("#qFirst").toggleClass('pushQs');
-	});
+					$('.welcomeLogoToPush').removeClass('pushWelcomeLogo');
+					$('.welcomeStartToPush').removeClass('pushStartWeb');
+				},500);
+			});
+		// END INTRO
+
+		// Q&A
+			
+		// END Q&A
+	// END NAVIGATION FLOW
+
+
+	// TEXT ANIMATIONS TESTS
+		$(document).click(function() {
+			$("#qFirst").toggleClass('pushQs');
+		});
+	// END ANIMATIONS TESTS
 });
