@@ -38,18 +38,25 @@ jQuery(document).ready(function($) {
 				$('.welcomeStartToPush').addClass('pushStartWeb');
 
 				setTimeout(function(){
+					// HIDE CURRENT PAGE
 					$('#welcomePage').addClass('passedPage');
 					$('#welcomePage').removeClass('currentPage');				
 					$('#welcomePage').addClass('notHere');
 
+					// RESET MASKING CURRENT PAGE OBJECTS
 					$('.welcomeLogoToPush').removeClass('pushWelcomeLogo');
 					$('.welcomeStartToPush').removeClass('pushStartWeb');
+
+					// BRING NEXT PAGE
+					$('#layoutMaster').addClass('currentPage');
+					$('#layoutMaster').removeClass('waitingPage');
 				},500);
 			});
 		// END INTRO
 
+
 		// Q&A
-			
+
 		// END Q&A
 	// END NAVIGATION FLOW
 

@@ -352,18 +352,18 @@ html{
 
 
 /*///// QUESTION MASTER /////*/
-    #questionMaster{}
+    #layoutMaster{}
 
-        #questionMaster .halfPage{
+        #layoutMaster .halfPage{
             position: relative;
             height: 100%;
             float: left;
         }
-        /*#questionMaster .secondHalves{
+        /*#layoutMaster .secondHalves{
             background-color: #ecf1f9;
         }*/
 
-            #questionMaster .halfPage .qMask{
+            #layoutMaster .halfPage .qMask{
                 position: absolute;
                 width: 340px;
                 height: 75px;
@@ -374,7 +374,7 @@ html{
                 overflow: hidden;
             }
 
-                #questionMaster .halfPage .qMask h1{
+                #layoutMaster .halfPage .qMask h1{
                     position: relative;
                     margin: 0 0 .5em 0;
                     font-size: 1.5em;
@@ -388,7 +388,7 @@ html{
                     transition: all .4s ease-in-out;
                 }
 
-            #questionMaster .halfPage .innerHalf{
+            #layoutMaster .halfPage .innerHalf{
                 position: relative;
                 width: 100%;
                 height: 50%;
@@ -399,11 +399,11 @@ html{
                 -o-transition: all .4s ease-in-out;
                 transition: all .4s ease-in-out;
             }
-            #questionMaster .halfPage .innerHalf:hover{
+            #layoutMaster .halfPage .innerHalf:hover{
                 text-decoration: underline;
             }
 
-                #questionMaster .halfPage .innerHalf .qAnswer{
+                #layoutMaster .halfPage .innerHalf .qAnswer{
                     position: absolute;
                     width: 80%;
                     padding-left: 20%;
@@ -413,13 +413,13 @@ html{
                     text-align: left;
                     text-decoration: inherit;
                 }
-                #questionMaster .halfPage .innerHalf:first-child .qAnswer{
+                #layoutMaster .halfPage .innerHalf:first-child .qAnswer{
                     bottom: 50px;
                 }
-                #questionMaster .halfPage .innerHalf:last-child .qAnswer{
+                #layoutMaster .halfPage .innerHalf:last-child .qAnswer{
                     top: 50px;
                 }
-                    #questionMaster .halfPage .innerHalf .qAnswer h2{
+                    #layoutMaster .halfPage .innerHalf .qAnswer h2{
                         margin: 0;
                         font-weight: 400;
                     }          
