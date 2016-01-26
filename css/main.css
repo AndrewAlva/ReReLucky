@@ -1,0 +1,1368 @@
+/*! HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+html {
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #202020;
+    color: #fff;
+    text-shadow: none;
+}
+
+::selection {
+    background: #202020;
+    color: #fff;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between images, videos, audio and canvas and the bottom of
+ * their containers: h5bp.com/i/440
+ */
+
+audio,
+canvas,
+img,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Browse Happy prompt
+   ========================================================================== */
+
+.browsehappy {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+    INIT Browser Sizes
+========================================================================== */
+
+    @media screen (max-width: 767px){
+        #mobile{}
+    }
+
+    @media screen (min-width: 768px){
+        #tablet{}
+    }
+
+    @media screen (min-width: 992px){
+        #laptops{}
+    }
+
+    @media screen (min-width: 1200px){
+        #desktops{}
+    }
+
+/* ==========================================================================
+    END Browser Sizes
+========================================================================== */
+
+/* ==========================================================================
+   INIT LUCKY COLOR PALETTE
+========================================================================== */
+    .BLUE_NAVY{ color: #0c1f28; }
+    .BLUE_NAVY_SHADOW{color: #00131d; }
+    .RED{ color: #e8545e; }
+    .RED_SHADOW{ color: #c83547; }
+    .GRAY{ color: #ecf1f9; }
+    .GRAY_SHADOW{ color: #d7dbe3; }
+    .WHITE{ color: #edf1fa; }
+/* ==========================================================================
+   END LUCKY COLOR PALETTE
+========================================================================== */
+
+
+/* ==========================================================================
+   NDRW's custom styles
+   ========================================================================== */
+html{
+    font-family: 'Raleway', sans-serif, helvetica, tahoma, cursive;
+}
+
+/*////////////////////////////// STYLES ON TIME //////////////////////////////*/
+    .dayTimeFontColor{
+        color: #0c171f;
+    }
+    .niteTimeFontColor{
+        color: #eef0f8;
+    }
+/*////////////////////////////// END STYLES ON TIME //////////////////////////////*/
+
+
+/*////////////////////////////// WRAPPERS STYLING //////////////////////////////*/
+
+    #windowWrapper{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        min-height: 600px;
+        opacity: 1;
+
+        -webkit-transition: all .8s ease-in-out;
+           -moz-transition: all .8s ease-in-out;
+            -ms-transition: all .8s ease-in-out;
+             -o-transition: all .8s ease-in-out;
+                transition: all .8s ease-in-out;
+    }
+
+    #currentWindow{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    .currentPage{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        bottom: 0;
+        -webkit-transition: all .8s ease-in-out;
+           -moz-transition: all .8s ease-in-out;
+            -ms-transition: all .8s ease-in-out;
+             -o-transition: all .8s ease-in-out;
+                transition: all .8s ease-in-out;
+    }
+
+    .waitingPage{
+        bottom: 100% !important;
+    }
+
+    .passedPage{
+        bottom: -100% !important;
+    }
+/*////////////////////////////// END WRAPPERS STYLING //////////////////////////////*/
+
+/*////////////////////////////// BACKGROUND ANIMATIONS //////////////////////////////*/
+    #container{
+        position: fixed;
+        width: 100%;
+        height: 100%;
+    }
+
+    #bgsWrapper{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        right: 0;
+        z-index: 0;
+        overflow: hidden;
+    }
+
+    .layer {
+        position: absolute;
+        width: 200vw;
+        height: 100vh;
+    }
+
+    .innerLayer{
+        position: absolute;
+        width: 200vw;
+        height: 200vh;
+    }
+
+    .stars1{
+        background-image: url(../img/bg/lucky-stars.svg);
+        background-size: 50%;
+        background-repeat: repeat;
+
+        -webkit-transition: all 2.4s ease;
+           -moz-transition: all 2.4s ease;
+            -ms-transition: all 2.4s ease;
+             -o-transition: all 2.4s ease;
+                transition: all 2.4s ease;
+        
+    }
+
+    .stars2{
+        background-image: url(../img/bg/lucky-stars-1.svg);
+        background-size: 50%;
+        background-repeat: repeat;
+        opacity: 0.8;
+
+        -webkit-transition: all 2.8s ease;
+           -moz-transition: all 2.8s ease;
+            -ms-transition: all 2.8s ease;
+             -o-transition: all 2.8s ease;
+                transition: all 2.8s ease;
+    }
+    .stars3{
+        background-image: url(../img/bg/lucky-stars-2.svg);
+        background-size: 33.33%;
+        background-repeat: repeat;
+        opacity: 0.2;
+
+        -webkit-transition: all 3.4s ease;
+           -moz-transition: all 3.4s ease;
+            -ms-transition: all 3.4s ease;
+             -o-transition: all 3.4s ease;
+                transition: all 3.4s ease;
+    }
+/*////////////////////////////// END BACKGROUND ANIMATIONS //////////////////////////////*/
+
+/*///// GOLDEN RATIO CLASSES /////*/
+    .lgGoldenWidth{
+        width: 61.8%;
+    }
+
+    .smGoldenWidth{
+        width: 38.2%;
+    }
+/*///// END GOLDEN RATIO CLASSES /////*/
+
+/*////////////////////////////// INTRO ANIMATION //////////////////////////////*/
+    #animationHolder{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+
+    #fakeIntro{
+        position: absolute;
+        width: 768px;
+        height: 512px;
+        margin: auto;
+        top: 0; right: 0; left: 0; bottom: 0;
+    }
+
+    #fakeIntro .titleMask{
+        position: absolute;
+        width: 100%;
+        height: 50px;
+        margin: auto;
+        top: 0; bottom: 0;
+        overflow: hidden;
+    }
+
+    #fakeIntro img{
+        width: 100%;
+    }
+    
+    #fakeIntro .titleTests{
+        position: relative;
+        margin: 0;
+        text-align: center;
+        color: #ecf1f9;
+        font-size: 2.4em;
+        -webkit-transition: all .5s ease-in-out;
+        -o-transition: all .5s ease-in-out;
+        transition: all .5s ease-in-out;
+    }
+
+    .pushTitle{
+        margin-top: -1.4em !important;
+    }
+
+
+    #startWeb{
+        position: absolute;
+        width: 70px;
+        height: 50px;
+        margin: auto;
+        right: 0; left: 0;
+        bottom: 0;
+
+        font-size: 1.5em;
+        color: #edf1fa;
+        cursor: pointer;
+        -webkit-transition: all .6s ease;
+        -o-transition: all .6s ease;
+        transition: all .6s ease;
+    }
+
+    #startWeb:hover{
+        color: #e8545e;
+
+        -webkit-animation: keepUp 1.4s cubic-bezier(.76,0,.21,1) infinite !important;
+           -moz-animation: keepUp 1.4s cubic-bezier(.76,0,.21,1) infinite !important;
+            -ms-animation: keepUp 1.4s cubic-bezier(.76,0,.21,1) infinite !important;
+             -o-animation: keepUp 1.4s cubic-bezier(.76,0,.21,1) infinite !important;
+                animation: keepUp 1.4s cubic-bezier(.76,0,.21,1) infinite !important;
+    }
+/*////////////////////////////// END INTRO ANIMATION //////////////////////////////*/
+
+
+
+/*///// QUESTION MASTER /////*/
+    #questionMaster{}
+
+        #questionMaster .halfPage{
+            position: relative;
+            height: 100%;
+            float: left;
+        }
+        /*#questionMaster .secondHalves{
+            background-color: #ecf1f9;
+        }*/
+
+            #questionMaster .halfPage .qMask{
+                position: absolute;
+                width: 340px;
+                height: 75px;
+                margin: auto;
+                top: 0; bottom: 0;
+                right: 5%;
+                color: inherit;
+                overflow: hidden;
+            }
+
+                #questionMaster .halfPage .qMask h1{
+                    position: relative;
+                    margin: 0 0 .5em 0;
+                    font-size: 1.5em;
+                    font-weight: 300;
+                    line-height: 1em;
+                    text-align: right;
+                    color: inherit;
+
+                    -webkit-transition: all .4s ease-in-out;
+                    -o-transition: all .4s ease-in-out;
+                    transition: all .4s ease-in-out;
+                }
+
+            #questionMaster .halfPage .innerHalf{
+                position: relative;
+                width: 100%;
+                height: 50%;
+                float: left;
+                cursor: pointer;
+
+                -webkit-transition: all .4s ease-in-out;
+                -o-transition: all .4s ease-in-out;
+                transition: all .4s ease-in-out;
+            }
+            #questionMaster .halfPage .innerHalf:hover{
+                text-decoration: underline;
+            }
+
+                #questionMaster .halfPage .innerHalf .qAnswer{
+                    position: absolute;
+                    width: 80%;
+                    padding-left: 20%;
+                    height: 50px;
+                    line-height: 50px;
+                    margin: auto;
+                    text-align: left;
+                    text-decoration: inherit;
+                }
+                #questionMaster .halfPage .innerHalf:first-child .qAnswer{
+                    bottom: 50px;
+                }
+                #questionMaster .halfPage .innerHalf:last-child .qAnswer{
+                    top: 50px;
+                }
+                    #questionMaster .halfPage .innerHalf .qAnswer h2{
+                        margin: 0;
+                        font-weight: 400;
+                    }          
+/*///// END QUESTION MASTER /////*/
+
+/* ///// QUESTION ANIMATION CLASSES ///// */
+    .pushQs{
+        margin-top: -3.5em !important;
+    }
+/* ///// END QUESTION ANIMATION CLASSES ///// */
+
+
+
+
+
+
+
+
+
+
+
+/*/////////////////////////// RESPONSIVE STYLING /////////////////////////////////////////*/
+    /*///// MOBILE STYLING /////*/
+        @media (max-width: 767px){
+            #windowWrapper{
+                min-height: 320px;
+            }
+        }
+    /*///// END MOBILE STYLING /////*/
+
+    /*///// TABLET STYLING /////*/
+        @media (min-width: 768px) and (max-width: 991px){
+            #windowWrapper{
+                min-height: 507px;
+            }
+
+            .questionTitle{
+                top: 30px;
+            }
+
+            .advicePages .questionTitle{
+                width: 800px !important;
+                height: 134px !important;
+            }
+
+            .advicePages h2{
+                font-size: 18px !important;
+            }
+
+            .questions2 .questionTitle h2{
+                font-size: 18px;
+            }
+
+            .questionTitle h2{
+                line-height: 22px;
+                font-size: 22px;
+            }
+
+            #flyWithUs .questionTitle h2{
+                margin: 45px 0;
+            }
+
+            #wrongAnswer h2{
+                margin: 40px 0;
+            }
+
+            #giftCode .questionTitle{
+                width: 830px !important;
+                height: 134px !important;
+            }
+
+            #giftCode .questionTitle h2{
+                top: 40px;
+            }
+
+            #giftCode .questionTitle h3{
+                top: 22px;
+            }
+
+            #goLuckyPortfolio .cardName h3{
+                font-size: 14px;
+            }
+
+
+
+
+
+
+            .cardsWrapper{
+                top: 10%;
+            }
+
+            .cardName{
+                top: 235px;
+            }
+
+            .cardShadow{
+                top: 200px;
+            }
+
+            .thirdCards{
+                width: 200px;                
+            }
+
+            .secondCards{
+                width: 200px;
+            }
+
+            .adviceCards{
+                width: 180px;
+                height: 85%;
+            }
+
+            .adviceCards:first-child, .adviceCards:nth-child(3){
+                bottom: 30px;
+            }
+
+            .uniqueCard{
+                width: 205px;
+                height: 292px;
+            }
+
+            .langCards{
+                width: 200px;
+            }
+
+            #giftCard{
+                width: 220px;
+            }
+
+            .rightThirdCard, .leftThirdCard{
+                bottom: -20px;
+            }
+
+
+
+
+            .shortAdvice{
+                top: 115px;
+            }
+
+            .longAdvice{
+                top: 95px;
+            }
+
+            .agencyAdvice h3{
+                font-size: 21px;
+            }
+
+            .adviceCards .cardShadow{
+                top: 180px !important;
+            }
+
+            .agencyData {
+                height: 170px;
+                width: 275px;
+            }
+
+            #giftCard .agencyData{
+                height: 130px !important;
+            }
+
+            .hoverTextShadow{
+                font-size: 24px !important;
+                text-shadow: ;
+            }
+
+
+
+
+
+
+
+
+            .clientQ0{
+                margin: 50px 0;
+            }
+
+            .clientQ1{
+                margin: 55px 0;
+            }
+
+            .clientQ2{
+                margin: 55px 0;
+            }
+
+            .clientQ3{
+                margin: 55px 0;
+            }
+
+            .clientQ4{
+                margin: 55px 0;
+            }
+
+            .clientA0{
+                margin: 35px 0;
+            }
+
+            .clientA1{
+                margin: 40px 0;
+            }
+
+            .clientA2{
+                margin: 40px 0;
+            }
+
+            .clientA3{
+                margin: 35px 0;
+            }
+
+            .clientA4{
+                margin: 35px 0;
+            }
+
+
+
+
+            .talentQ0{
+                margin: 65px 0;
+            }
+
+            .talentQ1{}
+
+            .talentQ2{
+                margin: 65px 0;
+            }
+
+            .talentQ3{
+                margin: 55px 0;
+            }
+
+            
+            .talentA0{
+                margin: 35px 0;
+            }
+
+            .talentA1{
+                margin: 35px 0;
+            }
+
+            .talentA2{
+                margin: 35px 0;
+            }
+
+            .talentA3{
+                margin: 35px 0;
+            }
+
+            .talentC{}
+
+
+
+            .mediumQuestion{
+                margin: 50px 0;
+            }
+
+
+
+
+            .embedWrapper{
+                width: 598px;
+                height: 350px;
+            }
+
+            .embedLogoWrapper{
+                width: 176px;
+                height: 62px;
+                bottom: 5px;
+            }
+
+            .embedLogoWrapper img{
+                width: 100%;
+            }
+        }
+
+        /*///// PORTRAIT SPECIAL TABLET STYLING /////*/
+        @media (min-width: 500px) and (max-width: 991px) and (orientation:portrait){
+            .questionTitle{
+                width: 500px;
+                height: 104px;
+                top: 30px;
+            }
+
+            .questions2 .questionTitle{
+                width: 500px;
+                height: 141px;
+                background-image: url(../img/cards/cloud-tblt.svg);
+                
+            }
+
+            .advicePages .questionTitle{
+                width: 500px !important;
+                height: 142px !important;
+                background-image: url('../img/cards/cloud-tblt.svg');
+                
+            }
+
+            .questions2 .questionTitle h2{
+                padding: 0 80px;
+                font-size: 18px;
+                line-height: 24px;
+            }
+
+            .questionTitle h2{
+                font-size: 26px;
+            }
+
+            .advicePages h2{
+                font-size: 16px !important;
+                line-height: 18px !important;
+                padding: 0 90px;
+            }
+
+            #wrongAnswer h2{
+                font-size: 20px !important;
+                line-height: 22px;
+            }
+
+            .mediumQuestion{
+                margin: 35px 0;
+            }
+
+
+
+
+            .cardsWrapper{
+                top: 10%;
+                height: 600px;
+            }
+
+            .advicePages .cardsWrapper{
+                top: 5%;
+            }
+
+            .compactCardsWrapper{
+                height: 0 !important;
+            }
+
+            .thirdCards{
+                width: 210px;
+                height: 302px;
+            }
+
+            .secondCards{
+                height: 330px;
+            }
+
+            .secondCards:first-child{
+                bottom: 300px;
+                right: 50%;
+            }
+
+            .secondCards:last-child{
+                bottom: 0;
+                left: 50%;
+            }
+
+            .leftThirdCard{
+                left: -52%;
+                right: 0;
+            }
+
+            .centerThirdCard{
+                left: 52%;
+            }
+            .centerCard{
+                top: 60%;
+            }
+
+            .rightThirdCard{
+                left: -52%;
+            }
+            .rightCard{
+                bottom: -60%;
+            }
+
+            .adviceCards:first-child{
+                bottom: -10px;
+            }
+
+            .adviceCards:nth-child(2){
+                left: 53%;
+                top: 50%;
+            }
+
+            .adviceCards:nth-child(3){
+                left: -53%;
+                bottom: -110%;
+            }
+
+            .adviceCardSelected{
+                top: 70% !important;
+            }
+
+            .uniqueCard{
+                width: 220px;
+                height: 312px;
+            }
+
+
+
+
+
+            .cardName{
+                top: 250px;
+            }
+
+            .continueFooter{
+                left: 45%;
+            }
+
+
+
+
+
+            .clientQ0{
+                margin: 35px 0;
+            }
+            .clientA0{
+                margin: 35px 0;
+            }
+
+
+            .clientQ1{
+                margin: 45px 0;
+            }
+            .clientA1{
+                margin: 25px 0;
+            }
+
+
+            .clientQ2{
+                margin: 45px 0;
+            }
+            .clientA2{
+                margin: 35px 0;
+            }
+            .clientC2{
+                left: 30%;
+            }
+
+
+            .clientQ3{
+                margin: 45px 0;
+            }
+            .clientA3{}
+
+
+            .clientQ4{/*done*/}
+            .clientA4{
+                margin: 30px 0;
+            }
+        }
+        /*///// END PORTRAIT SPECIAL TABLET STYLING /////*/
+
+    /*///// END TABLET STYLING /////*/
+
+    /*///// LAPTOP STYLING /////*/
+        @media (min-width: 992px) and (max-width: 1199px){
+            /*DONE*/
+        }
+    /*///// END LAPTOP STYLING /////*/
+
+    /*/////  BIG DESKTOP STYLING /////*/
+        @media (min-width: 1280px){
+            .continueFooter{
+                bottom: 20px;
+                font-size: 22px;
+            }
+
+            #startWeb{
+                width: 70px;
+                font-size: 24px;
+                bottom: 20px;
+            }
+
+            .advicePages .questionTitle{
+                width: 1200px !important;
+                height: 194px !important;
+            }
+
+            #giftCode .questionTitle{
+                width: 1200px !important;
+                height: 194px !important;
+            }
+
+            #giftCode .questionTitle h2{
+                top: 60px;
+            }
+
+            #giftCode .questionTitle h3{
+                top: 40px;
+            }
+
+            .questions2 .questionTitle{
+                width: 960px;
+                height: 206px;
+            }
+
+            .mediumQuestion{
+                margin: 75px 0;
+            }
+
+            #flyWithUs .questionTitle h2{
+                margin: 80px 0;
+            }
+
+            #goLuckyPortfolio .questionTitle{
+                width: 1000px;
+                height: 206px;
+            }
+
+            .questionTitle{
+                width: 1000px;
+                height: 206px;
+            }
+
+            .clientQ0{
+                margin: 60px 0;
+            }
+
+            .clientQ1{
+                margin: 70px 0;
+            }
+
+            .clientQ2{
+                margin: 65px 0;
+            }
+
+            .clientQ3{
+                margin: 75px 0;
+            }
+
+            .clientQ4{
+                margin: 65px 0;
+            }
+
+            .clientA0{
+                margin: 65px 0;
+            }
+
+            .clientA1{
+                margin: 65px 0;
+            }
+
+            .clientA2{
+                margin: 65px 0;
+            }
+
+            .clientA3{
+                margin: 60px 0;
+            }
+
+            .clientA4{
+                margin: 60px 0;
+            }
+
+            .clientC0{
+                width: 300px;
+            }
+
+            .clientC1{
+                width: 335px;
+            }
+
+            .clientC2{
+                width: 445px;
+            }
+
+            .clientC3{
+                width: 540px;
+            }
+
+            .clientC4{
+                width: 300px;
+            }
+
+
+
+
+            .talentQ0{
+                margin: 75px 0;
+            }
+
+            .talentQ1{
+                margin: 75px 0;
+            }
+
+            .talentQ2{
+                margin: 75px 0;
+            }
+
+            .talentQ3{
+                margin: 75px 0;
+            }
+
+            .talentA0{
+                margin: 65px 0;
+            }
+
+            .talentA1{
+                margin: 65px 0;
+            }
+
+            .talentA2{
+                margin: 65px 0;
+            }
+
+            .talentA3{
+                margin: 60px 0;
+            }
+
+            .smallQuestion{
+                margin: 75px 0;
+            }
+
+            .mediumQuestion{
+                margin: 85px 0;
+            }
+
+            .talentC{
+                width: 140px;
+            }
+
+
+
+            #wrongAnswer h2{
+                margin: 70px 0;
+            }
+
+
+
+            .cardsWrapper{
+                height: 400px;
+                top: 13%;
+            }
+
+            .advicePages .cardsWrapper{
+                height: 399px;
+            }
+
+            .thirdCards{
+                width: 260px;                
+            }
+
+            .secondCards{
+                width: 260px;
+            }
+
+            .adviceCards{
+                width: 280px;
+            }
+
+            .uniqueCard{
+                width: 270px;
+            }
+
+            .langCards{
+                width: 260px;
+            }
+
+            #giftCard{
+                width: 280px;
+            }
+
+
+
+            .cardName{
+                top: 315px;
+                font-size: 20px;
+            }
+
+            .cardShadow{
+                top: 270px;
+            }
+
+            .adviceCards .cardShadow{
+                top: 250px !important;
+            }
+
+            .hoverTextShadow{
+                font-size: 34px !important;
+                text-shadow: 8px 8px 0px #c83547 !important;
+            }
+
+            .shortAdvice{
+                top: 175px;
+            }
+
+            .longAdvice{
+                top: 155px;
+            }
+
+            .agencyData{
+                width: 325px;
+                height: 160px;
+            }
+
+            .agencyData p{
+                font-size: 22px;
+            }
+
+            .agencyAdvice h3{
+                font-size: 32px;
+            }
+
+            .embedWrapper{
+                width: 900px;
+                height: 526px;
+            }
+
+            .embedLogoWrapper{
+                bottom: 15px;
+            }
+
+            #bringGiftCode{
+                width: 180px;
+                font-size: 20px;
+                top: 30px;
+            }
+
+            #hideGiftCode{
+                width: 170px;
+                font-size: 20px;
+                bottom: 30px;
+            }
+
+
+        }
+    /*///// END BIG DESKTOP STYLING /////*/
+/*/////////////////////////// END RESPONSIVE STYLING /////////////////////////////////////*/
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+
+
+.crystalProtection{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+}
+
+.crystal{
+    opacity: 0 !important;
+}
+
+.notHere{
+    display: none !important;
+}
+
+.bringToFront{
+    z-index: 1000000 !important;
+}
+
+/*
+ * Image replacement
+ */
+
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    /* IE 6/7 fallback */
+    *text-indent: -9999px;
+}
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 150%;
+}
+
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+       (-o-min-device-pixel-ratio: 5/4),
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: h5bp.com/r
+   ========================================================================== */
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster: h5bp.com/s */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links for images, or javascript/internal links
+     */
+
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group; /* h5bp.com/t */
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
