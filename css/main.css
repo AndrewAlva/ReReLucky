@@ -142,7 +142,7 @@ html{
 }
 
 body{
-    background-color: #edf1fa;
+    background-color: #fff;
 }
 
 /*///// STYLES ON TIME /////*/
@@ -187,6 +187,7 @@ body{
         width: 100%;
         height: 100%;
         overflow: hidden;
+        z-index: 1000;
     }
 
     .currentPage{
@@ -231,6 +232,9 @@ body{
         position: fixed;
         width: 100%;
         height: 100%;
+        z-index: 10;
+        opacity: .2;
+        filter: alpha(opacity=20);
     }
 
     #bgsWrapper{
@@ -272,7 +276,6 @@ body{
         background-image: url(../img/bg/lucky-stars-1.svg);
         background-size: 50%;
         background-repeat: repeat;
-        opacity: 0.8;
 
         -webkit-transition: all 2.8s ease;
            -moz-transition: all 2.8s ease;
@@ -284,7 +287,6 @@ body{
         background-image: url(../img/bg/lucky-stars-2.svg);
         background-size: 33.33%;
         background-repeat: repeat;
-        opacity: 0.2;
 
         -webkit-transition: all 3.4s ease;
            -moz-transition: all 3.4s ease;
@@ -294,150 +296,310 @@ body{
     }
 /*///// END BACKGROUND ANIMATIONS /////*/
 
-
-
-/*///// WELCOME PAGE /////*/
-    #welcomeLogo{
+/*///// CURTAINS STYLING /////*/
+    #curtainDivision{
         position: absolute;
-        width: 600px;
-        height: 205px;
-        margin: auto;
-        top: 0; bottom: 0; left: 0; right: 0;
-        overflow: hidden;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
     }
-        #welcomeLogo img{
-            width: 100%;
-            -webkit-transition: all .4s ease-in-out;
-               -moz-transition: all .4s ease-in-out;
-                -ms-transition: all .4s ease-in-out;
-                 -o-transition: all .4s ease-in-out;
-                    transition: all .4s ease-in-out;
-        }
-
-    #startWeb{
+    #curtainWrapper{
         position: absolute;
-        width: 70px;
-        height: 30px;
-        margin: auto;
-        right: 0; left: 0;
-        bottom: 70px;
-
-        font-size: 1.5em;
-        color: #0c1f28;
-        cursor: pointer;
-        overflow: hidden;
+        width: 100%;
+        height: 100%;
+        z-index: 1000000;
+        display: inline;
     }
-        #startWeb p{
-            margin: 0;
-            -webkit-transition: all .4s ease-in-out;
-               -moz-transition: all .4s ease-in-out;
-                -ms-transition: all .4s ease-in-out;
-                 -o-transition: all .4s ease-in-out;
-                    transition: all .4s ease-in-out;
-        }
-
-    #startWeb:hover{
-        color: #e8545e;
-
-        -webkit-animation: keepUp .4s cubic-bezier(.76,0,.21,1) infinite !important;
-           -moz-animation: keepUp .4s cubic-bezier(.76,0,.21,1) infinite !important;
-            -ms-animation: keepUp .4s cubic-bezier(.76,0,.21,1) infinite !important;
-             -o-animation: keepUp .4s cubic-bezier(.76,0,.21,1) infinite !important;
-                animation: keepUp .4s cubic-bezier(.76,0,.21,1) infinite !important;
-    }
-
-    .pushWelcomeLogo{
-        margin-top: 205px !important;
-    }
-    .pushStartWeb{
-        margin-top: 30px !important;
-    }
-/*///// END WELCOME PAGE /////*/
-
-
-/*///// QUESTION MASTER /////*/
-    #layoutMaster{}
-
-        #layoutMaster .halfPage{
-            position: relative;
+        .curtains{
+            position: absolute;
             height: 100%;
-            float: left;
         }
-        /*#layoutMaster .secondHalves{
-            background-color: #ecf1f9;
-        }*/
+        #curtainDivision .curtains{
+            width: .11%;
+            background-color: #f1f1f2;
+        }
+        #curtainWrapper .curtains{
+            width: 11.111%;
+            background-color: #0f1f27;
+            opacity: .9;
+            filter: alpha(opacity=90);
 
-            #layoutMaster .halfPage .qMask{
-                position: absolute;
-                width: 340px;
-                height: 75px;
-                margin: auto;
-                top: 0; bottom: 0;
-                right: 5%;
-                color: inherit;
-                overflow: hidden;
+            -webkit-transform: translate3D(0px,0px,0px) scale(0.005,1);
+               -moz-transform: translate3D(0px,0px,0px) scale(0.005,1);
+                -ms-transform: translate3D(0px,0px,0px) scale(0.005,1);
+                 -o-transform: translate3D(0px,0px,0px) scale(0.005,1);
+                    transform: translate3D(0px,0px,0px) scale(0.005,1);
+
+            -webkit-transform-origin: 0% 0% 0px;
+               -moz-transform-origin: 0% 0% 0px;
+                -ms-transform-origin: 0% 0% 0px;
+                 -o-transform-origin: 0% 0% 0px;
+                    transform-origin: 0% 0% 0px;
+
+            -webkit-transition: all .4s ease-in-out;
+               -moz-transition: all .4s ease-in-out;
+                -ms-transition: all .4s ease-in-out;
+                 -o-transition: all .4s ease-in-out;
+                    transition: all .4s ease-in-out;
+        }
+
+        /*CURTAINS POSITION*/
+            .curtain-1{
+                left: 0%;
+            }
+            .curtain-2{
+                left: 11.111%;
+            }
+            .curtain-3{
+                left: 22.222%;
+            }
+            .curtain-4{
+                left: 33.333%;
+            }
+            .curtain-5{
+                left: 44.444%;
+            }
+            .curtain-6{
+                left: 55.555%;
+            }
+            .curtain-7{
+                left: 66.666%;
+            }
+            .curtain-8{
+                left: 77.777%;
+            }
+            .curtain-9{
+                left: 88.888%;
+            }
+        /*END CURTAINS POSITION*/
+/*///// END CURTAINS STYLING /////*/
+
+
+
+
+/*///// INSIDE CURRENT WINDOW /////*/
+    /*///// WELCOME PAGE /////*/
+        #welcomeLogo{
+            position: absolute;
+            width: 600px;
+            height: 205px;
+            margin: auto;
+            top: 0; bottom: 0; left: 0; right: 0;
+            overflow: hidden;
+        }
+            #welcomeLogo img{
+                width: 100%;
+                -webkit-transition: all .4s ease-in-out;
+                   -moz-transition: all .4s ease-in-out;
+                    -ms-transition: all .4s ease-in-out;
+                     -o-transition: all .4s ease-in-out;
+                        transition: all .4s ease-in-out;
             }
 
-                #layoutMaster .halfPage .qMask h1{
-                    position: relative;
-                    margin: 0 0 .5em 0;
-                    font-size: 1.5em;
-                    font-weight: 300;
-                    line-height: 1em;
-                    text-align: right;
+        #startWeb{
+            position: absolute;
+            width: 70px;
+            height: 30px;
+            margin: auto;
+            right: 0; left: 0;
+            bottom: 70px;
+
+            font-size: 1.5em;
+            color: #0c1f28;
+            cursor: pointer;
+            overflow: hidden;
+        }
+            #startWeb p{
+                margin: 0;
+                -webkit-transition: all .4s ease-in-out;
+                   -moz-transition: all .4s ease-in-out;
+                    -ms-transition: all .4s ease-in-out;
+                     -o-transition: all .4s ease-in-out;
+                        transition: all .4s ease-in-out;
+            }
+
+        #startWeb:hover{
+            color: #e8545e;
+
+            -webkit-animation: keepUp .4s cubic-bezier(.76,0,.21,1) infinite !important;
+               -moz-animation: keepUp .4s cubic-bezier(.76,0,.21,1) infinite !important;
+                -ms-animation: keepUp .4s cubic-bezier(.76,0,.21,1) infinite !important;
+                 -o-animation: keepUp .4s cubic-bezier(.76,0,.21,1) infinite !important;
+                    animation: keepUp .4s cubic-bezier(.76,0,.21,1) infinite !important;
+        }
+
+        .pushWelcomeLogo{
+            margin-top: 205px !important;
+        }
+        .pushStartWeb{
+            margin-top: 30px !important;
+        }
+    /*///// END WELCOME PAGE /////*/
+
+
+    /*///// QUESTION MASTER /////*/
+        #layoutMaster{}
+
+            #layoutMaster .halfPage{
+                position: relative;
+                height: 100%;
+                float: left;
+            }
+            /*#layoutMaster .secondHalves{
+                background-color: #ecf1f9;
+            }*/
+
+                #layoutMaster .halfPage .qMask{
+                    position: absolute;
+                    width: 340px;
+                    height: 75px;
+                    margin: auto;
+                    top: 0; bottom: 0;
+                    right: 5%;
                     color: inherit;
+                    overflow: hidden;
+                }
+
+                    #layoutMaster .halfPage .qMask h1{
+                        position: relative;
+                        margin: 0 0 .5em 0;
+                        font-size: 1.5em;
+                        font-weight: 300;
+                        line-height: 1em;
+                        text-align: right;
+                        color: inherit;
+
+                        -webkit-transition: all .4s ease-in-out;
+                        -o-transition: all .4s ease-in-out;
+                        transition: all .4s ease-in-out;
+                    }
+
+                #layoutMaster .halfPage .innerHalf{
+                    position: relative;
+                    width: 100%;
+                    height: 50%;
+                    float: left;
+                    cursor: pointer;
 
                     -webkit-transition: all .4s ease-in-out;
                     -o-transition: all .4s ease-in-out;
                     transition: all .4s ease-in-out;
                 }
-
-            #layoutMaster .halfPage .innerHalf{
-                position: relative;
-                width: 100%;
-                height: 50%;
-                float: left;
-                cursor: pointer;
-
-                -webkit-transition: all .4s ease-in-out;
-                -o-transition: all .4s ease-in-out;
-                transition: all .4s ease-in-out;
-            }
-            #layoutMaster .halfPage .innerHalf:hover{
-                text-decoration: underline;
-            }
-
-                #layoutMaster .halfPage .innerHalf .qAnswer{
-                    position: absolute;
-                    width: 80%;
-                    padding-left: 20%;
-                    height: 50px;
-                    line-height: 50px;
-                    margin: auto;
-                    text-align: left;
-                    text-decoration: inherit;
+                #layoutMaster .halfPage .innerHalf:hover{
+                    text-decoration: underline;
                 }
-                #layoutMaster .halfPage .innerHalf:first-child .qAnswer{
-                    bottom: 50px;
-                }
-                #layoutMaster .halfPage .innerHalf:last-child .qAnswer{
-                    top: 50px;
-                }
-                    #layoutMaster .halfPage .innerHalf .qAnswer h2{
-                        margin: 0;
-                        font-weight: 400;
-                    }          
-/*///// END QUESTION MASTER /////*/
 
-/* ///// QUESTION ANIMATION CLASSES ///// */
-    .pushQs{
-        margin-top: -3.5em !important;
+                    #layoutMaster .halfPage .innerHalf .qAnswer{
+                        position: absolute;
+                        width: 80%;
+                        padding-left: 20%;
+                        height: 50px;
+                        line-height: 50px;
+                        margin: auto;
+                        text-align: left;
+                        text-decoration: inherit;
+                    }
+                    #layoutMaster .halfPage .innerHalf:first-child .qAnswer{
+                        bottom: 50px;
+                    }
+                    #layoutMaster .halfPage .innerHalf:last-child .qAnswer{
+                        top: 50px;
+                    }
+                        #layoutMaster .halfPage .innerHalf .qAnswer h2{
+                            margin: 0;
+                            font-weight: 400;
+                        }          
+    /*///// END QUESTION MASTER /////*/
+
+    /* ///// QUESTION ANIMATION CLASSES ///// */
+        .pushQs{
+            margin-top: -3.5em !important;
+        }
+    /* ///// END QUESTION ANIMATION CLASSES ///// */
+/*///// END INSIDE CURRENT WINDOW /////*/
+
+
+
+
+
+/*///// LABEL LUCKY /////*/
+    #luckyLabel{
+        position: absolute;
+        width: 90px;
+        height: 150px;
+        top: 0; left: 62px;
+        z-index: 1;
     }
-/* ///// END QUESTION ANIMATION CLASSES ///// */
+        #luckyLabel a{
+            display: block;
+        }
+/*///// END LABEL LUCKY /////*/
+
+/*///// MENU STYLING /////*/
+    /* BUTTON */
+        #menuTrigger{
+            position: absolute;
+            width: 90px;
+            height: 90px;
+            top: 150px;
+            left: 62px;
+
+            z-index: 1000000000;
+            background-color: red;
+        }
+            #menuTrigger .innerTrigger{
+                position: absolute;
+                width: 56px;
+                height: 38px;
+                margin: auto;
+                top: 0; bottom: 0; left: 0; right: 0;
+                overflow: hidden;
+                background-color: gray;
+            }
+                #menuTrigger .innerTrigger #threeLinesWrap{
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    cursor: pointer;
+                }
+                    #menuTrigger .innerTrigger #threeLinesWrap .menuLines{
+                        position: absolute;
+                        height: 5px;
+                        margin: auto;
+                        left: 0;
+                        background-color: #0f1f27;
+                        -webkit-transition: all .3s ease-in-out;
+                           -moz-transition: all .3s ease-in-out;
+                            -ms-transition: all .3s ease-in-out;
+                             -o-transition: all .3s ease-in-out;
+                                transition: all .3s ease-in-out;
+                    }
+                    #menuTrigger .innerTrigger #threeLinesWrap #line-1{
+                        width: 56px;
+                        top: 0;
+                    }
+                    #menuTrigger .innerTrigger #threeLinesWrap #line-2{
+                        width: 35px;
+                        top: 0; bottom: 0;
+                    }
+                    #menuTrigger .innerTrigger #threeLinesWrap #line-3{
+                        width: 46px;
+                        bottom: 0;
+                    }
+                    .fullThreeLine{
+                        width: 100% !important;
+                    }
+                    .hideThreeLine{
+                        left: -56px !important;
+                    }
+    /* END BUTTON*/
 
 
 
 
+    /* WINDOW */
+    /* END WINDOW */
+/*///// END MENU STYLING /////*/
 
 
 

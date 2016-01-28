@@ -66,4 +66,23 @@ jQuery(document).ready(function($) {
 			$("#qFirst").toggleClass('pushQs');
 		});
 	// END ANIMATIONS TESTS
+
+
+
+	// MENU TRIGGER ANIMATIONS
+		$('#threeLinesWrap').mouseenter(function() {
+			$('.menuLines').addClass('fullThreeLine');
+		});
+
+		$('#threeLinesWrap').mouseleave(function() {
+			$('.menuLines').removeClass('fullThreeLine');
+		});
+
+		$('#threeLinesWrap').click(function() {
+			$('.menuLines').addClass('hideThreeLine')
+			setTimeout(function(){
+				$(this).addClass('notHere');
+			},350);
+		});
+	// END MENU TRIGGER ANIMATIONS
 });

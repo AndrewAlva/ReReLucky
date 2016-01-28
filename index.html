@@ -16,6 +16,7 @@
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+        <script src="js/velocity.min.js"></script>
     </head>
     <body id="luckyBody">
         <!--[if lt IE 7]>
@@ -26,7 +27,21 @@
         
         <div id="windowWrapper">
 
-            <!-- BACKGROUND DIVS -->
+            <!-- CURTAINS DIVISION  Z-1 -->
+                <div id="curtainDivision">
+                    <div id="curtainLine-1" class="curtains curtain-1"></div>
+                    <div id="curtainLine-2" class="curtains curtain-2"></div>
+                    <div id="curtainLine-3" class="curtains curtain-3"></div>
+                    <div id="curtainLine-4" class="curtains curtain-4"></div>
+                    <div id="curtainLine-5" class="curtains curtain-5"></div>
+                    <div id="curtainLine-6" class="curtains curtain-6"></div>
+                    <div id="curtainLine-7" class="curtains curtain-7"></div>
+                    <div id="curtainLine-8" class="curtains curtain-8"></div>
+                    <div id="curtainLine-9" class="curtains curtain-9"></div>
+                </div>
+            <!-- END CURTAINS DIVISION -->
+
+            <!-- BACKGROUND DIVS Z-10 -->
                 <div id="container" class="container">
                     <div id="bgsFullWrapper" class="scene">
                         <div class="layer" data-depth="1.00">
@@ -45,14 +60,22 @@
                 </div>
             <!-- END BACKGROUND DIVS -->
 
+            
 
+            <!-- Z-1000 -->
             <div id="currentWindow">
+
+                <div id="luckyLabel">
+                    <a href="#">
+                        <img src="img/brand/label_lucky.jpg" alt="Lucky Ideas">
+                    </a>
+                </div>
 
                 <!-- INTRO -->
                 <div id="welcomePage" class="currentPage">
                     
                     <div id="welcomeLogo">
-                        <img class="welcomeLogoToPush" src="img/lucky-logo.svg" alt="Lucky Ideas">
+                        <img class="welcomeLogoToPush" src="img//brand/lucky-logo.png" alt="Lucky Ideas">
                     </div>
 
                     <div id="startWeb">
@@ -94,9 +117,39 @@
 
                     </div>
                 </div>
-
-
             </div>
+
+
+            <!-- TRANSITION CURTAINS Z-1000000 -->
+                <div id="curtainWrapper" class="notHere">
+                    <div id="curtainFront-1" class="curtains curtain-1"></div>
+                    <div id="curtainFront-2" class="curtains curtain-2"></div>
+                    <div id="curtainFront-3" class="curtains curtain-3"></div>
+                    <div id="curtainFront-4" class="curtains curtain-4"></div>
+                    <div id="curtainFront-5" class="curtains curtain-5"></div>
+                    <div id="curtainFront-6" class="curtains curtain-6"></div>
+                    <div id="curtainFront-7" class="curtains curtain-7"></div>
+                    <div id="curtainFront-8" class="curtains curtain-8"></div>
+                    <div id="curtainFront-9" class="curtains curtain-9"></div>
+                </div>
+            <!-- END TRANSITION CURTAINS -->
+
+
+
+            <!-- MENU ELEMENTS Z-1000000000 -->
+                <div id="menuTrigger">
+                    <div class="innerTrigger">
+                        <div id="threeLinesWrap">
+                            <div id="line-1" class="menuLines"></div>
+                            <div id="line-2" class="menuLines"></div>
+                            <div id="line-3" class="menuLines"></div>
+                        </div>
+                        <div class="crossWrap"></div>
+                    </div>
+                </div>
+            <!-- END MENU ELEMENTS -->
+
+
         </div>
 
 
