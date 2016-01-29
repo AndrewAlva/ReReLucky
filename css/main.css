@@ -405,41 +405,58 @@ body{
 
         #startWeb{
             position: absolute;
-            width: 70px;
-            height: 30px;
+            width: 11.11%;
+            height: 2vw;
             margin: auto;
             right: 0; left: 0;
             bottom: 70px;
-
-            font-size: 1.5em;
-            color: #0c1f28;
+            
             cursor: pointer;
             overflow: hidden;
         }
-            #startWeb p{
-                margin: 0;
-                -webkit-transition: all .4s ease-in-out;
-                   -moz-transition: all .4s ease-in-out;
-                    -ms-transition: all .4s ease-in-out;
-                     -o-transition: all .4s ease-in-out;
-                        transition: all .4s ease-in-out;
+            #startWeb .innerStartWeb{
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                box-shadow: inset 0 0 3px #0f1f27;
+                -webkit-font-smoothing: antialiased;
+                   -moz-font-smoothing: antialiased;
+                    -ms-font-smoothing: antialiased;
+                     -o-font-smoothing: antialiased;
+                        font-smoothing: antialiased;
+
+                font-weight: 500;
+                color: #0f1f27;
+                background-color: transparent;
+
+                -webkit-transition: all .2s ease-in-out;
+                   -moz-transition: all .2s ease-in-out;
+                    -ms-transition: all .2s ease-in-out;
+                     -o-transition: all .2s ease-in-out;
+                        transition: all .2s ease-in-out;
             }
+            #startWeb .innerStartWeb:hover{
+                color: #fff;
+                background-color: #0f1f27;
+            }
+                #startWeb p{
+                    position: absolute;
+                    width: 100%;
+                    height: 1.3vw;
+                    margin: auto;
+                    top: 0; bottom: 0;
+                    text-align: center;
+                    font-size: 1.3vw;
+                    line-height: 1em;
+                }
 
-        #startWeb:hover{
-            color: #e8545e;
-
-            -webkit-animation: keepUp .4s cubic-bezier(.76,0,.21,1) infinite !important;
-               -moz-animation: keepUp .4s cubic-bezier(.76,0,.21,1) infinite !important;
-                -ms-animation: keepUp .4s cubic-bezier(.76,0,.21,1) infinite !important;
-                 -o-animation: keepUp .4s cubic-bezier(.76,0,.21,1) infinite !important;
-                    animation: keepUp .4s cubic-bezier(.76,0,.21,1) infinite !important;
-        }
+        
 
         .pushWelcomeLogo{
             margin-top: 205px !important;
         }
         .pushStartWeb{
-            margin-top: 30px !important;
+            margin-top: 2vw !important;
         }
     /*///// END WELCOME PAGE /////*/
 

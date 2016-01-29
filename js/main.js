@@ -35,7 +35,7 @@ jQuery(document).ready(function($) {
 		// INTRO
 			$('#startWeb').click(function() {
 				$('.welcomeLogoToPush').addClass('pushWelcomeLogo');
-				$('.welcomeStartToPush').addClass('pushStartWeb');
+				$('.innerStartWeb').addClass('pushStartWeb');
 
 				setTimeout(function(){
 					// HIDE CURRENT PAGE
@@ -45,7 +45,7 @@ jQuery(document).ready(function($) {
 
 					// RESET MASKING CURRENT PAGE OBJECTS
 					$('.welcomeLogoToPush').removeClass('pushWelcomeLogo');
-					$('.welcomeStartToPush').removeClass('pushStartWeb');
+					$('.innerStartWeb').removeClass('pushStartWeb');
 
 					// BRING NEXT PAGE
 					$('#layoutMaster').addClass('currentPage');
@@ -324,28 +324,28 @@ jQuery(document).ready(function($) {
 			}
 
 			function hideMenuTitles(){
-				setTimeout(function(){
-					if(menuTitleLoopCount == 5){
-						currentMenuTitle2 = menuTitle4;
+				if(menuTitleLoopCount == 5){
+					currentMenuTitle2 = menuTitle4;
 
-					} else if(menuTitleLoopCount == 4){
-						currentMenuTitle2 = menuTitle3;
+				} else if(menuTitleLoopCount == 4){
+					currentMenuTitle2 = menuTitle3;
 
-					} else if(menuTitleLoopCount == 3){
-						currentMenuTitle2 = menuTitle2;
+				} else if(menuTitleLoopCount == 3){
+					currentMenuTitle2 = menuTitle2;
 
-					} else if(menuTitleLoopCount == 2){
-						currentMenuTitle2 = menuTitle1;
+				} else if(menuTitleLoopCount == 2){
+					currentMenuTitle2 = menuTitle1;
 
-					}
+				}
 
-					currentMenuTitle2.removeClass('menuTitlesInserted');
+				currentMenuTitle2.removeClass('menuTitlesInserted');
 
-					menuTitleLoopCount = menuTitleLoopCount -1;
-					if(menuTitleLoopCount > 1){
+				menuTitleLoopCount = menuTitleLoopCount -1;
+				if(menuTitleLoopCount > 1){
+					setTimeout(function(){
 						hideMenuTitles();
-					}
-				},250);
+					},250);
+				}
 			}
 		// END MENU TITLES FUNCTIONS
 
@@ -382,27 +382,28 @@ jQuery(document).ready(function($) {
 			}
 
 			function hideRsTitles(){
-				setTimeout(function(){
-					if(rsTitleLoopCount == 4){
-						rsCurrentTitle2 = rsTitle3;
+				if(rsTitleLoopCount == 4){
+					rsCurrentTitle2 = rsTitle3;
 
-					} else if(rsTitleLoopCount == 3){
-						rsCurrentTitle2 = rsTitle2;
+				} else if(rsTitleLoopCount == 3){
+					rsCurrentTitle2 = rsTitle2;
 
-					} else if(rsTitleLoopCount == 2){
-						rsCurrentTitle2 = rsTitle1;
+				} else if(rsTitleLoopCount == 2){
+					rsCurrentTitle2 = rsTitle1;
 
-					} 
+				} 
 
-					rsCurrentTitle2.removeClass('menuTitlesInserted');
+				rsCurrentTitle2.removeClass('menuTitlesInserted');
 
-					rsTitleLoopCount = rsTitleLoopCount - 1;
-					if(rsTitleLoopCount > 0){
+				rsTitleLoopCount = rsTitleLoopCount - 1;
+				if(rsTitleLoopCount > 0){
+					setTimeout(function(){
 						hideRsTitles();
-					} else {
-						rsTitleLoopCount = 1;
-					}
-				},250);
+					},250);
+					
+				} else {
+					rsTitleLoopCount = 1;
+				}
 			}
 		// END RSS FUNCTIONS
 	// END MENU TRIGGER INTERACTION
