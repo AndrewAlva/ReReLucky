@@ -17,6 +17,7 @@
         <link rel="stylesheet" href="css/main.css">
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
         <script src="js/velocity.min.js"></script>
+        <script src="js/velocity.ui.js"></script>
     </head>
     <body id="luckyBody">
         <!--[if lt IE 7]>
@@ -122,29 +123,68 @@
 
             <!-- TRANSITION CURTAINS Z-1000000 -->
                 <div id="curtainWrapper" class="notHere">
-                    <div id="curtainFront-1" class="curtains curtain-1"></div>
-                    <div id="curtainFront-2" class="curtains curtain-2"></div>
-                    <div id="curtainFront-3" class="curtains curtain-3"></div>
-                    <div id="curtainFront-4" class="curtains curtain-4"></div>
-                    <div id="curtainFront-5" class="curtains curtain-5"></div>
-                    <div id="curtainFront-6" class="curtains curtain-6"></div>
-                    <div id="curtainFront-7" class="curtains curtain-7"></div>
-                    <div id="curtainFront-8" class="curtains curtain-8"></div>
-                    <div id="curtainFront-9" class="curtains curtain-9"></div>
+                    <div id="curtainFront-0" class="curtains animCurt curtain-1"></div>
+                    <div id="curtainFront-1" class="curtains animCurt curtain-2"></div>
+                    <div id="curtainFront-2" class="curtains animCurt curtain-3"></div>
+                    <div id="curtainFront-3" class="curtains animCurt curtain-4"></div>
+                    <div id="curtainFront-4" class="curtains animCurt curtain-5"></div>
+                    <div id="curtainFront-5" class="curtains animCurt curtain-6"></div>
+                    <div id="curtainFront-6" class="curtains animCurt curtain-7"></div>
+                    <div id="curtainFront-7" class="curtains animCurt curtain-8"></div>
+                    <div id="curtainFront-8" class="curtains animCurt curtain-9"></div>
                 </div>
             <!-- END TRANSITION CURTAINS -->
 
 
 
-            <!-- MENU ELEMENTS Z-1000000000 -->
+            <!-- MENU ELEMENTS -->
+                <!-- Z-1000000000 -->
+                <div id="menuWindow" class="notHere">
+                    <div id="titlesWrapper">
+                        <div class="fullMenuTitles">
+                            
+                            <div class="innerMenuTitle">
+                                <h2 id="menuTitle1">Cliente</h2>
+                            </div>
+                        </div>
+
+                        <div class="fullMenuTitles">
+                            
+                            <div class="innerMenuTitle">
+                                <h2 id="menuTitle2">Competencia</h2>
+                            </div>
+                        </div>
+
+                        <div class="fullMenuTitles">
+                            
+                            <div class="innerMenuTitle">
+                                <h2 id="menuTitle3">Talento</h2>
+                            </div>
+                        </div>
+
+                        <div class="fullMenuTitles">
+                            
+                            <div class="innerMenuTitle">
+                                <h2 id="menuTitle4">Información</h2>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Z-1000000000000 -->
                 <div id="menuTrigger">
                     <div class="innerTrigger">
+                        <div id="crossWrap">
+                            <img id="crossCloseMenu" src="img/ui/close-menu.png" alt="Close" class="hiddenCross">
+                        </div>
+
                         <div id="threeLinesWrap">
                             <div id="line-1" class="menuLines"></div>
                             <div id="line-2" class="menuLines"></div>
                             <div id="line-3" class="menuLines"></div>
                         </div>
-                        <div class="crossWrap"></div>
+                        
                     </div>
                 </div>
             <!-- END MENU ELEMENTS -->

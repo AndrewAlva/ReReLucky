@@ -69,7 +69,8 @@ jQuery(document).ready(function($) {
 
 
 
-	// MENU TRIGGER ANIMATIONS
+	// MENU TRIGGER INTERACTION
+		
 		$('#threeLinesWrap').mouseenter(function() {
 			$('.menuLines').addClass('fullThreeLine');
 		});
@@ -79,10 +80,194 @@ jQuery(document).ready(function($) {
 		});
 
 		$('#threeLinesWrap').click(function() {
-			$('.menuLines').addClass('hideThreeLine')
-			setTimeout(function(){
-				$(this).addClass('notHere');
-			},350);
+			// LABEL LOGO ANIMATION
+				$('#luckyLabel').addClass('hideLabel');
+			// END LABEL
+
+
+			// TRIGGER BUTTON ANIMATION
+				$('.menuLines').addClass('hideThreeLine')
+				setTimeout(function(){
+					$('#threeLinesWrap').addClass('notHere');
+					setTimeout(function(){
+						$('#crossCloseMenu').removeClass('hiddenCross');
+					},200);
+				},350);
+			// END TRIGGER BUTTON ANIMATION
+
+
+			// CURTAINS ANIMATION
+				$('#curtainWrapper').removeClass('notHere');
+				setTimeout(function(){
+					curtainLoop();
+					$('#curtainDivision').addClass('op10');
+					$('#curtainDivision').addClass('bringToFront');
+				},100);
+			// END CURTAINS
+
+
+			// WINDOW MENU ANIMATION
+				$('#menuWindow').removeClass('notHere');
+			// END WINDOW MENU
+
 		});
-	// END MENU TRIGGER ANIMATIONS
+
+
+		$('#crossWrap').click(function() {
+			// LABEL LOGO ANIMATION
+				$('#luckyLabel').removeClass('hideLabel');
+			// END LABEL
+
+
+			// TRIGGER BUTTON ANIMATION
+				$('#crossCloseMenu').addClass('hiddenCross');
+				$('#threeLinesWrap').removeClass('notHere');
+
+				setTimeout(function(){
+					$('.menuLines').removeClass('hideThreeLine');
+
+				},350)
+			// END TRIGGER BUTTON ANIMATION
+
+
+			// CURTAINS ANIMATION
+				curtainClose();
+				setTimeout(function(){
+					$('#curtainDivision').removeClass('op10');
+					$('#curtainDivision').removeClass('bringToFront');
+				},500);
+
+				setTimeout(function(){
+					$('#curtainWrapper').addClass('notHere');
+				},1000);
+			// END CURTAINS
+
+
+
+			// WINDOW MENU ANIMATION
+			// END WINDOW MENU
+
+		});
+
+		// CURTAIN MOVEMENT FUNCTION
+			var curtainFront0 = $('#curtainFront-0');
+			var curtainFront1 = $('#curtainFront-1');
+			var curtainFront2 = $('#curtainFront-2');
+			var curtainFront3 = $('#curtainFront-3');
+			var curtainFront4 = $('#curtainFront-4');
+			var curtainFront5 = $('#curtainFront-5');
+			var curtainFront6 = $('#curtainFront-6');
+			var curtainFront7 = $('#curtainFront-7');
+			var curtainFront8 = $('#curtainFront-8');
+
+			var curtainLoopCount = 0;                     //  set your counter to 1
+			var currentCurtain1;
+			var currentCurtain2;
+
+			// OPENING CURTAINS
+			function curtainLoop() {           //  create a loop function
+			    setTimeout(function () {    //  call a 3s setTimeout when the loop is called
+			        if(curtainLoopCount == 0){
+						currentCurtain1 = curtainFront0;
+
+					} else if(curtainLoopCount == 1){
+						currentCurtain1 = curtainFront1;
+
+					} else if(curtainLoopCount == 2){
+						currentCurtain1 = curtainFront2;
+
+					} else if(curtainLoopCount == 3){
+						currentCurtain1 = curtainFront3;
+
+					} else if(curtainLoopCount == 4){
+						currentCurtain1 = curtainFront4;
+
+					} else if(curtainLoopCount == 5){
+						currentCurtain1 = curtainFront5;
+
+					} else if(curtainLoopCount == 6){
+						currentCurtain1 = curtainFront6;
+
+					} else if(curtainLoopCount == 7){
+						currentCurtain1 = curtainFront7;
+
+					} else if(curtainLoopCount == 8){
+						currentCurtain1 = curtainFront8;
+
+					}
+
+					currentCurtain1.addClass('openedCurtains');
+
+			        curtainLoopCount++;                     //  increment the counter
+			        if (curtainLoopCount < 9) {            //  if the counter < 10, call the loop function
+			        	curtainLoop();             //  ..  again which will trigger another 
+			        }                        //  ..  setTimeout()
+			    }, 30)
+			}
+
+			// CLOSING CURTAIN
+			function curtainClose() {           //  create a loop function
+			    setTimeout(function () {    //  call a 3s setTimeout when the loop is called
+			        if(curtainLoopCount == 9){
+						currentCurtain2 = curtainFront8;
+
+					} else if(curtainLoopCount == 8){
+						currentCurtain2 = curtainFront7;
+
+					} else if(curtainLoopCount == 7){
+						currentCurtain2 = curtainFront6;
+
+					} else if(curtainLoopCount == 6){
+						currentCurtain2 = curtainFront5;
+
+					} else if(curtainLoopCount == 5){
+						currentCurtain2 = curtainFront4;
+
+					} else if(curtainLoopCount == 4){
+						currentCurtain2 = curtainFront3;
+
+					} else if(curtainLoopCount == 3){
+						currentCurtain2 = curtainFront2;
+
+					} else if(curtainLoopCount == 2){
+						currentCurtain2 = curtainFront1;
+
+					} else if(curtainLoopCount == 1){
+						currentCurtain2 = curtainFront0;
+
+					}
+
+					currentCurtain2.removeClass('openedCurtains');
+
+			        curtainLoopCount = curtainLoopCount - 1;                     //  increment the counter
+			        if (curtainLoopCount > 0) {            //  if the counter < 10, call the loop function
+			        	curtainClose();             //  ..  again which will trigger another 
+			        }                        //  ..  setTimeout()
+			    }, 30)
+			}
+		// END CURTAIN MOVEMENT FUNCTION
+
+		// MENU TITLES FUNCTIONS
+			function showMenuTitles(){
+				var menuTitle1 = $('#menuTitle1');
+				var menuTitle2 = $('#menuTitle2');
+				var menuTitle3 = $('#menuTitle3');
+				var menuTitle4 = $('#menuTitle4');
+
+				
+			}
+		// END MENU TITLES FUNCTIONS
+	// END MENU TRIGGER INTERACTION
+
+
+
+
+
+
+
+
+
+
+
+
 });
