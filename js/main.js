@@ -80,74 +80,113 @@ jQuery(document).ready(function($) {
 		});
 
 		$('#threeLinesWrap').click(function() {
-			// LABEL LOGO ANIMATION
-				$('#luckyLabel').addClass('hideLabel');
-			// END LABEL
+			if (curtEnd){
+				// TURN OFF TRIGGER
+				curtEnd = false;
 
 
-			// TRIGGER BUTTON ANIMATION
-				$('.menuLines').addClass('hideThreeLine')
-				setTimeout(function(){
-					$('#threeLinesWrap').addClass('notHere');
+				// LABEL LOGO ANIMATION
+					$('#luckyLabel').addClass('hideLabel');
+				// END LABEL
+
+
+				// TRIGGER BUTTON ANIMATION
+					$('.menuLines').addClass('hideThreeLine')
 					setTimeout(function(){
-						$('#crossCloseMenu').removeClass('hiddenCross');
-					},200);
-				},350);
-			// END TRIGGER BUTTON ANIMATION
+						$('#threeLinesWrap').addClass('notHere');
+						setTimeout(function(){
+							$('#crossCloseMenu').removeClass('hiddenCross');
+						},200);
+					},350);
+				// END TRIGGER BUTTON ANIMATION
 
 
-			// CURTAINS ANIMATION
-				$('#curtainWrapper').removeClass('notHere');
+				// CURTAINS ANIMATION
+					$('#curtainWrapper').removeClass('notHere');
+					setTimeout(function(){
+						curtainLoop();
+						$('#curtainDivision').addClass('op10');
+						$('#curtainDivision').addClass('bringToFront');
+					},100);
+
+					setTimeout(function(){
+						showMenuTitles();
+						showRsTitles();
+					},500);
+				// END CURTAINS
+
+
+				// WINDOW MENU ANIMATION
+					$('#menuWindow').removeClass('notHere');
+				// END WINDOW MENU
+
+				// ACTIVE MENU TRIGGER AGAIN
 				setTimeout(function(){
-					curtainLoop();
-					$('#curtainDivision').addClass('op10');
-					$('#curtainDivision').addClass('bringToFront');
-				},100);
-			// END CURTAINS
-
-
-			// WINDOW MENU ANIMATION
-				$('#menuWindow').removeClass('notHere');
-			// END WINDOW MENU
+					curtEnd = true;
+				},2900);
+			}
 
 		});
 
 
 		$('#crossWrap').click(function() {
-			// LABEL LOGO ANIMATION
-				$('#luckyLabel').removeClass('hideLabel');
-			// END LABEL
+			if (curtEnd){
+
+				// TURN OFF TRIGGER
+				curtEnd = false;
 
 
-			// TRIGGER BUTTON ANIMATION
-				$('#crossCloseMenu').addClass('hiddenCross');
-				$('#threeLinesWrap').removeClass('notHere');
+				
+				// CURTAINS ANIMATION
+					hideMenuTitles();
+					hideRsTitles();
+					
+					setTimeout(function(){
+						curtainClose();
+					},1200);
 
+					setTimeout(function(){
+						$('#curtainDivision').removeClass('op10');
+						$('#curtainDivision').removeClass('bringToFront');
+
+						// TRIGGER BUTTON ANIMATION
+							$('#crossCloseMenu').addClass('hiddenCross');
+							$('#threeLinesWrap').removeClass('notHere');
+
+							setTimeout(function(){
+								$('.menuLines').removeClass('hideThreeLine');
+							},350)
+						// END TRIGGER BUTTON ANIMATION
+					},1500);
+
+					setTimeout(function(){
+						$('#curtainWrapper').addClass('notHere');
+
+						// WINDOW MENU ANIMATION
+							$('#menuWindow').addClass('notHere');
+						// END WINDOW MENU
+
+						// LABEL LOGO ANIMATION
+							$('#luckyLabel').removeClass('hideLabel');
+						// END LABEL
+					},2200);
+				// END CURTAINS
+
+				// ACTIVE MENU TRIGGER AGAIN
 				setTimeout(function(){
-					$('.menuLines').removeClass('hideThreeLine');
-
-				},350)
-			// END TRIGGER BUTTON ANIMATION
-
-
-			// CURTAINS ANIMATION
-				curtainClose();
-				setTimeout(function(){
-					$('#curtainDivision').removeClass('op10');
-					$('#curtainDivision').removeClass('bringToFront');
-				},500);
-
-				setTimeout(function(){
-					$('#curtainWrapper').addClass('notHere');
-				},1000);
-			// END CURTAINS
+					curtEnd = true;
+				},2900);
+			}
 
 
 
-			// WINDOW MENU ANIMATION
-			// END WINDOW MENU
 
 		});
+
+		// CURTAIN TRANSITIONS TRIGGER
+			var curtEnd = true;
+
+		// END CURTAIN TRIGGER
 
 		// CURTAIN MOVEMENT FUNCTION
 			var curtainFront0 = $('#curtainFront-0');
@@ -248,15 +287,124 @@ jQuery(document).ready(function($) {
 		// END CURTAIN MOVEMENT FUNCTION
 
 		// MENU TITLES FUNCTIONS
-			function showMenuTitles(){
-				var menuTitle1 = $('#menuTitle1');
-				var menuTitle2 = $('#menuTitle2');
-				var menuTitle3 = $('#menuTitle3');
-				var menuTitle4 = $('#menuTitle4');
+			var menuTitle1 = $('#menuTitle1');
+			var menuTitle2 = $('#menuTitle2');
+			var menuTitle3 = $('#menuTitle3');
+			var menuTitle4 = $('#menuTitle4');
 
-				
+			var menuTitleLoopCount = 1;
+
+			var currentMenuTitle1;
+			var currentMenuTitle2;
+
+			function showMenuTitles(){
+				setTimeout(function(){
+					if(menuTitleLoopCount == 1){
+						currentMenuTitle1 = menuTitle1;
+
+					} else if(menuTitleLoopCount == 2){
+						currentMenuTitle1 = menuTitle2;
+
+					} else if(menuTitleLoopCount == 3){
+						currentMenuTitle1 = menuTitle3;
+
+					} else if(menuTitleLoopCount == 4){
+						currentMenuTitle1 = menuTitle4;
+
+					}
+
+					currentMenuTitle1.addClass('menuTitlesInserted');
+
+					menuTitleLoopCount++;
+					if(menuTitleLoopCount < 5){
+						showMenuTitles();
+					}
+				},250);
+
+			}
+
+			function hideMenuTitles(){
+				setTimeout(function(){
+					if(menuTitleLoopCount == 5){
+						currentMenuTitle2 = menuTitle4;
+
+					} else if(menuTitleLoopCount == 4){
+						currentMenuTitle2 = menuTitle3;
+
+					} else if(menuTitleLoopCount == 3){
+						currentMenuTitle2 = menuTitle2;
+
+					} else if(menuTitleLoopCount == 2){
+						currentMenuTitle2 = menuTitle1;
+
+					}
+
+					currentMenuTitle2.removeClass('menuTitlesInserted');
+
+					menuTitleLoopCount = menuTitleLoopCount -1;
+					if(menuTitleLoopCount > 1){
+						hideMenuTitles();
+					}
+				},250);
 			}
 		// END MENU TITLES FUNCTIONS
+
+		// RRSS TITLES FUNCTIONS
+			var rsTitle1 = $('#rsTitle1');
+			var rsTitle2 = $('#rsTitle2');
+			var rsTitle3 = $('#rsTitle3');
+
+			var rsTitleLoopCount = 1;
+
+			var rsCurrentTitle1;
+			var rsCurrentTitle2;
+
+			function showRsTitles(){
+				setTimeout(function(){
+					if(rsTitleLoopCount == 1){
+						rsCurrentTitle1 = rsTitle1;
+
+					} else if(rsTitleLoopCount == 2){
+						rsCurrentTitle1 = rsTitle2;
+
+					} else if(rsTitleLoopCount == 3){
+						rsCurrentTitle1 = rsTitle3;
+
+					} 
+
+					rsCurrentTitle1.addClass('menuTitlesInserted');
+
+					rsTitleLoopCount++;
+					if(rsTitleLoopCount < 4){
+						showRsTitles();
+					}
+				},250);
+			}
+
+			function hideRsTitles(){
+				setTimeout(function(){
+					if(rsTitleLoopCount == 4){
+						rsCurrentTitle2 = rsTitle3;
+
+					} else if(rsTitleLoopCount == 3){
+						rsCurrentTitle2 = rsTitle2;
+
+					} else if(rsTitleLoopCount == 2){
+						rsCurrentTitle2 = rsTitle1;
+
+					} 
+
+					rsCurrentTitle2.removeClass('menuTitlesInserted');
+
+					rsTitleLoopCount = rsTitleLoopCount - 1;
+					if(rsTitleLoopCount > 0){
+						hideRsTitles();
+					} else {
+						rsTitleLoopCount = 1;
+					}
+				},250);
+			}
+		// END RSS FUNCTIONS
 	// END MENU TRIGGER INTERACTION
 
 
