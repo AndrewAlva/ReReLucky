@@ -32,40 +32,77 @@ jQuery(document).ready(function($) {
 
 
 	// NAVIGATION FLOW
+		// RESET FULL PAGE LABEL BUTTON
+			$('#luckyLabel').click(function() {
+				// HIDE WHO ARE YOU ELEMENTS
+				masterHideElement($('#whoRUQuestion'),550);
+				masterHideElement($('#whoRUOption1'),400);
+				masterHideElement($('#whoRUOption2'),200);
+				masterHideElement($('#whoRUOption3'),0);
+
+				// SHOW INTRO
+				$('#welcomePage').removeClass('notHere');			
+				
+
+				// RESET MASKING CURRENT PAGE OBJECTS
+				setTimeout(function(){
+					$('.welcomeLogoToPush').removeClass('pushWelcomeLogo');
+					$('.innerStartWeb').removeClass('pushStartWeb');
+				},700);
+				
+
+			});
+
+		// RESET FULL PAGE LABEL
+
+
+
 		// INTRO
 			$('#startWeb').click(function() {
 				$('.welcomeLogoToPush').addClass('pushWelcomeLogo');
 				$('.innerStartWeb').addClass('pushStartWeb');
 
 				setTimeout(function(){
-					// HIDE CURRENT PAGE
-					$('#welcomePage').addClass('passedPage');
-					$('#welcomePage').removeClass('currentPage');				
+					// HIDE INTRO				
 					$('#welcomePage').addClass('notHere');
 
-					// RESET MASKING CURRENT PAGE OBJECTS
-					$('.welcomeLogoToPush').removeClass('pushWelcomeLogo');
-					$('.innerStartWeb').removeClass('pushStartWeb');
+					// SHOW WHO ARE YOU ELEMENTS
+					masterShowElement($('#whoRUQuestion'),0);
+					masterShowElement($('#whoRUOption1'),150);
+					masterShowElement($('#whoRUOption2'),350);
+					masterShowElement($('#whoRUOption3'),550);
 
-					// BRING NEXT PAGE
-					$('#layoutMaster').addClass('currentPage');
-					$('#layoutMaster').removeClass('waitingPage');
-				},500);
+				},600);
 			});
 		// END INTRO
 
 
-		// Q&A
 
-		// END Q&A
+		// MASTER SHOW/HIDE ELEMENTS
+			function masterShowElement(thisElement,setDelay){
+				setTimeout(function(){
+					$(thisElement).addClass('masterInsertElement');
+				},setDelay);
+			}
+
+			function masterHideElement(thisElement,setDelay){
+				setTimeout(function(){
+					$(thisElement).removeClass('masterInsertElement');
+				},setDelay);
+			}
+		// END MASTER SHOW/HIDE
 	// END NAVIGATION FLOW
 
 
-	// TEXT ANIMATIONS TESTS
-		$(document).click(function() {
-			$("#qFirst").toggleClass('pushQs');
+	// OPTIONS HOVER ANIMATIONS
+		$('.placeAnimated').mouseenter(function() {
+			$(this).find('.innerAnimateComment').addClass('revealComment');
 		});
-	// END ANIMATIONS TESTS
+
+		$('.placeAnimated').mouseleave(function() {
+			$(this).find('.innerAnimateComment').removeClass('revealComment');
+		});
+	// END OPTIONS HOVER
 
 
 

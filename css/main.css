@@ -172,7 +172,7 @@ body{
         position: absolute;
         width: 100%;
         height: 100%;
-        min-height: 600px;
+        min-height: 700px;
         opacity: 1;
 
         -webkit-transition: all .8s ease-in-out;
@@ -188,42 +188,6 @@ body{
         height: 100%;
         overflow: hidden;
         z-index: 1000;
-    }
-
-    .currentPage{
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        bottom: 0;
-        -webkit-transition: all .8s ease-in-out;
-           -moz-transition: all .8s ease-in-out;
-            -ms-transition: all .8s ease-in-out;
-             -o-transition: all .8s ease-in-out;
-                transition: all .8s ease-in-out;
-    }
-
-    .waitingPage{
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        bottom: 100% !important;
-        -webkit-transition: all .8s ease-in-out;
-           -moz-transition: all .8s ease-in-out;
-            -ms-transition: all .8s ease-in-out;
-             -o-transition: all .8s ease-in-out;
-                transition: all .8s ease-in-out;
-    }
-
-    .passedPage{
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        bottom: -100% !important;
-        -webkit-transition: all .8s ease-in-out;
-           -moz-transition: all .8s ease-in-out;
-            -ms-transition: all .8s ease-in-out;
-             -o-transition: all .8s ease-in-out;
-                transition: all .8s ease-in-out;
     }
 /*///// END WRAPPERS STYLING /////*/
 
@@ -386,160 +350,298 @@ body{
 
 /*///// INSIDE CURRENT WINDOW /////*/
     /*///// WELCOME PAGE /////*/
-        #welcomeLogo{
+        #welcomePage{
             position: absolute;
-            width: 600px;
-            height: 205px;
-            margin: auto;
-            top: 0; bottom: 0; left: 0; right: 0;
-            overflow: hidden;
+            width: 100%;
+            height: 100%;
+            bottom: 0;
+            z-index: 100;
+            -webkit-transition: all .8s ease-in-out;
+               -moz-transition: all .8s ease-in-out;
+                -ms-transition: all .8s ease-in-out;
+                 -o-transition: all .8s ease-in-out;
+                    transition: all .8s ease-in-out;
         }
-            #welcomeLogo img{
-                width: 100%;
-                -webkit-transition: all .4s ease-in-out;
-                   -moz-transition: all .4s ease-in-out;
-                    -ms-transition: all .4s ease-in-out;
-                     -o-transition: all .4s ease-in-out;
-                        transition: all .4s ease-in-out;
-            }
 
-        #startWeb{
-            position: absolute;
-            width: 11.11%;
-            height: 2vw;
-            margin: auto;
-            right: 0; left: 0;
-            bottom: 70px;
-            
-            cursor: pointer;
-            overflow: hidden;
-        }
-            #startWeb .innerStartWeb{
+            #welcomeLogo{
                 position: absolute;
-                width: 100%;
-                height: 100%;
-                box-shadow: inset 0 0 3px #0f1f27;
-                -webkit-font-smoothing: antialiased;
-                   -moz-font-smoothing: antialiased;
-                    -ms-font-smoothing: antialiased;
-                     -o-font-smoothing: antialiased;
-                        font-smoothing: antialiased;
-
-                font-weight: 500;
-                color: #0f1f27;
-                background-color: transparent;
-
-                -webkit-transition: all .2s ease-in-out;
-                   -moz-transition: all .2s ease-in-out;
-                    -ms-transition: all .2s ease-in-out;
-                     -o-transition: all .2s ease-in-out;
-                        transition: all .2s ease-in-out;
+                width: 600px;
+                height: 205px;
+                margin: auto;
+                top: 0; bottom: 0; left: 0; right: 0;
+                overflow: hidden;
             }
-            #startWeb .innerStartWeb:hover{
-                color: #fff;
-                background-color: #0f1f27;
-            }
-                #startWeb p{
-                    position: absolute;
+                #welcomeLogo img{
                     width: 100%;
-                    height: 1.3vw;
-                    margin: auto;
-                    top: 0; bottom: 0;
-                    text-align: center;
-                    font-size: 1.3vw;
-                    line-height: 1em;
+                    -webkit-transition: all .5s ease-in-out;
+                       -moz-transition: all .5s ease-in-out;
+                        -ms-transition: all .5s ease-in-out;
+                         -o-transition: all .5s ease-in-out;
+                            transition: all .5s ease-in-out;
                 }
 
-        
+            #startWeb{
+                position: absolute;
+                width: 11.11%;
+                height: 2vw;
+                margin: auto;
+                right: 0; left: 0;
+                bottom: 70px;
+                
+                cursor: pointer;
+                overflow: hidden;
+            }
+                #startWeb .innerStartWeb{
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    box-shadow: inset 0 0 3px #0f1f27;
+                    -webkit-font-smoothing: antialiased;
+                       -moz-font-smoothing: antialiased;
+                        -ms-font-smoothing: antialiased;
+                         -o-font-smoothing: antialiased;
+                            font-smoothing: antialiased;
 
-        .pushWelcomeLogo{
-            margin-top: 205px !important;
-        }
-        .pushStartWeb{
-            margin-top: 2vw !important;
-        }
+                    font-weight: 500;
+                    color: #0f1f27;
+                    background-color: transparent;
+
+                    -webkit-transition: all .2s ease-in-out;
+                       -moz-transition: all .2s ease-in-out;
+                        -ms-transition: all .2s ease-in-out;
+                         -o-transition: all .2s ease-in-out;
+                            transition: all .2s ease-in-out;
+                }
+                #startWeb .innerStartWeb:hover{
+                    color: #fff;
+                    background-color: #0f1f27;
+                }
+                    #startWeb .innerStartWeb p{
+                        position: absolute;
+                        width: 100%;
+                        height: 1.3vw;
+                        margin: auto;
+                        top: 0; bottom: 0;
+                        text-align: center;
+                        font-size: 1.3vw;
+                        line-height: 1em;
+                    }
+
+            
+
+            .pushWelcomeLogo{
+                margin-top: 205px !important;
+            }
+            .pushStartWeb{
+                margin-top: 2vw !important;
+            }
     /*///// END WELCOME PAGE /////*/
 
 
-    /*///// QUESTION MASTER /////*/
-        #layoutMaster{}
-
-            #layoutMaster .halfPage{
-                position: relative;
-                height: 100%;
-                float: left;
-            }
-            /*#layoutMaster .secondHalves{
-                background-color: #ecf1f9;
-            }*/
-
-                #layoutMaster .halfPage .qMask{
-                    position: absolute;
-                    width: 340px;
-                    height: 75px;
-                    margin: auto;
-                    top: 0; bottom: 0;
-                    right: 5%;
-                    color: inherit;
-                    overflow: hidden;
-                }
-
-                    #layoutMaster .halfPage .qMask h1{
-                        position: relative;
-                        margin: 0 0 .5em 0;
-                        font-size: 1.5em;
-                        font-weight: 300;
-                        line-height: 1em;
-                        text-align: right;
-                        color: inherit;
-
-                        -webkit-transition: all .4s ease-in-out;
-                        -o-transition: all .4s ease-in-out;
-                        transition: all .4s ease-in-out;
-                    }
-
-                #layoutMaster .halfPage .innerHalf{
-                    position: relative;
-                    width: 100%;
-                    height: 50%;
-                    float: left;
-                    cursor: pointer;
-
-                    -webkit-transition: all .4s ease-in-out;
-                    -o-transition: all .4s ease-in-out;
-                    transition: all .4s ease-in-out;
-                }
-                #layoutMaster .halfPage .innerHalf:hover{
-                    text-decoration: underline;
-                }
-
-                    #layoutMaster .halfPage .innerHalf .qAnswer{
-                        position: absolute;
-                        width: 80%;
-                        padding-left: 20%;
-                        height: 50px;
-                        line-height: 50px;
-                        margin: auto;
-                        text-align: left;
-                        text-decoration: inherit;
-                    }
-                    #layoutMaster .halfPage .innerHalf:first-child .qAnswer{
-                        bottom: 50px;
-                    }
-                    #layoutMaster .halfPage .innerHalf:last-child .qAnswer{
-                        top: 50px;
-                    }
-                        #layoutMaster .halfPage .innerHalf .qAnswer h2{
-                            margin: 0;
-                            font-weight: 400;
-                        }          
-    /*///// END QUESTION MASTER /////*/
-
-    /* ///// QUESTION ANIMATION CLASSES ///// */
-        .pushQs{
-            margin-top: -3.5em !important;
+    /*///// MASTER LAYOUT /////*/
+        #masterWrapper{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            /*background-color: rgba(255,0,0,.5);*/
         }
-    /* ///// END QUESTION ANIMATION CLASSES ///// */
+
+            /*// INFO MASTER //*/
+                #infoMasterWrapper{
+                    position: relative;
+                    width: 66.66%;
+                    height: 100%;
+                    float: left;
+                }
+                    #quoteMaster{
+                        position: absolute;
+                        width: 83.33%;
+                        height: 100%;
+                        margin-left: 16.66%;
+                        overflow: hidden;
+                        /*background-color: rgba(0,255,255,.5);*/
+                    }
+                        #quoteMaster .quoteBox{
+                            position: absolute;
+                            width: 100%;
+                            left: -100%;
+                            margin: auto;
+                            top: 0; bottom: 0;
+                            font-size: 1.9vw;
+                            line-height: 1em;
+                            color: #9ca0a4;
+
+                            -webkit-transition: all .7s cubic-bezier(.53,0,0,1);
+                               -moz-transition: all .7s cubic-bezier(.53,0,0,1);
+                                -ms-transition: all .7s cubic-bezier(.53,0,0,1);
+                                 -o-transition: all .7s cubic-bezier(.53,0,0,1);
+                                    transition: all .7s cubic-bezier(.53,0,0,1);
+                        }
+                            #quoteMaster .quoteBox h1{
+                                position: absolute;
+                                width: 100%;
+                                height: 100%;
+                                margin: 0;
+                            }
+
+                        /* SPECIFIC QUOTES STYLE*/
+                            /* WHO ARE YOU */
+                            #whoRUQuestion{
+                                height: 2.3vw;
+                            }
+                        /* END SPECIFIC QUOTES STYLE*/
+
+                    #nextSlideMaster{
+                        position: absolute;
+                        width: 66.66%;
+                        height: 50px;
+                        right: 16.66%;
+                        bottom: 130px;
+                        overflow: hidden;
+
+                        /*background-color: rgba(0,0,255,.5);*/
+                    }
+            /*// END INFO MASTER //*/
+
+
+            /*// OPTIONS MASTER //*/
+                #optionsMasterWrapper{
+                    position: relative;
+                    width: 33.33%;
+                    height: 100%;
+                    float: left;
+                }
+                    
+                    #threeOptionsMaster{
+                        position: absolute;
+                        width: 100%;
+                        height: 681px;
+                        margin: auto;
+                        top: 0; bottom: 0;
+                        overflow: hidden;
+
+                        /*background-color: rgba(0,255,0,.5);*/
+                    }
+                        #threeOptionsMaster .threeOptionsBox{
+                            position: absolute;
+                            width: 100%;
+                            height: 100%;
+                        }
+                            #threeOptionsMaster .threeOptionsBox .threeOptionsSingle{
+                                position: relative;
+                                width: 100%;
+                                height: 33.33%;
+                                float: left;
+                                left: -100%;
+
+                                    -webkit-transition: all .7s cubic-bezier(.53,0,0,1);
+                                       -moz-transition: all .7s cubic-bezier(.53,0,0,1);
+                                        -ms-transition: all .7s cubic-bezier(.53,0,0,1);
+                                         -o-transition: all .7s cubic-bezier(.53,0,0,1);
+                                            transition: all .7s cubic-bezier(.53,0,0,1);
+                            }
+                                
+
+                    #twoOptionsMaster{
+                        position: absolute;
+                        width: 100%;
+                        height: 560px;
+                        margin: auto;
+                        top: 0; bottom: 0;
+                        overflow: hidden;
+
+                        /*background-color: rgba(255,0,0,.5);*/
+                    }
+
+                    #oneOptionMaster{
+                        position: absolute;
+                        width: 100%;
+                        height: 280px;
+                        margin: auto;
+                        top: 0; bottom: 0;
+                        overflow: hidden;
+
+                        /*background-color: rgba(255,255,0,.5);*/
+                    }
+
+
+                /* OPTIONS ANIMATION CLASSES */
+                    #optionsMasterWrapper  .placeHolder{
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        z-index: 1;
+                    }
+                        #optionsMasterWrapper  .placeHolder h2{
+                            position: absolute;
+                            width: 100%;
+                            height: 2.5vw;
+                            margin: auto;
+                            top: 0; bottom: 0;
+                            word-break: break-all;
+
+                            font-size: 2.5vw;
+                            font-weight: 500;
+                            line-height: 1em;
+                            color: #9ca0a4;
+                        }
+
+
+                    #optionsMasterWrapper .placeAnimated{
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        overflow: hidden;
+                        z-index: 1000;
+                    }
+                        #optionsMasterWrapper .placeAnimated .innerAnimateComment{
+                            position: absolute;
+                            width: 0%;
+                            height: 100%;
+                            overflow: hidden;
+                            background-color: #0c171f;
+
+                            -webkit-transition: all .5s cubic-bezier(.95,.01,.45,1);
+                               -moz-transition: all .5s cubic-bezier(.95,.01,.45,1);
+                                -ms-transition: all .5s cubic-bezier(.95,.01,.45,1);
+                                 -o-transition: all .5s cubic-bezier(.95,.01,.45,1);
+                                    transition: all .5s cubic-bezier(.95,.01,.45,1);
+                        }
+                            .revealComment{
+                                width: 100% !important;
+                            }
+                            #optionsMasterWrapper .placeAnimated .innerAnimateComment h3{
+                                position: absolute;
+                                width: 33.33vw;
+                                height: 2.05vw;
+                                padding-left: 40px;
+                                margin: auto;
+                                top: 0; bottom: 0;
+                                left: 0;
+                                word-break: keep-all;
+                                color: #fff;
+
+                                font-size: 2.05vw;
+                                line-height: 1em;
+                                font-weight: 500;
+                                -webkit-font-smoothing: antialiased;
+                                   -moz-font-smoothing: antialiased;
+                                    -ms-font-smoothing: antialiased;
+                                     -o-font-smoothing: antialiased;
+                                        font-smoothing: antialiased;
+                            }
+                /* END OPTIONS ANIMATION */
+            /*// END OPTIONS MASTER //*/
+    /*///// END MASTER LAYOUT /////*/
+
+
+
+    /*///// MASTER ANIMATION CLASSES /////*/
+        .masterInsertElement{
+            left: 0% !important;
+        }
+    /*///// END MASTER ANIMATION  /////*/
 /*///// END INSIDE CURRENT WINDOW /////*/
 
 
@@ -552,7 +654,7 @@ body{
         width: 70px;
         height: 117px;
         top: 0; left: 70px;
-        z-index: 1;
+        z-index: 1000;
 
         -webkit-transition: all .7s cubic-bezier(.95,.01,.45,1);
            -moz-transition: all .7s cubic-bezier(.95,.01,.45,1);
@@ -613,16 +715,16 @@ body{
                 #titlesWrapper .fullMenuTitles a{
                     display: block;
                     position: absolute;
-                    width: 100%;
+                    width: 75%;
                     height: 100%;
+                    left: 25%;
                     text-decoration: none;
                     color: #fff;
                 }
                     #titlesWrapper .fullMenuTitles .innerMenuTitle{
                         position: absolute;
-                        width: 75%;
+                        width: 100%;
                         height: 100%;
-                        left: 25%;
                         overflow: hidden;
                     }
                         #titlesWrapper .fullMenuTitles .innerMenuTitle h2{
