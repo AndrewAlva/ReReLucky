@@ -172,7 +172,7 @@ body{
         position: absolute;
         width: 100%;
         height: 100%;
-        min-height: 700px;
+        min-height: 850px;
         opacity: 1;
 
         -webkit-transition: all .8s ease-in-out;
@@ -446,6 +446,10 @@ body{
             z-index: 1;
             /*background-color: rgba(255,0,0,.5);*/
         }
+        .highlightIt{
+            background-color: #0c171f;
+            color: #fff;
+        }
 
             /*// INFO MASTER //*/
                 #infoMasterWrapper{
@@ -465,10 +469,10 @@ body{
                         #quoteMaster .quoteBox{
                             position: absolute;
                             width: 100%;
-                            left: -100%;
+                            /*left: -100%;*/
                             margin: auto;
                             top: 0; bottom: 0;
-                            font-size: 1.9vw;
+                            font-size: 1.8vw;
                             line-height: 1em;
                             color: #9ca0a4;
 
@@ -483,25 +487,47 @@ body{
                                 width: 100%;
                                 height: 100%;
                                 margin: 0;
+                                line-height: 1.2em;
                             }
 
                         /* SPECIFIC QUOTES STYLE*/
-                            /* WHO ARE YOU */
-                            #whoRUQuestion{
-                                height: 2.3vw;
+                            /* ONE-LINE */
+                            #whoRUQuestion, #clientSuccessQuestion, #talentFirstQuestion{
+                                height: 4.4vw;
+                            }
+
+                            /* TWO-LINE */
+                            #competitionFirstQuestion, #competitionFirstAdvice{
+                                height: 8.8vw;
+                            }
+
+                            /* THREE-LINES */
+                            #clientThirdQuestion{
+                                height: 14vw;
+                            }
+
+                            /* FOUR-LINES */
+                            #clientSecondQuestion{
+                                height: 18vw;
+                            }
+
+                            /* FIVE-LINES */
+                            #clientFirstQuestion{
+                                height: 22vw;
+                            }
+
+                            /* SIX-LINES */
+                            #clientSecondAdvice, #clientThirdAdvice{
+                                height: 26vw;
+                            }
+
+                            /* SEVEN-LINES */
+                            #clientFirstAdvice{
+                                height: 30vw;
                             }
                         /* END SPECIFIC QUOTES STYLE*/
 
-                    #nextSlideMaster{
-                        position: absolute;
-                        width: 66.66%;
-                        height: 50px;
-                        right: 16.66%;
-                        bottom: 130px;
-                        overflow: hidden;
-
-                        /*background-color: rgba(0,0,255,.5);*/
-                    }
+                    
             /*// END INFO MASTER //*/
 
 
@@ -512,58 +538,101 @@ body{
                     height: 100%;
                     float: left;
                 }
-                    
-                    #threeOptionsMaster{
-                        position: absolute;
-                        width: 100%;
-                        height: 681px;
-                        margin: auto;
-                        top: 0; bottom: 0;
-                        overflow: hidden;
 
-                        /*background-color: rgba(0,255,0,.5);*/
-                    }
-                        #threeOptionsMaster .threeOptionsBox{
+                    /* THREE OPTIONS */
+                        #threeOptionsMaster{
                             position: absolute;
                             width: 100%;
-                            height: 100%;
+                            height: 681px;
+                            margin: auto;
+                            top: 0; bottom: 0;
+                            overflow: hidden;
+
+                            /*background-color: rgba(0,255,0,.5);*/
                         }
-                            #threeOptionsMaster .threeOptionsBox .threeOptionsSingle{
-                                position: relative;
+                            #threeOptionsMaster .threeOptionsBox{
+                                position: absolute;
                                 width: 100%;
-                                height: 33.33%;
-                                float: left;
-                                left: -100%;
+                                height: 100%;
+                            }
+                                #threeOptionsMaster .threeOptionsBox .threeOptionsSingle{
+                                    position: relative;
+                                    width: 100%;
+                                    height: 33.33%;
+                                    float: left;
+                                    /*left: -100%;*/
 
                                     -webkit-transition: all .7s cubic-bezier(.53,0,0,1);
                                        -moz-transition: all .7s cubic-bezier(.53,0,0,1);
                                         -ms-transition: all .7s cubic-bezier(.53,0,0,1);
                                          -o-transition: all .7s cubic-bezier(.53,0,0,1);
                                             transition: all .7s cubic-bezier(.53,0,0,1);
-                            }
+                                }
+                    /* END THREE OPTIONS */
                                 
+                    
+                    /* TWO OPTIONS */
+                        #twoOptionsMaster{
+                            position: absolute;
+                            width: 100%;
+                            height: 29.03vw;
+                            margin: auto;
+                            top: 0; bottom: 0;
+                            overflow: hidden;
 
-                    #twoOptionsMaster{
-                        position: absolute;
-                        width: 100%;
-                        height: 560px;
-                        margin: auto;
-                        top: 0; bottom: 0;
-                        overflow: hidden;
+                            /*background-color: rgba(255,0,0,.5);*/
+                        }
+                            #twoOptionsMaster .twoOptionsBox{
+                                position: absolute;
+                                width: 100%;
+                                height: 100%;
+                            }
+                                #twoOptionsMaster .twoOptionsBox .twoOptionsSingle{
+                                    position: relative;
+                                    width: 100%;
+                                    height: 50%;
+                                    float: left;
+                                    /*left: -100%;*/
 
-                        /*background-color: rgba(255,0,0,.5);*/
-                    }
+                                    -webkit-transition: all .7s cubic-bezier(.53,0,0,1);
+                                       -moz-transition: all .7s cubic-bezier(.53,0,0,1);
+                                        -ms-transition: all .7s cubic-bezier(.53,0,0,1);
+                                         -o-transition: all .7s cubic-bezier(.53,0,0,1);
+                                            transition: all .7s cubic-bezier(.53,0,0,1);
+                                }
 
-                    #oneOptionMaster{
-                        position: absolute;
-                        width: 100%;
-                        height: 280px;
-                        margin: auto;
-                        top: 0; bottom: 0;
-                        overflow: hidden;
+                    /* END TWO OPTIONS */
 
-                        /*background-color: rgba(255,255,0,.5);*/
-                    }
+                    /* ONE OPTION */
+                        #oneOptionMaster{
+                            position: absolute;
+                            width: 100%;
+                            height: 14.518vw;
+                            margin: auto;
+                            top: 0; bottom: 0;
+                            overflow: hidden;
+
+                            /*background-color: rgba(255,255,0,.5);*/
+                        }
+                            #oneOptionMaster .oneOptionBox{
+                                position: absolute;
+                                width: 100%;
+                                height: 100%;
+                            }
+                                #oneOptionMaster .oneOptionBox .oneOptionSingle{
+                                    position: relative;
+                                    width: 100%;
+                                    height: 100%;
+                                    float: left;
+                                    /*left: -100%;*/
+
+                                    -webkit-transition: all .7s cubic-bezier(.53,0,0,1);
+                                       -moz-transition: all .7s cubic-bezier(.53,0,0,1);
+                                        -ms-transition: all .7s cubic-bezier(.53,0,0,1);
+                                         -o-transition: all .7s cubic-bezier(.53,0,0,1);
+                                            transition: all .7s cubic-bezier(.53,0,0,1);
+                                }
+                    /* END ONE OPTION */
 
 
                 /* OPTIONS ANIMATION CLASSES */
@@ -585,6 +654,17 @@ body{
                             font-weight: 500;
                             line-height: 1em;
                             color: #9ca0a4;
+                        }
+                    #optionsMasterWrapper  .placeHolderYN{
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        z-index: 1;
+                    }
+                        #optionsMasterWrapper  .placeHolderYN img{
+                            position: absolute;
+                            width: 100%;
+                            height: 100%;
                         }
 
 
@@ -608,13 +688,15 @@ body{
                                  -o-transition: all .5s cubic-bezier(.95,.01,.45,1);
                                     transition: all .5s cubic-bezier(.95,.01,.45,1);
                         }
+                        #optionsMasterWrapper .placeAnimated .bgcGray{
+                            background-color: #9ca0a4 !important;
+                        }
                             .revealComment{
                                 width: 100% !important;
                             }
                             #optionsMasterWrapper .placeAnimated .innerAnimateComment h3{
                                 position: absolute;
                                 width: 33.33vw;
-                                height: 2.05vw;
                                 padding-left: 40px;
                                 margin: auto;
                                 top: 0; bottom: 0;
@@ -622,8 +704,8 @@ body{
                                 word-break: keep-all;
                                 color: #fff;
 
-                                font-size: 2.05vw;
-                                line-height: 1em;
+                                font-size: 1.35vw;
+                                line-height: 1.2em;
                                 font-weight: 500;
                                 -webkit-font-smoothing: antialiased;
                                    -moz-font-smoothing: antialiased;
@@ -631,8 +713,86 @@ body{
                                      -o-font-smoothing: antialiased;
                                         font-smoothing: antialiased;
                             }
+                            #optionsMasterWrapper .placeAnimated .oneLine h3{
+                                height: 1.75vw;
+                            }
+                            #optionsMasterWrapper .placeAnimated .twoLines h3{
+                                height: 4.5vw;
+                            }
+                            #optionsMasterWrapper .placeAnimated .threeLines h3{
+                                height: 6.75vw;
+                            }
+                            #optionsMasterWrapper .placeAnimated .fourLines h3{
+                                height: 6.5vw;
+                            }
                 /* END OPTIONS ANIMATION */
             /*// END OPTIONS MASTER //*/
+
+
+            /*// NEXT SLIDE MASTER //*/
+                #nextSlideMaster{
+                    position: absolute;
+                    width: 66.66%;
+                    height: 50px;
+                    right: 16.66%;
+                    bottom: 130px;
+                    color: #e5545e;
+                    overflow: hidden;
+
+                    -webkit-transition: all .4s ease-in-out;
+                       -moz-transition: all .4s ease-in-out;
+                        -ms-transition: all .4s ease-in-out;
+                         -o-transition: all .4s ease-in-out;
+                            transition: all .4s ease-in-out;
+
+                    /*background-color: rgba(0,0,255,.5);*/
+                }
+                #nextSlideMaster:hover{
+                    right: 18%;
+                    color: #0c171f;
+                }
+                    #nextSlideMaster .nextSlideBox{
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        cursor: pointer;
+                    }
+                        #nextSlideMaster .nextSlideBox .nextSlideLeftBox{
+                            position: relative;
+                            width: 75%;
+                            height: 100%;
+                            float: left;
+                        }
+                            #nextSlideMaster .nextSlideBox .nextSlideLeftBox h5{
+                                position: absolute;
+                                width: 100%;
+                                height: 1.3em;
+                                margin: auto;
+                                top: 0; bottom: 0;
+
+                                font-size: 1.3em;
+                                font-weight: 500;
+                                text-align: right;
+                                left: 0;
+                                -webkit-font-smoothing: antialiased;
+                                   -moz-font-smoothing: antialiased;
+                                    -ms-font-smoothing: antialiased;
+                                     -o-font-smoothing: antialiased;
+                                        font-smoothing: antialiased;
+                            }
+                        #nextSlideMaster .nextSlideBox .nextSlideRightBox{
+                            position: relative;
+                            width: 25%;
+                            height: 100%;
+                            float: left;
+                        }
+                            #nextSlideMaster .nextSlideBox .nextSlideRightBox img{
+                                position: absolute;
+                                margin: auto;
+                                top: 0; bottom: 0;
+                                left: 1vw;
+                            }
+            /*// END NEXT SLIDE MASTER //*/
     /*///// END MASTER LAYOUT /////*/
 
 
