@@ -469,7 +469,7 @@ body{
                         #quoteMaster .quoteBox{
                             position: absolute;
                             width: 100%;
-                            /*left: -100%;*/
+                            left: -100%;
                             margin: auto;
                             top: 0; bottom: 0;
                             font-size: 1.8vw;
@@ -548,7 +548,7 @@ body{
                             position: absolute;
                             width: 80%;
                             height: 26vw;
-                            /*left: -100%;*/
+                            left: -100%;
                             margin: auto;
                             top: 0; bottom: 0;
                             line-height: 1em;
@@ -661,7 +661,7 @@ body{
                                     width: 100%;
                                     height: 33.33%;
                                     float: left;
-                                    /*left: -100%;*/
+                                    left: -100%;
 
                                     -webkit-transition: all .7s cubic-bezier(.53,0,0,1);
                                        -moz-transition: all .7s cubic-bezier(.53,0,0,1);
@@ -693,7 +693,7 @@ body{
                                     width: 100%;
                                     height: 50%;
                                     float: left;
-                                    /*left: -100%;*/
+                                    left: -100%;
 
                                     -webkit-transition: all .7s cubic-bezier(.53,0,0,1);
                                        -moz-transition: all .7s cubic-bezier(.53,0,0,1);
@@ -724,7 +724,7 @@ body{
                                     width: 100%;
                                     height: 100%;
                                     float: left;
-                                    /*left: -100%;*/
+                                    left: -100%;
 
                                     -webkit-transition: all .7s cubic-bezier(.53,0,0,1);
                                        -moz-transition: all .7s cubic-bezier(.53,0,0,1);
@@ -785,7 +785,7 @@ body{
                                             height: 1.7vw;
                                             margin: auto;
                                             top: 0; bottom: 0;
-                                            /*left: -100%;*/
+                                            left: -100%;
                                             word-break: break-all;
 
                                             text-align:left; 
@@ -854,6 +854,12 @@ body{
                             position: absolute;
                             width: 100%;
                             height: 100%;
+
+                            -webkit-transition: all .4s ease-in-out;
+                               -moz-transition: all .4s ease-in-out;
+                                -ms-transition: all .4s ease-in-out;
+                                 -o-transition: all .4s ease-in-out;
+                                    transition: all .4s ease-in-out;
                         }
 
 
@@ -906,7 +912,7 @@ body{
                                 height: 1.75vw;
                             }
                             #optionsMasterWrapper .placeAnimated .twoLines h3{
-                                height: 4.5vw;
+                                height: 3.5vw;
                             }
                             #optionsMasterWrapper .placeAnimated .threeLines h3{
                                 height: 6.75vw;
@@ -944,7 +950,14 @@ body{
                         position: absolute;
                         width: 100%;
                         height: 100%;
+                        left: -100%;
                         cursor: pointer;
+
+                        -webkit-transition: left .7s ease-in-out;
+                           -moz-transition: left .7s ease-in-out;
+                            -ms-transition: left .7s ease-in-out;
+                             -o-transition: left .7s ease-in-out;
+                                transition: left .7s ease-in-out;
                     }
                         #nextSlideMaster .nextSlideBox .nextSlideLeftBox{
                             position: relative;
@@ -1032,7 +1045,7 @@ body{
                 #quoteMaster .backToVideo{
                     position: absolute;
                     width: 20%;
-                    height: 50px;
+                    height: 30px;
                     overflow: hidden;
                     margin: auto;
                     right: 20%;
@@ -1045,8 +1058,21 @@ body{
                     font-size: 1vw;
                     cursor: pointer;
 
-                    background-color: rgba(255,0,0.5);
+                    /*background-color: rgba(255,0,0,.5);*/
                 }
+
+                /* BACK ARROW ANIMATION CLASSES */
+                    .backToVideo .finalArrow{
+                        -webkit-transition: all .4s ease-in-out;
+                           -moz-transition: all .4s ease-in-out;
+                            -ms-transition: all .4s ease-in-out;
+                             -o-transition: all .4s ease-in-out;
+                                transition: all .4s ease-in-out;
+                    }
+
+                    .backToVideo .hiddenArrow{
+                        margin-top: 30px;
+                    }
             /*// END EXTRA INFO LINK MASTER //*/
     /*///// END MASTER LAYOUT /////*/
 
@@ -1055,6 +1081,11 @@ body{
     /*///// MASTER ANIMATION CLASSES /////*/
         .masterInsertElement{
             left: 0% !important;
+        }
+
+        .masterOptionOp50{
+            opacity: .50 !important;
+            filter: alpha(opacity=50) !important;
         }
     /*///// END MASTER ANIMATION  /////*/
 /*///// END INSIDE CURRENT WINDOW /////*/

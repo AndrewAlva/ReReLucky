@@ -32,16 +32,20 @@ jQuery(document).ready(function($) {
 
 
 	// NAVIGATION FLOW
-		// RESET FULL PAGE LABEL BUTTON
+		// LABEL BUTTON RESET FULL PAGE
 			$('#luckyLabel').click(function() {
 				// HIDE WHO ARE YOU ELEMENTS
-				masterHideElement($('#whoRUQuestion'),550);
-				masterHideElement($('#whoRUOption1'),400);
-				masterHideElement($('#whoRUOption2'),200);
 				masterHideElement($('#whoRUOption3'),0);
+				masterHideElement($('#whoRUOption2'),200);
+				masterHideElement($('#whoRUOption1'),400);
+				masterHideElement($('#whoRUQuestion'),550);
+				
+				
 
 				// SHOW INTRO
-				$('#welcomePage').removeClass('notHere');			
+				$('#welcomePage').removeClass('notHere');
+				// RESET WHO ARE YOU OPTIONS
+				$('#whoRUOptions').removeClass('notHere');
 				
 
 				// RESET MASKING CURRENT PAGE OBJECTS
@@ -49,11 +53,53 @@ jQuery(document).ready(function($) {
 					$('.welcomeLogoToPush').removeClass('pushWelcomeLogo');
 					$('.innerStartWeb').removeClass('pushStartWeb');
 				},700);
-				
+
+				// RESET CLIENT FIRST QUESTION FLOW: CONNECT?
+				masterHideElement($('#clientFirstOption2'),0);
+				masterHideElement($('#clientFirstOption1'),200);
+				masterHideElement($('#clientFirstQuestion'),350);
+
+				// RESET CLIENT FIRST ADVICE AGENCIES
+				masterHideElement($('#clientFirstAgency3'),0);
+				masterHideElement($('#clientFirstAgency2'),200);
+				masterHideElement($('#clientFirstAgency1'),400);
+				masterHideElement($('#clientFirstNext'),550);
+				masterHideElement($('#clientFirstAdvice'),750);
+
+
+				// RESET CLIENT SECOND QUESTION: FEAR?
+				masterHideElement($('#clientSecondOption2'),0);
+				masterHideElement($('#clientSecondOption1'),200);
+				masterHideElement($('#clientSecondQuestion'),350);
+
+				// RESET CLIENT SECOND ADVICE AGENCIES
+				masterHideElement($('#clientSecondAgency3'),0);
+				masterHideElement($('#clientSecondAgency2'),200);
+				masterHideElement($('#clientSecondAgency1'),400);
+				masterHideElement($('#clientSecondNext'),550);
+				masterHideElement($('#clientSecondAdvice'),750);
+
+
+				// RESET CLIENT THIRD QUESTION: PERSONAL NAMES?
+				masterHideElement($('#clientThirdOption2'),0);
+				masterHideElement($('#clientThirdOption1'),200);
+				masterHideElement($('#clientThirdQuestion'),350);
+
+				// RESET CLIENT THIRD ADVICE AGENCIES
+				masterHideElement($('#clientThirdAgency3'),0);
+				masterHideElement($('#clientThirdAgency2'),200);
+				masterHideElement($('#clientThirdAgency1'),400);
+				masterHideElement($('#clientThirdNext'),550);
+				masterHideElement($('#clientThirdAdvice'),750);
+
+
+				// RESET CLIENT SUCCESS QUESTION: WANNA FLY?
+				masterHideElement($('#clientSuccessOption1'),0);
+				masterHideElement($('#clientSuccessQuestion'),200);
 
 			});
 
-		// RESET FULL PAGE LABEL
+		// END LABEL RESET FULL PAGE
 
 
 
@@ -75,6 +121,171 @@ jQuery(document).ready(function($) {
 				},600);
 			});
 		// END INTRO
+
+		// WHO ARE YOU: CLIENT FLOW
+			// I'M CLIENT
+				$('#whoRUOption1').click(function() {
+					masterHideElement($('#whoRUOption3'),0);
+					masterHideElement($('#whoRUOption2'),200);
+					masterHideElement($('#whoRUOption1'),400);
+					masterHideElement($('#whoRUQuestion'),600);
+
+					setTimeout(function(){
+						$('#whoRUOptions').addClass('notHere');
+
+						masterShowElement($('#clientFirstQuestion'),200);
+						masterShowElement($('#clientFirstOption1'),600);
+						masterShowElement($('#clientFirstOption2'),800);
+					},1200);
+				});
+			// END I'M CLIENT
+
+				// FIRST QUESTION FLOW
+					// A) I'M LOOKING TO CONNECT WITH MY TARGET
+						$('#clientFirstYes').click(function() {
+							masterHideElement($('#clientFirstOption2'),0);
+							masterHideElement($('#clientFirstOption1'),200);
+							masterHideElement($('#clientFirstQuestion'),450);
+
+							setTimeout(function(){
+								masterShowElement($('#clientFirstAdvice'),600);
+								masterShowElement($('#clientFirstNext'),700);
+								masterShowElement($('#clientFirstAgency1'),750);
+								masterShowElement($('#clientFirstAgency2'),950);
+								masterShowElement($('#clientFirstAgency3'),1150);
+							},100);
+						});
+					// END A) CONNECT WITH MY TARGET
+
+						// A)1) NEXT SLIDE
+							$('#clientFirstNext').click(function() {
+								masterHideElement($('#clientFirstNext'),0);
+								masterHideElement($('#clientFirstAgency3'),100);
+								masterHideElement($('#clientFirstAgency2'),300);
+								masterHideElement($('#clientFirstAgency1'),500);
+								masterHideElement($('#clientFirstAdvice'),650);
+
+								setTimeout(function(){
+									masterShowElement($('#clientSecondQuestion'),0);
+									masterShowElement($('#clientSecondOption1'),400);
+									masterShowElement($('#clientSecondOption2'),600);
+								},1100);
+							});
+						// END A)1) END NEXT SLIDE
+
+					// B) NOT TO CONNECT WITH MY TARGET
+						$('#clientFirstNo').click(function() {
+							masterHideElement($('#clientFirstOption2'),0);
+							masterHideElement($('#clientFirstOption1'),200);
+							masterHideElement($('#clientFirstQuestion'),450);
+
+							setTimeout(function(){
+								masterShowElement($('#clientSecondQuestion'),0);
+								masterShowElement($('#clientSecondOption1'),400);
+								masterShowElement($('#clientSecondOption2'),600);
+							},850);
+						});
+					// END B) NOT TO CONNECT WITH MY TARGET
+				// END FIRST QUESTION FLOW
+
+
+				// SECOND QUESTION FLOW
+					// A) I'M AFRAID OF TAKING RISKS
+						$('#clientSecondYes').click(function() {
+							masterHideElement($('#clientSecondOption2'),0);
+							masterHideElement($('#clientSecondOption1'),200);
+							masterHideElement($('#clientSecondQuestion'),450);
+
+							setTimeout(function(){
+								masterShowElement($('#clientSecondAdvice'),600);
+								masterShowElement($('#clientSecondNext'),700);
+								masterShowElement($('#clientSecondAgency1'),750);
+								masterShowElement($('#clientSecondAgency2'),950);
+								masterShowElement($('#clientSecondAgency3'),1150);
+							},100);
+						});
+					// END A) I'M AFRAID
+
+						// A)1) NEXT SLIDE
+							$('#clientSecondNext').click(function() {
+								masterHideElement($('#clientSecondNext'),0);
+								masterHideElement($('#clientSecondAgency3'),100);
+								masterHideElement($('#clientSecondAgency2'),300);
+								masterHideElement($('#clientSecondAgency1'),500);
+								masterHideElement($('#clientSecondAdvice'),650);
+
+								setTimeout(function(){
+									masterShowElement($('#clientThirdQuestion'),0);
+									masterShowElement($('#clientThirdOption1'),400);
+									masterShowElement($('#clientThirdOption2'),600);
+								},1100);
+							});
+						// END A)1) NEXT
+
+					// B) I'M NOT AFRAID
+						$('#clientSecondNo').click(function() {
+							masterHideElement($('#clientSecondOption2'),0);
+							masterHideElement($('#clientSecondOption1'),200);
+							masterHideElement($('#clientSecondQuestion'),450);
+
+							setTimeout(function(){
+								masterShowElement($('#clientThirdQuestion'),0);
+								masterShowElement($('#clientThirdOption1'),400);
+								masterShowElement($('#clientThirdOption2'),600);
+							},850);
+						});
+					// END B) NOT AFRAID
+				// END SECOND QUESTION FLOW
+
+
+				// THIRD QUESTION FLOW
+					// A) I'D RATHER PERSONAL NAMES AGENCIES
+						$('#clientThirdYes').click(function() {
+							masterHideElement($('#clientThirdOption2'),0);
+							masterHideElement($('#clientThirdOption1'),200);
+							masterHideElement($('#clientThirdQuestion'),450);
+
+							setTimeout(function(){
+								masterShowElement($('#clientThirdAdvice'),600);
+								masterShowElement($('#clientThirdNext'),700);
+								masterShowElement($('#clientThirdAgency1'),750);
+								masterShowElement($('#clientThirdAgency2'),950);
+								masterShowElement($('#clientThirdAgency3'),1150);
+							},100);
+						});
+					// END A) I'D RATHER PERSONAL NAMES AGENCIES
+
+						// A)1) NEXT SLIDE
+							$('#clientThirdNext').click(function() {
+								masterHideElement($('#clientThirdNext'),0);
+								masterHideElement($('#clientThirdAgency3'),100);
+								masterHideElement($('#clientThirdAgency2'),300);
+								masterHideElement($('#clientThirdAgency1'),500);
+								masterHideElement($('#clientThirdAdvice'),650);
+
+								setTimeout(function(){
+									masterShowElement($('#clientSuccessQuestion'),0);
+									masterShowElement($('#clientSuccessOption1'),200);
+								},1100);
+							});
+						// END A)1) NEXT
+
+					// B) I DON'T CARE THE NAME OF THE AGENCIES
+						$('#clientThirdNo').click(function() {
+							masterHideElement($('#clientThirdOption2'),0);
+							masterHideElement($('#clientThirdOption1'),200);
+							masterHideElement($('#clientThirdQuestion'),450);
+
+							setTimeout(function(){
+								masterShowElement($('#clientSuccessQuestion'),0);
+								masterShowElement($('#clientSuccessOption1'),200);
+							},850);
+						});
+					// END B) I DON'T CARE THE NAME OF THE AGENCIES
+				// END THIRD QUESTION FLOW
+
+				
+		// END CLIENT FLOW
 
 
 
@@ -98,9 +309,17 @@ jQuery(document).ready(function($) {
 		$('.placeAnimated').mouseenter(function() {
 			$(this).find('.innerAnimateComment').addClass('revealComment');
 		});
-
 		$('.placeAnimated').mouseleave(function() {
 			$(this).find('.innerAnimateComment').removeClass('revealComment');
+		});
+
+
+
+		$('.twoOptionsSingle').mouseenter(function() {
+			$(this).find('img').addClass('masterOptionOp50');
+		});
+		$('.twoOptionsSingle').mouseleave(function() {
+			$(this).find('img').removeClass('masterOptionOp50');
 		});
 	// END OPTIONS HOVER
 
