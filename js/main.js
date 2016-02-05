@@ -99,9 +99,23 @@ jQuery(document).ready(function($) {
 
 
 				// RESET CLIENT SUCCESS VIDEO
+				masterHideElement($('#clientGetInfoBox'),0);
+				masterHideElement($('#clientIframe'),100);
+
+				setTimeout(function(){
+					$('#clientVideo').addClass('notHere');
+					$('#videoMasterWrapper').addClass('notHere');
+				},800);
 
 
 				// RESET CLIENT SUCCESS CONTACT INFO
+				$('#finalClientBackInfo').find('.finalArrow').addClass('hiddenArrow');
+				
+				masterHideElement($('#infoRSTitle3'),100);
+				masterHideElement($('#infoRSTitle2'),250);
+				masterHideElement($('#infoRSTitle1'),400);
+
+				masterHideElement($('#finalInfoClient'),450);
 
 			});
 
@@ -381,6 +395,14 @@ jQuery(document).ready(function($) {
 			$(this).find('img').addClass('masterOptionOp50');
 		});
 		$('.twoOptionsSingle').mouseleave(function() {
+			$(this).find('img').removeClass('masterOptionOp50');
+		});
+
+
+		$('.oneOptionSingle').mouseenter(function() {
+			$(this).find('img').addClass('masterOptionOp50');
+		});
+		$('.oneOptionSingle').mouseleave(function() {
 			$(this).find('img').removeClass('masterOptionOp50');
 		});
 	// END OPTIONS HOVER
