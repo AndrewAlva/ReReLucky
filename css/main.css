@@ -1018,6 +1018,18 @@ body{
 
                             /*background-color: rgba(0,255,0,.1);*/
                         }
+                            #videoMasterWrapper .videoBox .videoWindow iframe{
+                                position: absolute;
+                                width: 100%;
+                                height: 100%;
+                                left: -100%;
+
+                                -webkit-transition: all .7s ease-in-out;
+                                   -moz-transition: all .7s ease-in-out;
+                                    -ms-transition: all .7s ease-in-out;
+                                     -o-transition: all .7s ease-in-out;
+                                        transition: all .7s ease-in-out;
+                            }
 
                         #videoMasterWrapper .videoBox .infoHere{
                             position: absolute;
@@ -1035,9 +1047,21 @@ body{
                             font-size: 1vw;
                             cursor: pointer;
                         }
-                            #videoMasterWrapper .videoBox .infoHere p{
-                                margin: 0;
+                            #videoMasterWrapper .videoBox .infoHere .extraGetInfoBox{
+                                position: absolute;
+                                width: 100%;
+                                height: 100%;
+                                left: -100%;
+
+                                -webkit-transition: all .3s ease-in-out;
+                                   -moz-transition: all .3s ease-in-out;
+                                    -ms-transition: all .3s ease-in-out;
+                                     -o-transition: all .3s ease-in-out;
+                                        transition: all .3s ease-in-out;
                             }
+                                #videoMasterWrapper .videoBox .infoHere p{
+                                    margin: 0;
+                                }
             /*// END VIDEO MASTER //*/
 
 
@@ -1063,6 +1087,8 @@ body{
 
                 /* BACK ARROW ANIMATION CLASSES */
                     .backToVideo .finalArrow{
+                        margin-top: 0px;
+
                         -webkit-transition: all .4s ease-in-out;
                            -moz-transition: all .4s ease-in-out;
                             -ms-transition: all .4s ease-in-out;
@@ -1071,7 +1097,7 @@ body{
                     }
 
                     .backToVideo .hiddenArrow{
-                        margin-top: 30px;
+                        margin-top: 30px !important;
                     }
             /*// END EXTRA INFO LINK MASTER //*/
     /*///// END MASTER LAYOUT /////*/

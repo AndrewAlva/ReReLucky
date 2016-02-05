@@ -61,10 +61,10 @@ jQuery(document).ready(function($) {
 
 				// RESET CLIENT FIRST ADVICE AGENCIES
 				masterHideElement($('#clientFirstAgency3'),0);
-				masterHideElement($('#clientFirstAgency2'),200);
-				masterHideElement($('#clientFirstAgency1'),400);
-				masterHideElement($('#clientFirstNext'),550);
-				masterHideElement($('#clientFirstAdvice'),750);
+				masterHideElement($('#clientFirstAgency2'),100);
+				masterHideElement($('#clientFirstAgency1'),200);
+				masterHideElement($('#clientFirstNext'),300);
+				masterHideElement($('#clientFirstAdvice'),450);
 
 
 				// RESET CLIENT SECOND QUESTION: FEAR?
@@ -74,10 +74,10 @@ jQuery(document).ready(function($) {
 
 				// RESET CLIENT SECOND ADVICE AGENCIES
 				masterHideElement($('#clientSecondAgency3'),0);
-				masterHideElement($('#clientSecondAgency2'),200);
-				masterHideElement($('#clientSecondAgency1'),400);
-				masterHideElement($('#clientSecondNext'),550);
-				masterHideElement($('#clientSecondAdvice'),750);
+				masterHideElement($('#clientSecondAgency2'),100);
+				masterHideElement($('#clientSecondAgency1'),200);
+				masterHideElement($('#clientSecondNext'),300);
+				masterHideElement($('#clientSecondAdvice'),450);
 
 
 				// RESET CLIENT THIRD QUESTION: PERSONAL NAMES?
@@ -87,15 +87,21 @@ jQuery(document).ready(function($) {
 
 				// RESET CLIENT THIRD ADVICE AGENCIES
 				masterHideElement($('#clientThirdAgency3'),0);
-				masterHideElement($('#clientThirdAgency2'),200);
-				masterHideElement($('#clientThirdAgency1'),400);
-				masterHideElement($('#clientThirdNext'),550);
-				masterHideElement($('#clientThirdAdvice'),750);
+				masterHideElement($('#clientThirdAgency2'),100);
+				masterHideElement($('#clientThirdAgency1'),200);
+				masterHideElement($('#clientThirdNext'),300);
+				masterHideElement($('#clientThirdAdvice'),450);
 
 
 				// RESET CLIENT SUCCESS QUESTION: WANNA FLY?
 				masterHideElement($('#clientSuccessOption1'),0);
 				masterHideElement($('#clientSuccessQuestion'),200);
+
+
+				// RESET CLIENT SUCCESS VIDEO
+
+
+				// RESET CLIENT SUCCESS CONTACT INFO
 
 			});
 
@@ -283,6 +289,62 @@ jQuery(document).ready(function($) {
 						});
 					// END B) I DON'T CARE THE NAME OF THE AGENCIES
 				// END THIRD QUESTION FLOW
+
+
+				// SUCCESS QUESTION FLOW
+					// YES, I WANT TO FLY
+						$('#clientSuccessYes').click(function() {
+							masterHideElement($('#clientSuccessOption1'),0);
+							masterHideElement($('#clientSuccessQuestion'),100);
+
+							setTimeout(function(){
+								$('#videoMasterWrapper').removeClass('notHere');
+								$('#clientVideo').removeClass('notHere');
+
+								masterShowElement($('#clientIframe'),100);
+								masterShowElement($('#clientGetInfoBox'),300);
+							},600);
+						});
+					// END YES, I WANT TO FLY
+
+
+						// CLICK HERE TO GET INFO
+							$('#clientInfoHere').click(function() {
+								masterHideElement($('#clientGetInfoBox'),0);
+								masterHideElement($('#clientIframe'),100);
+
+								setTimeout(function(){
+									$('#clientVideo').addClass('notHere');
+									$('#videoMasterWrapper').addClass('notHere');
+
+									masterShowElement($('#finalInfoClient'),100);
+									$('#finalClientBackInfo').find('.finalArrow').removeClass('hiddenArrow');
+
+									masterShowElement($('#infoRSTitle1'),200);
+									masterShowElement($('#infoRSTitle2'),350);
+									masterShowElement($('#infoRSTitle3'),500);
+								},800);
+							});
+						// END CLICK TO GET INFO
+
+						// CLICK HERE TO GO BACK TO VIDEO
+							$('#finalClientBackInfo').click(function() {
+								$('#finalClientBackInfo').find('.finalArrow').addClass('hiddenArrow');
+
+								$('#videoMasterWrapper').removeClass('notHere');
+								$('#clientVideo').removeClass('notHere');
+
+								masterHideElement($('#infoRSTitle3'),50);
+								masterHideElement($('#infoRSTitle2'),200);
+								masterHideElement($('#infoRSTitle1'),350);
+
+								masterHideElement($('#finalInfoClient'),450);
+
+								masterShowElement($('#clientIframe'),850);
+								masterShowElement($('#clientGetInfoBox'),950);
+							});
+						// END CLICK BACK TO VIDEO
+				// END SUCCESS FLOW
 
 				
 		// END CLIENT FLOW
