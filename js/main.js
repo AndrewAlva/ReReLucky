@@ -54,68 +54,86 @@ jQuery(document).ready(function($) {
 					$('.innerStartWeb').removeClass('pushStartWeb');
 				},700);
 
-				// RESET CLIENT FIRST QUESTION FLOW: CONNECT?
-				masterHideElement($('#clientFirstOption2'),0);
-				masterHideElement($('#clientFirstOption1'),200);
-				masterHideElement($('#clientFirstQuestion'),350);
+				// RESET CLIENT FLOW
 
-				// RESET CLIENT FIRST ADVICE AGENCIES
-				masterHideElement($('#clientFirstAgency3'),0);
-				masterHideElement($('#clientFirstAgency2'),100);
-				masterHideElement($('#clientFirstAgency1'),200);
-				masterHideElement($('#clientFirstNext'),300);
-				masterHideElement($('#clientFirstAdvice'),450);
+					// RESET CLIENT FIRST QUESTION FLOW: CONNECT?
+					masterHideElement($('#clientFirstOption2'),0);
+					masterHideElement($('#clientFirstOption1'),200);
+					masterHideElement($('#clientFirstQuestion'),350);
 
-
-				// RESET CLIENT SECOND QUESTION: FEAR?
-				masterHideElement($('#clientSecondOption2'),0);
-				masterHideElement($('#clientSecondOption1'),200);
-				masterHideElement($('#clientSecondQuestion'),350);
-
-				// RESET CLIENT SECOND ADVICE AGENCIES
-				masterHideElement($('#clientSecondAgency3'),0);
-				masterHideElement($('#clientSecondAgency2'),100);
-				masterHideElement($('#clientSecondAgency1'),200);
-				masterHideElement($('#clientSecondNext'),300);
-				masterHideElement($('#clientSecondAdvice'),450);
+					// RESET CLIENT FIRST ADVICE AGENCIES
+					masterHideElement($('#clientFirstAgency3'),0);
+					masterHideElement($('#clientFirstAgency2'),100);
+					masterHideElement($('#clientFirstAgency1'),200);
+					masterHideElement($('#clientFirstNext'),300);
+					masterHideElement($('#clientFirstAdvice'),450);
 
 
-				// RESET CLIENT THIRD QUESTION: PERSONAL NAMES?
-				masterHideElement($('#clientThirdOption2'),0);
-				masterHideElement($('#clientThirdOption1'),200);
-				masterHideElement($('#clientThirdQuestion'),350);
+					// RESET CLIENT SECOND QUESTION: FEAR?
+					masterHideElement($('#clientSecondOption2'),0);
+					masterHideElement($('#clientSecondOption1'),200);
+					masterHideElement($('#clientSecondQuestion'),350);
 
-				// RESET CLIENT THIRD ADVICE AGENCIES
-				masterHideElement($('#clientThirdAgency3'),0);
-				masterHideElement($('#clientThirdAgency2'),100);
-				masterHideElement($('#clientThirdAgency1'),200);
-				masterHideElement($('#clientThirdNext'),300);
-				masterHideElement($('#clientThirdAdvice'),450);
-
-
-				// RESET CLIENT SUCCESS QUESTION: WANNA FLY?
-				masterHideElement($('#clientSuccessOption1'),0);
-				masterHideElement($('#clientSuccessQuestion'),200);
+					// RESET CLIENT SECOND ADVICE AGENCIES
+					masterHideElement($('#clientSecondAgency3'),0);
+					masterHideElement($('#clientSecondAgency2'),100);
+					masterHideElement($('#clientSecondAgency1'),200);
+					masterHideElement($('#clientSecondNext'),300);
+					masterHideElement($('#clientSecondAdvice'),450);
 
 
-				// RESET CLIENT SUCCESS VIDEO
-				masterHideElement($('#clientGetInfoBox'),0);
-				masterHideElement($('#clientIframe'),100);
+					// RESET CLIENT THIRD QUESTION: PERSONAL NAMES?
+					masterHideElement($('#clientThirdOption2'),0);
+					masterHideElement($('#clientThirdOption1'),200);
+					masterHideElement($('#clientThirdQuestion'),350);
 
-				setTimeout(function(){
-					$('#clientVideo').addClass('notHere');
-					$('#videoMasterWrapper').addClass('notHere');
-				},800);
+					// RESET CLIENT THIRD ADVICE AGENCIES
+					masterHideElement($('#clientThirdAgency3'),0);
+					masterHideElement($('#clientThirdAgency2'),100);
+					masterHideElement($('#clientThirdAgency1'),200);
+					masterHideElement($('#clientThirdNext'),300);
+					masterHideElement($('#clientThirdAdvice'),450);
 
 
-				// RESET CLIENT SUCCESS CONTACT INFO
-				$('#finalClientBackInfo').find('.finalArrow').addClass('hiddenArrow');
-				
-				masterHideElement($('#infoRSTitle3'),100);
-				masterHideElement($('#infoRSTitle2'),250);
-				masterHideElement($('#infoRSTitle1'),400);
+					// RESET CLIENT SUCCESS QUESTION: WANNA FLY?
+					masterHideElement($('#clientSuccessOption1'),0);
+					masterHideElement($('#clientSuccessQuestion'),200);
 
-				masterHideElement($('#finalInfoClient'),450);
+
+					// RESET CLIENT SUCCESS VIDEO
+					masterHideElement($('#clientGetInfoBox'),0);
+					masterHideElement($('#clientIframe'),100);
+
+					setTimeout(function(){
+						$('#clientVideo').addClass('notHere');
+						$('#videoMasterWrapper').addClass('notHere');
+					},800);
+
+
+					// RESET CLIENT SUCCESS CONTACT INFO
+					$('#finalClientBackInfo').find('.finalArrow').addClass('hiddenArrow');
+					
+					masterHideElement($('#infoRSTitle3'),100);
+					masterHideElement($('#infoRSTitle2'),250);
+					masterHideElement($('#infoRSTitle1'),400);
+
+					masterHideElement($('#finalInfoClient'),450);
+				// END RESET CLIENT
+
+				// RESET COMPETITION FLOW
+					// RESET COMPETITION FIRST QUESTION
+					masterHideElement($('#competitionFirstOption2'), 0);
+					masterHideElement($('#competitionFirstOption1'), 100);
+					masterHideElement($('#competitionFirstQuestion'), 200);
+
+
+					// RESET COMPETITION FIRST ADVICE
+					masterHideElement($('#competitionAnywayOption1'),0);
+					masterHideElement($('#competitionFirstAdvice'),150);
+				// END RESET COMPETITION
+
+				// RESET TALENT FLOW
+				// END RESET TALENT
 
 			});
 
@@ -358,10 +376,59 @@ jQuery(document).ready(function($) {
 								masterShowElement($('#clientGetInfoBox'),950);
 							});
 						// END CLICK BACK TO VIDEO
-				// END SUCCESS FLOW
-
-				
+				// END SUCCESS FLOW			
 		// END CLIENT FLOW
+
+		// WHO ARE YOU: COMPETITION FLOW
+			// I'M COMPETITION
+				$('#whoRUOption2').click(function() {
+					masterHideElement($('#whoRUOption3'),0);
+					masterHideElement($('#whoRUOption2'),200);
+					masterHideElement($('#whoRUOption1'),400);
+					masterHideElement($('#whoRUQuestion'),600);
+
+					setTimeout(function(){
+						$('#whoRUOptions').addClass('notHere');
+
+						masterShowElement($('#competitionFirstQuestion'),0);
+						masterShowElement($('#competitionFirstOption1'),400);
+						masterShowElement($('#competitionFirstOption2'),600);
+					},1200);
+				});
+			// END I'M COMPETITION
+
+			// FIRST QUESTION FLOW
+					// A) NO, IT'S NOT ENOUGH
+						$('#competitionFirstYes').click(function() {
+							masterHideElement($('#competitionFirstOption2'),0);
+							masterHideElement($('#competitionFirstOption1'),200);
+							masterHideElement($('#competitionFirstQuestion'),450);
+
+							setTimeout(function(){
+								masterShowElement($('#competitionFirstAdvice'),0);
+								masterShowElement($('#competitionAnywayOption1'),100);
+							},700);
+						});
+					// END A) NOT ENOUGH
+
+					// B) IT'S ENOUGH
+						$('#competitionFirstNo').click(function() {
+							masterHideElement($('#competitionFirstOption2'),0);
+							masterHideElement($('#competitionFirstOption1'),200);
+							masterHideElement($('#competitionFirstQuestion'),450);
+
+							setTimeout(function(){
+								masterShowElement($('#competitionFirstAdvice'),0);
+								masterShowElement($('#competitionAnywayOption1'),100);
+							},700);
+						});
+					// END B) ENOUGH
+				// END FIRST QUESTION FLOW
+		// END COMPETITION FLOW
+
+		// WHO ARE YOU: TALENT FLOW
+		// END TALENT FLOW
+
 
 
 
