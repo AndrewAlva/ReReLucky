@@ -118,6 +118,9 @@ jQuery(document).ready(function($) {
 					masterHideElement($('#infoRSTitle1'),400);
 
 					masterHideElement($('#finalInfoClient'),450);
+					setTimeout(function(){
+						$('#finalInfoClientWrapper').addClass('notHere');
+					},850);
 				// END RESET CLIENT
 
 				// RESET COMPETITION FLOW
@@ -345,6 +348,8 @@ jQuery(document).ready(function($) {
 								masterHideElement($('#clientGetInfoBox'),0);
 								masterHideElement($('#clientIframe'),100);
 
+								$('#finalInfoClientWrapper').removeClass('notHere');
+
 								setTimeout(function(){
 									$('#clientVideo').addClass('notHere');
 									$('#videoMasterWrapper').addClass('notHere');
@@ -371,6 +376,9 @@ jQuery(document).ready(function($) {
 								masterHideElement($('#infoRSTitle1'),350);
 
 								masterHideElement($('#finalInfoClient'),450);
+								setTimeout(function(){
+									$('#finalInfoClientWrapper').removeClass('notHere');
+								},850);
 
 								masterShowElement($('#clientIframe'),850);
 								masterShowElement($('#clientGetInfoBox'),950);
@@ -427,6 +435,70 @@ jQuery(document).ready(function($) {
 		// END COMPETITION FLOW
 
 		// WHO ARE YOU: TALENT FLOW
+			// I'M TALENT
+				$('#whoRUOption3').click(function() {
+					masterHideElement($('#whoRUOption3'),0);
+					masterHideElement($('#whoRUOption2'),200);
+					masterHideElement($('#whoRUOption1'),400);
+					masterHideElement($('#whoRUQuestion'),600);
+
+					setTimeout(function(){
+						$('#whoRUOptions').addClass('notHere');
+
+						masterShowElement($('#talentFirstQuestion'),0);
+						masterShowElement($('#talentFirstOption1'),150);
+						masterShowElement($('#talentFirstOption2'),300);
+					},1000);
+				});
+			// END I'M TALENT
+
+			// FIRST QUESTION FLOW
+					// A) I LIKE TO DRINK
+						$('#talentFirstYes').click(function() {
+							masterHideElement($('#talentFirstOption2'),0);
+							masterHideElement($('#talentFirstOption1'),200);
+							masterHideElement($('#talentFirstQuestion'),450);
+
+							setTimeout(function(){
+								masterShowElement($('#talentSecondQuestion'),0);
+								masterShowElement($('#talentSecondOption1'),400);
+								masterShowElement($('#talentSecondOption2'),600);
+							},850);
+						});
+					// END A) I DRINK
+
+					// B) I DON'T DRINK
+						$('#talentFirstNo').click(function() {
+							masterHideElement($('#talentFirstOption2'),0);
+							masterHideElement($('#talentFirstOption1'),200);
+							masterHideElement($('#talentFirstQuestion'),450);
+
+							setTimeout(function(){
+								masterShowElement($('#talentFirstAdvice'),600);
+								masterShowElement($('#talentFirstNext'),700);
+								masterShowElement($('#talentFirstAgency1'),750);
+								masterShowElement($('#talentFirstAgency2'),950);
+								masterShowElement($('#talentFirstAgency3'),1150);
+							},100);
+						});
+					// END B) I DON'T DRINK
+
+						// B)1) NEXT SLIDE
+							$('#talentFirstNext').click(function() {
+								masterHideElement($('#talentFirstNext'),0);
+								masterHideElement($('#talentFirstAgency3'),100);
+								masterHideElement($('#talentFirstAgency2'),300);
+								masterHideElement($('#talentFirstAgency1'),500);
+								masterHideElement($('#talentFirstAdvice'),650);
+
+								setTimeout(function(){
+									masterShowElement($('#talentSecondQuestion'),0);
+									masterShowElement($('#talentSecondOption1'),400);
+									masterShowElement($('#talentSecondOption2'),600);
+								},1100);
+							});
+						// END B)1) END NEXT SLIDE
+				// END FIRST QUESTION FLOW
 		// END TALENT FLOW
 
 
