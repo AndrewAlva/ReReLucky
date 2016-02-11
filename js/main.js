@@ -136,6 +136,70 @@ jQuery(document).ready(function($) {
 				// END RESET COMPETITION
 
 				// RESET TALENT FLOW
+
+					// RESET TALENT FIRST QUESTION FLOW: DO YOU DRINK?
+					masterHideElement($('#talentFirstOption2'),0);
+					masterHideElement($('#talentFirstOption1'),150);
+					masterHideElement($('#talentFirstQuestion'),300);
+
+					// RESET TALENT FIRST ADVICE AGENCIES
+					masterHideElement($('#talentFirstAgency3'),150);
+					masterHideElement($('#talentFirstAgency2'),300);
+					masterHideElement($('#talentFirstAgency1'),450);
+					masterHideElement($('#talentFirstNext'),550);
+					masterHideElement($('#talentFirstAdvice'),700);
+
+
+					// RESET TALENT SECOND QUESTION FLOW: 9AM TO 7PM?
+					masterHideElement($('#talentSecondOption2'),0);
+					masterHideElement($('#talentSecondOption1'),150);
+					masterHideElement($('#talentSecondQuestion'),300);
+
+					// RESET TALENT SECOND ADVICE AGENCIES
+					masterHideElement($('#talentSecondAgency3'),150);
+					masterHideElement($('#talentSecondAgency2'),300);
+					masterHideElement($('#talentSecondAgency1'),450);
+					masterHideElement($('#talentSecondNext'),550);
+					masterHideElement($('#talentSecondAdvice'),700);
+
+
+					// RESET TALENT THIRD QUESTION FLOW: OLDER THAN 30?
+					masterHideElement($('#talentThirdOption2'),0);
+					masterHideElement($('#talentThirdOption1'),150);
+					masterHideElement($('#talentThirdQuestion'),300);
+
+					// RESET TALENT THIRD ADVICE AGENCIES
+					masterHideElement($('#talentThirdAgency3'),150);
+					masterHideElement($('#talentThirdAgency2'),300);
+					masterHideElement($('#talentThirdAgency1'),450);
+					masterHideElement($('#talentThirdNext'),550);
+					masterHideElement($('#talentThirdAdvice'),700);
+
+
+					// RESET TALENT SUCCESS QUESTION
+					masterHideElement($('#talentSuccessOption2'),0);
+					masterHideElement($('#talentSuccessOption1'),150);
+					masterHideElement($('#talentSuccessQuestion'),300);
+
+						// RESET TALENT SUCCESS VIDEO
+						masterHideElement($('#talentGetInfoBox'),0);
+						masterHideElement($('#talentIframe'),150);
+
+						setTimeout(function(){
+							$('#talentVideo').addClass('notHere');
+							$('#videoMasterWrapper').addClass('notHere');
+						},800);
+
+						// RESET TALENT SUCCESS CODE
+						$('#talentSuccessAdviceBackInfo').find('.finalArrow').addClass('hiddenArrow');
+
+						masterHideElement($('#talentAdviceCode1'),0);
+						masterHideElement($('#talentSuccessAdvice'),200);
+
+						setTimeout(function(){
+							$('#talentSuccessAdviceWrapper').addClass('notHere');
+						},850);
+				
 				// END RESET TALENT
 
 			});
@@ -453,52 +517,224 @@ jQuery(document).ready(function($) {
 			// END I'M TALENT
 
 			// FIRST QUESTION FLOW
-					// A) I LIKE TO DRINK
-						$('#talentFirstYes').click(function() {
-							masterHideElement($('#talentFirstOption2'),0);
-							masterHideElement($('#talentFirstOption1'),200);
-							masterHideElement($('#talentFirstQuestion'),450);
+				// A) I LIKE TO DRINK
+					$('#talentFirstYes').click(function() {
+						masterHideElement($('#talentFirstOption2'),0);
+						masterHideElement($('#talentFirstOption1'),200);
+						masterHideElement($('#talentFirstQuestion'),450);
+
+						setTimeout(function(){
+							masterShowElement($('#talentSecondQuestion'),0);
+							masterShowElement($('#talentSecondOption1'),400);
+							masterShowElement($('#talentSecondOption2'),600);
+						},850);
+					});
+				// END A) I DRINK
+
+				// B) I DON'T DRINK
+					$('#talentFirstNo').click(function() {
+						masterHideElement($('#talentFirstOption2'),0);
+						masterHideElement($('#talentFirstOption1'),200);
+						masterHideElement($('#talentFirstQuestion'),450);
+
+						setTimeout(function(){
+							masterShowElement($('#talentFirstAdvice'),600);
+							masterShowElement($('#talentFirstNext'),700);
+							masterShowElement($('#talentFirstAgency1'),750);
+							masterShowElement($('#talentFirstAgency2'),950);
+							masterShowElement($('#talentFirstAgency3'),1150);
+						},100);
+					});
+				// END B) I DON'T DRINK
+
+					// B)1) NEXT SLIDE
+						$('#talentFirstNext').click(function() {
+							masterHideElement($('#talentFirstNext'),0);
+							masterHideElement($('#talentFirstAgency3'),100);
+							masterHideElement($('#talentFirstAgency2'),300);
+							masterHideElement($('#talentFirstAgency1'),500);
+							masterHideElement($('#talentFirstAdvice'),650);
 
 							setTimeout(function(){
 								masterShowElement($('#talentSecondQuestion'),0);
 								masterShowElement($('#talentSecondOption1'),400);
 								masterShowElement($('#talentSecondOption2'),600);
-							},850);
+							},1100);
 						});
-					// END A) I DRINK
+					// END B)1) END NEXT SLIDE
+			// END FIRST QUESTION FLOW
 
-					// B) I DON'T DRINK
-						$('#talentFirstNo').click(function() {
-							masterHideElement($('#talentFirstOption2'),0);
-							masterHideElement($('#talentFirstOption1'),200);
-							masterHideElement($('#talentFirstQuestion'),450);
+			// SECOND QUESTION FLOW
+				// A) I WON'T STAY AFTER 7PM
+					$('#talentSecondYes').click(function() {
+						masterHideElement($('#talentSecondOption2'),0);
+						masterHideElement($('#talentSecondOption1'),200);
+						masterHideElement($('#talentSecondQuestion'),450);
+
+						setTimeout(function(){
+							masterShowElement($('#talentSecondAdvice'),600);
+							masterShowElement($('#talentSecondNext'),700);
+							masterShowElement($('#talentSecondAgency1'),750);
+							masterShowElement($('#talentSecondAgency2'),950);
+							masterShowElement($('#talentSecondAgency3'),1150);
+						},100);
+					});
+				// END A) I WON'T STAY
+
+					// A)1) NEXT SLIDE
+						$('#talentSecondNext').click(function() {
+							masterHideElement($('#talentSecondNext'),0);
+							masterHideElement($('#talentSecondAgency3'),100);
+							masterHideElement($('#talentSecondAgency2'),300);
+							masterHideElement($('#talentSecondAgency1'),500);
+							masterHideElement($('#talentSecondAdvice'),650);
 
 							setTimeout(function(){
-								masterShowElement($('#talentFirstAdvice'),600);
-								masterShowElement($('#talentFirstNext'),700);
-								masterShowElement($('#talentFirstAgency1'),750);
-								masterShowElement($('#talentFirstAgency2'),950);
-								masterShowElement($('#talentFirstAgency3'),1150);
-							},100);
+								masterShowElement($('#talentThirdQuestion'),0);
+								masterShowElement($('#talentThirdOption1'),400);
+								masterShowElement($('#talentThirdOption2'),600);
+							},1100);
 						});
-					// END B) I DON'T DRINK
+					// END A)1) END NEXT SLIDE
 
-						// B)1) NEXT SLIDE
-							$('#talentFirstNext').click(function() {
-								masterHideElement($('#talentFirstNext'),0);
-								masterHideElement($('#talentFirstAgency3'),100);
-								masterHideElement($('#talentFirstAgency2'),300);
-								masterHideElement($('#talentFirstAgency1'),500);
-								masterHideElement($('#talentFirstAdvice'),650);
+				// B) I WILL STAY, I'M PASSIONATE
+					$('#talentSecondNo').click(function() {
+						masterHideElement($('#talentSecondOption2'),0);
+						masterHideElement($('#talentSecondOption1'),200);
+						masterHideElement($('#talentSecondQuestion'),450);
 
-								setTimeout(function(){
-									masterShowElement($('#talentSecondQuestion'),0);
-									masterShowElement($('#talentSecondOption1'),400);
-									masterShowElement($('#talentSecondOption2'),600);
-								},1100);
-							});
-						// END B)1) END NEXT SLIDE
-				// END FIRST QUESTION FLOW
+						setTimeout(function(){
+							masterShowElement($('#talentThirdQuestion'),0);
+							masterShowElement($('#talentThirdOption1'),400);
+							masterShowElement($('#talentThirdOption2'),600);
+						},850);
+					});
+				// END B) I WILL STAY, I'M PASSIONATE
+			// END SECOND QUESTION FLOW
+
+			// THIRD QUESTION FLOW
+				// A) I'M OLDER THAN 30
+					$('#talentThirdYes').click(function() {
+						masterHideElement($('#talentThirdOption2'),0);
+						masterHideElement($('#talentThirdOption1'),200);
+						masterHideElement($('#talentThirdQuestion'),450);
+
+						setTimeout(function(){
+							masterShowElement($('#talentThirdAdvice'),600);
+							masterShowElement($('#talentThirdNext'),700);
+							masterShowElement($('#talentThirdAgency1'),750);
+							masterShowElement($('#talentThirdAgency2'),950);
+							masterShowElement($('#talentThirdAgency3'),1150);
+						},100);
+					});
+				// END A) I'M OLDER THAN 30
+
+					// A)1) NEXT SLIDE
+						$('#talentThirdNext').click(function() {
+							masterHideElement($('#talentThirdNext'),0);
+							masterHideElement($('#talentThirdAgency3'),100);
+							masterHideElement($('#talentThirdAgency2'),300);
+							masterHideElement($('#talentThirdAgency1'),500);
+							masterHideElement($('#talentThirdAdvice'),650);
+
+							setTimeout(function(){
+								masterShowElement($('#talentSuccessQuestion'),0);
+								masterShowElement($('#talentSuccessOption1'),200);
+								masterShowElement($('#talentSuccessOption2'),400);
+							},1100);
+						});
+					// END A)1) END NEXT SLIDE
+
+				// B) I'M STILL YOUNG
+					$('#talentThirdNo').click(function() {
+						masterHideElement($('#talentThirdOption2'),0);
+						masterHideElement($('#talentThirdOption1'),200);
+						masterHideElement($('#talentThirdQuestion'),450);
+
+						setTimeout(function(){
+							masterShowElement($('#talentSuccessQuestion'),0);
+							masterShowElement($('#talentSuccessOption1'),200);
+							masterShowElement($('#talentSuccessOption2'),400);
+						},850);
+					});
+				// END B) I'M STILL YOUNG
+			// END THIRD QUESTION FLOW
+
+			// TALENT SUCCESS QUESTION FLOW
+				// I'D PREFER DOBLADA
+					$('#talentSuccessYes').click(function() {
+						masterHideElement($('#talentSuccessOption2'),0);
+						masterHideElement($('#talentSuccessOption1'),200);
+						masterHideElement($('#talentSuccessQuestion'),350);
+
+						setTimeout(function(){
+							$('#videoMasterWrapper').removeClass('notHere');
+							$('#talentVideo').removeClass('notHere');
+
+							masterShowElement($('#talentIframe'),100);
+							masterShowElement($('#talentGetInfoBox'),300);
+						},600);
+					});
+				// END I'D PREFER DOBLADA
+
+				// YES, I'D PREFER SUBTITULADA
+					$('#talentSuccessNo').click(function() {
+						masterHideElement($('#talentSuccessOption2'),0);
+						masterHideElement($('#talentSuccessOption1'),200);
+						masterHideElement($('#talentSuccessQuestion'),350);
+
+						setTimeout(function(){
+							$('#videoMasterWrapper').removeClass('notHere');
+							$('#talentVideo').removeClass('notHere');
+
+							masterShowElement($('#talentIframe'),100);
+							masterShowElement($('#talentGetInfoBox'),300);
+						},600);
+					});
+				// END YES, I'D PREFER SUBTITULADA
+
+
+					// CLICK HERE TO GET CODE
+						$('#talentInfoHere').click(function() {
+							masterHideElement($('#talentGetInfoBox'),0);
+							masterHideElement($('#talentIframe'),200);
+
+							$('#talentSuccessAdviceWrapper').removeClass('notHere');
+
+							setTimeout(function(){
+								$('#talentVideo').addClass('notHere');
+								$('#videoMasterWrapper').addClass('notHere');
+
+
+								$('#talentSuccessAdviceBackInfo').find('.finalArrow').removeClass('hiddenArrow');
+
+								masterShowElement($('#talentSuccessAdvice'),100);
+								masterShowElement($('#talentAdviceCode1'),300);
+							},800);
+						});
+					// END CLICK TO GET CODE
+
+
+					// CLICK HERE TO GO BACK TO VIDEO
+						$('#talentSuccessAdviceBackInfo').click(function() {
+
+							$('#talentSuccessAdviceBackInfo').find('.finalArrow').addClass('hiddenArrow');
+							masterHideElement($('#talentAdviceCode1'),0);
+							masterHideElement($('#talentSuccessAdvice'),200);
+
+							$('#talentVideo').removeClass('notHere');
+							$('#videoMasterWrapper').removeClass('notHere');
+
+							setTimeout(function(){
+								$('#talentSuccessAdviceWrapper').addClass('notHere');
+
+								masterShowElement($('#talentIframe'),0);
+								masterShowElement($('#talentGetInfoBox'),200);
+							},600);
+						});
+					// END CLICK TO GO BACK TO VIDEO
+
+			// END TALENT SUCCESS FLOW 
 		// END TALENT FLOW
 
 

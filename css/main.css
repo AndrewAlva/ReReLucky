@@ -930,7 +930,7 @@ body{
                     width: 66.66%;
                     height: 50px;
                     right: 16.66%;
-                    bottom: 130px;
+                    bottom: 100px;
                     color: #e5545e;
                     overflow: hidden;
 
@@ -943,7 +943,7 @@ body{
                     /*background-color: rgba(0,0,255,.5);*/
                 }
                 #nextSlideMaster:hover{
-                    right: 18%;
+                    right: 15%;
                     color: #0c171f;
                 }
                     #nextSlideMaster .nextSlideBox{
@@ -1039,6 +1039,7 @@ body{
                             margin: auto;
                             left: 0; right: 0;
                             bottom: 45px;
+                            opacity: .7;
 
                             text-align: center;
                             color: #9ea2a6;
@@ -1046,6 +1047,16 @@ body{
                             font-weight: 300;
                             font-size: 1vw;
                             cursor: pointer;
+
+                            -webkit-transition: bottom .3s ease-in-out, opacity .3s ease-in-out;
+                               -moz-transition: bottom .3s ease-in-out, opacity .3s ease-in-out;
+                                -ms-transition: bottom .3s ease-in-out, opacity .3s ease-in-out;
+                                 -o-transition: bottom .3s ease-in-out, opacity .3s ease-in-out;
+                                    transition: bottom .3s ease-in-out, opacity .3s ease-in-out;
+                        }
+                        #videoMasterWrapper .videoBox .infoHere:hover{
+                            bottom: 40px !important;
+                            opacity: 1 !important;
                         }
                             #videoMasterWrapper .videoBox .infoHere .extraGetInfoBox{
                                 position: absolute;
@@ -1074,6 +1085,7 @@ body{
                     margin: auto;
                     right: 20%;
                     bottom: 45px;
+                    opacity: .7;
 
                     text-align: center;
                     color: #9ea2a6;
@@ -1082,7 +1094,17 @@ body{
                     font-size: 1vw;
                     cursor: pointer;
 
+                    -webkit-transition: bottom .3s ease-in-out, opacity .3s ease-in-out;
+                       -moz-transition: bottom .3s ease-in-out, opacity .3s ease-in-out;
+                        -ms-transition: bottom .3s ease-in-out, opacity .3s ease-in-out;
+                         -o-transition: bottom .3s ease-in-out, opacity .3s ease-in-out;
+                            transition: bottom .3s ease-in-out, opacity .3s ease-in-out;
+
                     /*background-color: rgba(255,0,0,.5);*/
+                }
+                #quoteMaster .backToVideo:hover{
+                    bottom: 50px !important;
+                    opacity: 1 !important;
                 }
 
                 /* BACK ARROW ANIMATION CLASSES */
