@@ -798,11 +798,11 @@ body{
                                                  -o-font-smoothing: antialiased;
                                                     font-smoothing: antialiased;
 
-                                            -webkit-transition: all 1s cubic-bezier(.53,0,0,1);
-                                               -moz-transition: all 1s cubic-bezier(.53,0,0,1);
-                                                -ms-transition: all 1s cubic-bezier(.53,0,0,1);
-                                                 -o-transition: all 1s cubic-bezier(.53,0,0,1);
-                                                    transition: all 1s cubic-bezier(.53,0,0,1);
+                                            -webkit-transition: all .5s cubic-bezier(.53,0,0,1);
+                                               -moz-transition: all .5s cubic-bezier(.53,0,0,1);
+                                                -ms-transition: all .5s cubic-bezier(.53,0,0,1);
+                                                 -o-transition: all .5s cubic-bezier(.53,0,0,1);
+                                                    transition: all .5s cubic-bezier(.53,0,0,1);
                                         }
                     /* END SOCIAL MEDIA OPTIONS */
 

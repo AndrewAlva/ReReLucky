@@ -34,196 +34,158 @@ jQuery(document).ready(function($) {
 	// NAVIGATION FLOW
 		// LABEL BUTTON RESET FULL PAGE
 			$('#luckyLabel').click(function() {
-				// HIDE WHO ARE YOU ELEMENTS
-				masterHideElement($('#whoRUOption3'),0);
-				masterHideElement($('#whoRUOption2'),200);
-				masterHideElement($('#whoRUOption1'),400);
-				masterHideElement($('#whoRUQuestion'),550);
-				
-				
-
-				// SHOW INTRO
-				$('#welcomePage').removeClass('notHere');
-				// RESET WHO ARE YOU OPTIONS
-				$('#whoRUOptions').removeClass('notHere');
-				
-
-				// RESET MASKING CURRENT PAGE OBJECTS
-				setTimeout(function(){
-					$('.welcomeLogoToPush').removeClass('pushWelcomeLogo');
-					$('.innerStartWeb').removeClass('pushStartWeb');
-				},700);
-
-				// RESET CLIENT FLOW
-
-					// RESET CLIENT FIRST QUESTION FLOW: CONNECT?
-					masterHideElement($('#clientFirstOption2'),0);
-					masterHideElement($('#clientFirstOption1'),200);
-					masterHideElement($('#clientFirstQuestion'),350);
-
-					// RESET CLIENT FIRST ADVICE AGENCIES
-					masterHideElement($('#clientFirstAgency3'),0);
-					masterHideElement($('#clientFirstAgency2'),100);
-					masterHideElement($('#clientFirstAgency1'),200);
-					masterHideElement($('#clientFirstNext'),300);
-					masterHideElement($('#clientFirstAdvice'),450);
+				// masterResetLucky();
+				// setTimeout(function(){
+				// 	masterResetLucky();
+				// },1500);
+				window.location.href = "";
+			});
+		// END LABEL RESET FULL PAGE
 
 
-					// RESET CLIENT SECOND QUESTION: FEAR?
-					masterHideElement($('#clientSecondOption2'),0);
-					masterHideElement($('#clientSecondOption1'),200);
-					masterHideElement($('#clientSecondQuestion'),350);
+		// MENU SHORTCUTS
 
-					// RESET CLIENT SECOND ADVICE AGENCIES
-					masterHideElement($('#clientSecondAgency3'),0);
-					masterHideElement($('#clientSecondAgency2'),100);
-					masterHideElement($('#clientSecondAgency1'),200);
-					masterHideElement($('#clientSecondNext'),300);
-					masterHideElement($('#clientSecondAdvice'),450);
+			// SHOW CLIENT FIRST QUESTION
+			$('#menuTitle1').click(function() {
+				if(curtEnd){
 
-
-					// RESET CLIENT THIRD QUESTION: PERSONAL NAMES?
-					masterHideElement($('#clientThirdOption2'),0);
-					masterHideElement($('#clientThirdOption1'),200);
-					masterHideElement($('#clientThirdQuestion'),350);
-
-					// RESET CLIENT THIRD ADVICE AGENCIES
-					masterHideElement($('#clientThirdAgency3'),0);
-					masterHideElement($('#clientThirdAgency2'),100);
-					masterHideElement($('#clientThirdAgency1'),200);
-					masterHideElement($('#clientThirdNext'),300);
-					masterHideElement($('#clientThirdAdvice'),450);
-
-
-					// RESET CLIENT SUCCESS QUESTION: WANNA FLY?
-					masterHideElement($('#clientSuccessOption1'),0);
-					masterHideElement($('#clientSuccessQuestion'),200);
-
-
-					// RESET CLIENT SUCCESS VIDEO
-					masterHideElement($('#clientGetInfoBox'),0);
-					masterHideElement($('#clientIframe'),100);
+					masterResetLucky();
+					masterCloseCurtain();
 
 					setTimeout(function(){
-						$('#clientVideo').addClass('notHere');
-						$('#videoMasterWrapper').addClass('notHere');
+						$('.welcomeLogoToPush').addClass('pushWelcomeLogo');
+						$('.innerStartWeb').addClass('pushStartWeb');
+
+						setTimeout(function(){
+
+							$('#welcomePage').addClass('notHere');
+							$('#whoRUOptions').addClass('notHere');
+
+							masterShowElement($('#clientFirstQuestion'),200);
+							masterShowElement($('#clientFirstOption1'),600);
+							masterShowElement($('#clientFirstOption2'),800);
+
+						},1000);
 					},800);
+				}
+			});
 
 
-					// RESET CLIENT SUCCESS CONTACT INFO
-					$('#finalClientBackInfo').find('.finalArrow').addClass('hiddenArrow');
-					
-					masterHideElement($('#infoRSTitle3'),100);
-					masterHideElement($('#infoRSTitle2'),250);
-					masterHideElement($('#infoRSTitle1'),400);
-
-					masterHideElement($('#finalInfoClient'),450);
-					setTimeout(function(){
-						$('#finalInfoClientWrapper').addClass('notHere');
-					},850);
-				// END RESET CLIENT
-
-				// RESET COMPETITION FLOW
-					// RESET COMPETITION FIRST QUESTION
-					masterHideElement($('#competitionFirstOption2'), 0);
-					masterHideElement($('#competitionFirstOption1'), 100);
-					masterHideElement($('#competitionFirstQuestion'), 200);
-
-
-					// RESET COMPETITION FIRST ADVICE
-					masterHideElement($('#competitionAnywayOption1'),0);
-					masterHideElement($('#competitionFirstAdvice'),150);
-				// END RESET COMPETITION
-
-				// RESET TALENT FLOW
-
-					// RESET TALENT FIRST QUESTION FLOW: DO YOU DRINK?
-					masterHideElement($('#talentFirstOption2'),0);
-					masterHideElement($('#talentFirstOption1'),150);
-					masterHideElement($('#talentFirstQuestion'),300);
-
-					// RESET TALENT FIRST ADVICE AGENCIES
-					masterHideElement($('#talentFirstAgency3'),150);
-					masterHideElement($('#talentFirstAgency2'),300);
-					masterHideElement($('#talentFirstAgency1'),450);
-					masterHideElement($('#talentFirstNext'),550);
-					masterHideElement($('#talentFirstAdvice'),700);
-
-
-					// RESET TALENT SECOND QUESTION FLOW: 9AM TO 7PM?
-					masterHideElement($('#talentSecondOption2'),0);
-					masterHideElement($('#talentSecondOption1'),150);
-					masterHideElement($('#talentSecondQuestion'),300);
-
-					// RESET TALENT SECOND ADVICE AGENCIES
-					masterHideElement($('#talentSecondAgency3'),150);
-					masterHideElement($('#talentSecondAgency2'),300);
-					masterHideElement($('#talentSecondAgency1'),450);
-					masterHideElement($('#talentSecondNext'),550);
-					masterHideElement($('#talentSecondAdvice'),700);
-
-
-					// RESET TALENT THIRD QUESTION FLOW: OLDER THAN 30?
-					masterHideElement($('#talentThirdOption2'),0);
-					masterHideElement($('#talentThirdOption1'),150);
-					masterHideElement($('#talentThirdQuestion'),300);
-
-					// RESET TALENT THIRD ADVICE AGENCIES
-					masterHideElement($('#talentThirdAgency3'),150);
-					masterHideElement($('#talentThirdAgency2'),300);
-					masterHideElement($('#talentThirdAgency1'),450);
-					masterHideElement($('#talentThirdNext'),550);
-					masterHideElement($('#talentThirdAdvice'),700);
-
-
-					// RESET TALENT SUCCESS QUESTION
-					masterHideElement($('#talentSuccessOption2'),0);
-					masterHideElement($('#talentSuccessOption1'),150);
-					masterHideElement($('#talentSuccessQuestion'),300);
-
-						// RESET TALENT SUCCESS VIDEO
-						masterHideElement($('#talentGetInfoBox'),0);
-						masterHideElement($('#talentIframe'),150);
-
-						setTimeout(function(){
-							$('#talentVideo').addClass('notHere');
-							$('#videoMasterWrapper').addClass('notHere');
-						},800);
-
-						// RESET TALENT SUCCESS CODE
-						$('#talentSuccessAdviceBackInfo').find('.finalArrow').addClass('hiddenArrow');
-
-						masterHideElement($('#talentAdviceCode1'),0);
-						masterHideElement($('#talentSuccessAdvice'),200);
-
-						setTimeout(function(){
-							$('#talentSuccessAdviceWrapper').addClass('notHere');
-						},850);
+			// SHOW TALENT FIRST QUESTION
+			$('#menuTitle2').click(function() {
 				
-				// END RESET TALENT
+				if(curtEnd){
+					masterResetLucky();
+					masterCloseCurtain();
+
+					setTimeout(function(){
+						$('.welcomeLogoToPush').addClass('pushWelcomeLogo');
+						$('.innerStartWeb').addClass('pushStartWeb');
+
+						setTimeout(function(){
+
+							$('#welcomePage').addClass('notHere');
+							$('#whoRUOptions').addClass('notHere');
+
+							masterShowElement($('#competitionFirstQuestion'),200);
+							masterShowElement($('#competitionFirstOption1'),600);
+							masterShowElement($('#competitionFirstOption2'),800);
+
+						},1000);
+					},800);
+				}
+			});
+
+
+			// SHOW COMPETITION FIRST QUESTION
+			$('#menuTitle3').click(function() {
+
+				if(curtEnd){
+					masterResetLucky();
+					masterCloseCurtain();
+
+					setTimeout(function(){
+						$('.welcomeLogoToPush').addClass('pushWelcomeLogo');
+						$('.innerStartWeb').addClass('pushStartWeb');
+
+						setTimeout(function(){
+
+							$('#welcomePage').addClass('notHere');
+							$('#whoRUOptions').addClass('notHere');
+
+							masterShowElement($('#talentFirstQuestion'),200);
+							masterShowElement($('#talentFirstOption1'),600);
+							masterShowElement($('#talentFirstOption2'),800);
+
+						},1000);
+					},800);
+				}
 
 			});
 
-		// END LABEL RESET FULL PAGE
+
+			// SHOW CLIENT FINAL INFORMATION
+			$('#menuTitle4').click(function() {
+				if(curtEnd){
+					masterResetLucky();
+					masterCloseCurtain();
+
+					setTimeout(function(){
+						$('.welcomeLogoToPush').addClass('pushWelcomeLogo');
+						$('.innerStartWeb').addClass('pushStartWeb');
+
+						setTimeout(function(){
+
+							$('#welcomePage').addClass('notHere');
+							$('#whoRUOptions').addClass('notHere');
+
+							$('#finalInfoClientWrapper').removeClass('notHere');
+
+							setTimeout(function(){
+								$('#clientVideo').addClass('notHere');
+								$('#videoMasterWrapper').addClass('notHere');
+
+								masterShowElement($('#finalInfoClient'),100);
+								$('#finalClientBackInfo').find('.finalArrow').removeClass('hiddenArrow');
+
+								masterShowElement($('#infoRSTitle1'),200);
+								masterShowElement($('#infoRSTitle2'),350);
+								masterShowElement($('#infoRSTitle3'),500);
+							},100);
+
+						},1000);
+					},800);
+				}
+			});
+
+
+		// END MENU
 
 
 
 		// INTRO
 			$('#startWeb').click(function() {
-				$('.welcomeLogoToPush').addClass('pushWelcomeLogo');
-				$('.innerStartWeb').addClass('pushStartWeb');
+				if(curtEnd){
+					curtEnd = false;
+					$('.welcomeLogoToPush').addClass('pushWelcomeLogo');
+					$('.innerStartWeb').addClass('pushStartWeb');
 
-				setTimeout(function(){
-					// HIDE INTRO				
-					$('#welcomePage').addClass('notHere');
+					setTimeout(function(){
+						// HIDE INTRO				
+						$('#welcomePage').addClass('notHere');
 
-					// SHOW WHO ARE YOU ELEMENTS
-					masterShowElement($('#whoRUQuestion'),0);
-					masterShowElement($('#whoRUOption1'),150);
-					masterShowElement($('#whoRUOption2'),350);
-					masterShowElement($('#whoRUOption3'),550);
+						// SHOW WHO ARE YOU ELEMENTS
+						masterShowElement($('#whoRUQuestion'),0);
+						masterShowElement($('#whoRUOption1'),150);
+						masterShowElement($('#whoRUOption2'),350);
+						masterShowElement($('#whoRUOption3'),550);
 
-				},600);
+						setTimeout(function(){
+							curtEnd = true;
+						},1000);
+
+					},600);
+				}
 			});
 		// END INTRO
 
@@ -753,6 +715,179 @@ jQuery(document).ready(function($) {
 				},setDelay);
 			}
 		// END MASTER SHOW/HIDE
+
+		// MASTER RESET FUNCTION
+			function masterResetLucky(){
+
+				// HIDE WHO ARE YOU ELEMENTS
+				masterHideElement($('#whoRUOption3'),0);
+				masterHideElement($('#whoRUOption2'),200);
+				masterHideElement($('#whoRUOption1'),400);
+				masterHideElement($('#whoRUQuestion'),550);
+				
+				
+
+				// SHOW INTRO
+				$('#welcomePage').removeClass('notHere');
+				// RESET WHO ARE YOU OPTIONS
+				$('#whoRUOptions').removeClass('notHere');
+				
+
+				// RESET MASKING CURRENT PAGE OBJECTS
+				setTimeout(function(){
+					$('.welcomeLogoToPush').removeClass('pushWelcomeLogo');
+					$('.innerStartWeb').removeClass('pushStartWeb');
+				},700);
+
+				// RESET CLIENT FLOW
+
+					// RESET CLIENT FIRST QUESTION FLOW: CONNECT?
+					masterHideElement($('#clientFirstOption2'),0);
+					masterHideElement($('#clientFirstOption1'),200);
+					masterHideElement($('#clientFirstQuestion'),350);
+
+					// RESET CLIENT FIRST ADVICE AGENCIES
+					masterHideElement($('#clientFirstAgency3'),0);
+					masterHideElement($('#clientFirstAgency2'),100);
+					masterHideElement($('#clientFirstAgency1'),200);
+					masterHideElement($('#clientFirstNext'),300);
+					masterHideElement($('#clientFirstAdvice'),450);
+
+
+					// RESET CLIENT SECOND QUESTION: FEAR?
+					masterHideElement($('#clientSecondOption2'),0);
+					masterHideElement($('#clientSecondOption1'),200);
+					masterHideElement($('#clientSecondQuestion'),350);
+
+					// RESET CLIENT SECOND ADVICE AGENCIES
+					masterHideElement($('#clientSecondAgency3'),0);
+					masterHideElement($('#clientSecondAgency2'),100);
+					masterHideElement($('#clientSecondAgency1'),200);
+					masterHideElement($('#clientSecondNext'),300);
+					masterHideElement($('#clientSecondAdvice'),450);
+
+
+					// RESET CLIENT THIRD QUESTION: PERSONAL NAMES?
+					masterHideElement($('#clientThirdOption2'),0);
+					masterHideElement($('#clientThirdOption1'),200);
+					masterHideElement($('#clientThirdQuestion'),350);
+
+					// RESET CLIENT THIRD ADVICE AGENCIES
+					masterHideElement($('#clientThirdAgency3'),0);
+					masterHideElement($('#clientThirdAgency2'),100);
+					masterHideElement($('#clientThirdAgency1'),200);
+					masterHideElement($('#clientThirdNext'),300);
+					masterHideElement($('#clientThirdAdvice'),450);
+
+
+					// RESET CLIENT SUCCESS QUESTION: WANNA FLY?
+					masterHideElement($('#clientSuccessOption1'),0);
+					masterHideElement($('#clientSuccessQuestion'),200);
+
+
+					// RESET CLIENT SUCCESS VIDEO
+					masterHideElement($('#clientGetInfoBox'),0);
+					masterHideElement($('#clientIframe'),100);
+
+					setTimeout(function(){
+						$('#clientVideo').addClass('notHere');
+						$('#videoMasterWrapper').addClass('notHere');
+					},800);
+
+
+					// RESET CLIENT SUCCESS CONTACT INFO
+					$('#finalClientBackInfo').find('.finalArrow').addClass('hiddenArrow');
+					
+					masterHideElement($('#infoRSTitle3'),100);
+					masterHideElement($('#infoRSTitle2'),250);
+					masterHideElement($('#infoRSTitle1'),400);
+
+					masterHideElement($('#finalInfoClient'),450);
+					setTimeout(function(){
+						$('#finalInfoClientWrapper').addClass('notHere');
+					},850);
+				// END RESET CLIENT
+
+				// RESET COMPETITION FLOW
+					// RESET COMPETITION FIRST QUESTION
+					masterHideElement($('#competitionFirstOption2'), 0);
+					masterHideElement($('#competitionFirstOption1'), 100);
+					masterHideElement($('#competitionFirstQuestion'), 200);
+
+
+					// RESET COMPETITION FIRST ADVICE
+					masterHideElement($('#competitionAnywayOption1'),0);
+					masterHideElement($('#competitionFirstAdvice'),150);
+				// END RESET COMPETITION
+
+				// RESET TALENT FLOW
+
+					// RESET TALENT FIRST QUESTION FLOW: DO YOU DRINK?
+					masterHideElement($('#talentFirstOption2'),0);
+					masterHideElement($('#talentFirstOption1'),150);
+					masterHideElement($('#talentFirstQuestion'),300);
+
+					// RESET TALENT FIRST ADVICE AGENCIES
+					masterHideElement($('#talentFirstAgency3'),150);
+					masterHideElement($('#talentFirstAgency2'),300);
+					masterHideElement($('#talentFirstAgency1'),450);
+					masterHideElement($('#talentFirstNext'),550);
+					masterHideElement($('#talentFirstAdvice'),700);
+
+
+					// RESET TALENT SECOND QUESTION FLOW: 9AM TO 7PM?
+					masterHideElement($('#talentSecondOption2'),0);
+					masterHideElement($('#talentSecondOption1'),150);
+					masterHideElement($('#talentSecondQuestion'),300);
+
+					// RESET TALENT SECOND ADVICE AGENCIES
+					masterHideElement($('#talentSecondAgency3'),150);
+					masterHideElement($('#talentSecondAgency2'),300);
+					masterHideElement($('#talentSecondAgency1'),450);
+					masterHideElement($('#talentSecondNext'),550);
+					masterHideElement($('#talentSecondAdvice'),700);
+
+
+					// RESET TALENT THIRD QUESTION FLOW: OLDER THAN 30?
+					masterHideElement($('#talentThirdOption2'),0);
+					masterHideElement($('#talentThirdOption1'),150);
+					masterHideElement($('#talentThirdQuestion'),300);
+
+					// RESET TALENT THIRD ADVICE AGENCIES
+					masterHideElement($('#talentThirdAgency3'),150);
+					masterHideElement($('#talentThirdAgency2'),300);
+					masterHideElement($('#talentThirdAgency1'),450);
+					masterHideElement($('#talentThirdNext'),550);
+					masterHideElement($('#talentThirdAdvice'),700);
+
+
+					// RESET TALENT SUCCESS QUESTION
+					masterHideElement($('#talentSuccessOption2'),0);
+					masterHideElement($('#talentSuccessOption1'),150);
+					masterHideElement($('#talentSuccessQuestion'),300);
+
+						// RESET TALENT SUCCESS VIDEO
+						masterHideElement($('#talentGetInfoBox'),0);
+						masterHideElement($('#talentIframe'),150);
+
+						setTimeout(function(){
+							$('#talentVideo').addClass('notHere');
+							$('#videoMasterWrapper').addClass('notHere');
+						},800);
+
+						// RESET TALENT SUCCESS CODE
+						$('#talentSuccessAdviceBackInfo').find('.finalArrow').addClass('hiddenArrow');
+
+						masterHideElement($('#talentAdviceCode1'),0);
+						masterHideElement($('#talentSuccessAdvice'),200);
+
+						setTimeout(function(){
+							$('#talentSuccessAdviceWrapper').addClass('notHere');
+						},850);
+				
+				// END RESET TALENT
+			}
+		// END MASTER RESET
 	// END NAVIGATION FLOW
 
 
@@ -845,57 +980,7 @@ jQuery(document).ready(function($) {
 
 
 		$('#crossWrap').click(function() {
-			if (curtEnd){
-
-				// TURN OFF TRIGGER
-				curtEnd = false;
-
-
-				
-				// CURTAINS ANIMATION
-					hideMenuTitles();
-					hideRsTitles();
-					
-					setTimeout(function(){
-						curtainClose();
-					},1200);
-
-					setTimeout(function(){
-						$('#curtainDivision').removeClass('op10');
-						$('#curtainDivision').removeClass('bringToFront');
-
-						// TRIGGER BUTTON ANIMATION
-							$('#crossCloseMenu').addClass('hiddenCross');
-							$('#threeLinesWrap').removeClass('notHere');
-
-							setTimeout(function(){
-								$('.menuLines').removeClass('hideThreeLine');
-							},350)
-						// END TRIGGER BUTTON ANIMATION
-					},1500);
-
-					setTimeout(function(){
-						$('#curtainWrapper').addClass('notHere');
-
-						// WINDOW MENU ANIMATION
-							$('#menuWindow').addClass('notHere');
-						// END WINDOW MENU
-
-						// LABEL LOGO ANIMATION
-							$('#luckyLabel').removeClass('hideLabel');
-						// END LABEL
-					},2200);
-				// END CURTAINS
-
-				// ACTIVE MENU TRIGGER AGAIN
-				setTimeout(function(){
-					curtEnd = true;
-				},2900);
-			}
-
-
-
-
+			masterCloseCurtain();
 		});
 
 		// CURTAIN TRANSITIONS TRIGGER
@@ -1121,6 +1206,59 @@ jQuery(document).ready(function($) {
 				}
 			}
 		// END RSS FUNCTIONS
+
+
+		// MASTER CLOSE MENU CURTAIN FUNCTION
+			function masterCloseCurtain(){
+				if (curtEnd){
+
+					// TURN OFF TRIGGER
+					curtEnd = false;
+
+
+					
+					// CURTAINS ANIMATION
+						hideMenuTitles();
+						hideRsTitles();
+						
+						setTimeout(function(){
+							curtainClose();
+						},1200);
+
+						setTimeout(function(){
+							$('#curtainDivision').removeClass('op10');
+							$('#curtainDivision').removeClass('bringToFront');
+
+							// TRIGGER BUTTON ANIMATION
+								$('#crossCloseMenu').addClass('hiddenCross');
+								$('#threeLinesWrap').removeClass('notHere');
+
+								setTimeout(function(){
+									$('.menuLines').removeClass('hideThreeLine');
+								},350)
+							// END TRIGGER BUTTON ANIMATION
+						},1500);
+
+						setTimeout(function(){
+							$('#curtainWrapper').addClass('notHere');
+
+							// WINDOW MENU ANIMATION
+								$('#menuWindow').addClass('notHere');
+							// END WINDOW MENU
+
+							// LABEL LOGO ANIMATION
+								$('#luckyLabel').removeClass('hideLabel');
+							// END LABEL
+						},2200);
+					// END CURTAINS
+
+					// ACTIVE MENU TRIGGER AGAIN
+					setTimeout(function(){
+						curtEnd = true;
+					},2900);
+				}
+			}
+		// END MASTER CLOSE MENU FUNCTION
 	// END MENU TRIGGER INTERACTION
 
 
