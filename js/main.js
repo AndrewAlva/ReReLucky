@@ -46,7 +46,7 @@ jQuery(document).ready(function($) {
 		// MENU SHORTCUTS
 
 			// SHOW CLIENT FIRST QUESTION
-			$('#menuTitle1').click(function() {
+			$('#startClient').click(function() {
 				if(curtEnd){
 
 					masterResetLucky();
@@ -71,8 +71,8 @@ jQuery(document).ready(function($) {
 			});
 
 
-			// SHOW TALENT FIRST QUESTION
-			$('#menuTitle2').click(function() {
+			// SHOW COMPETITION FIRST QUESTION
+			$('#startCompetition').click(function() {
 				
 				if(curtEnd){
 					masterResetLucky();
@@ -97,8 +97,8 @@ jQuery(document).ready(function($) {
 			});
 
 
-			// SHOW COMPETITION FIRST QUESTION
-			$('#menuTitle3').click(function() {
+			// SHOW TALENT FIRST QUESTION
+			$('#startTalent').click(function() {
 
 				if(curtEnd){
 					masterResetLucky();
@@ -125,7 +125,7 @@ jQuery(document).ready(function($) {
 
 
 			// SHOW CLIENT FINAL INFORMATION
-			$('#menuTitle4').click(function() {
+			$('#startInfo').click(function() {
 				if(curtEnd){
 					masterResetLucky();
 					masterCloseCurtain();
@@ -1119,7 +1119,7 @@ jQuery(document).ready(function($) {
 					if(menuTitleLoopCount < 5){
 						showMenuTitles();
 					}
-				},250);
+				},180);
 
 			}
 
@@ -1144,7 +1144,7 @@ jQuery(document).ready(function($) {
 				if(menuTitleLoopCount > 1){
 					setTimeout(function(){
 						hideMenuTitles();
-					},250);
+					},180);
 				}
 			}
 		// END MENU TITLES FUNCTIONS
@@ -1223,7 +1223,7 @@ jQuery(document).ready(function($) {
 						
 						setTimeout(function(){
 							curtainClose();
-						},1200);
+						},800);
 
 						setTimeout(function(){
 							$('#curtainDivision').removeClass('op10');
