@@ -1,5 +1,6 @@
 jQuery(document).ready(function($) {
 
+	var allDivs = $('div');
 	// SET UI COLOURS ON TIME
 		// var today = new Date();
 		// var todayHour = today.getHours();
@@ -167,6 +168,7 @@ jQuery(document).ready(function($) {
 			$('#startWeb').click(function() {
 				if(curtEnd){
 					curtEnd = false;
+					allDivs.addClass('waitPlease');
 					$('.welcomeLogoToPush').addClass('pushWelcomeLogo');
 					$('.innerStartWeb').addClass('pushStartWeb');
 
@@ -182,6 +184,7 @@ jQuery(document).ready(function($) {
 
 						setTimeout(function(){
 							curtEnd = true;
+							allDivs.removeClass('waitPlease');
 						},1000);
 
 					},600);
@@ -933,6 +936,7 @@ jQuery(document).ready(function($) {
 			if (curtEnd){
 				// TURN OFF TRIGGER
 				curtEnd = false;
+				allDivs.addClass('waitPlease');
 
 
 				// LABEL LOGO ANIMATION
@@ -973,6 +977,7 @@ jQuery(document).ready(function($) {
 				// ACTIVE MENU TRIGGER AGAIN
 				setTimeout(function(){
 					curtEnd = true;
+					allDivs.removeClass('waitPlease');
 				},2900);
 			}
 
@@ -1214,6 +1219,7 @@ jQuery(document).ready(function($) {
 
 					// TURN OFF TRIGGER
 					curtEnd = false;
+					allDivs.addClass('waitPlease');
 
 
 					
@@ -1255,6 +1261,7 @@ jQuery(document).ready(function($) {
 					// ACTIVE MENU TRIGGER AGAIN
 					setTimeout(function(){
 						curtEnd = true;
+						allDivs.removeClass('waitPlease');
 					},2900);
 				}
 			}

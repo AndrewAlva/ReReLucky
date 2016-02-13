@@ -281,6 +281,8 @@ body{
         #curtainDivision .curtains{
             width: .9px;
             background-color: #f1f1f2;
+            opacity: .50;
+            filter: alpha(opacity=50);
         }
         #curtainWrapper .curtains{
             width: 11.111%;
@@ -1409,7 +1411,42 @@ body{
 
 /*///// RESPONSIVE STYLING /////*/
     /*///// LAPTOP STYLING /////*/
-        @media (min-width: 992px) and (max-width: 1199px){}
+        @media (min-width: 992px) and (max-width: 1199px){
+            /* CURTAINS */
+                #curtainDivision .curtains{
+                    width: 1px;
+                }
+            /* END CURTAINS */
+
+
+            /* INFO MASTER */
+                /* CONTACTO FINAL CLIENTE */
+                    #quoteMaster .infoBox a{
+                        padding: 15px 25px 15px 25px;
+                    }
+                /* END CONTACTO FINAL CLIENTE */
+            /* END INFO MASTER */
+
+
+            /* OPTIONS MASTER */
+                /* OPTIONS HOVER ANIMATE */
+                    #optionsMasterWrapper .placeAnimated .innerAnimateComment h3{
+                        font-size: 1.55vw;
+                    }
+
+
+                    #optionsMasterWrapper .placeAnimated .oneLine h3{
+                        height: 1.85vw;
+                    }
+                    #optionsMasterWrapper .placeAnimated .twoLines h3{
+                        height: 3.6vw;
+                    }
+                    #optionsMasterWrapper .placeAnimated .fourLines h3{
+                        height: 7.2vw;
+                    }
+                /* END OPTIONS HOVER ANIMATE */
+            /* END OPTIONS MASTER */
+        }
     /*///// END LAPTOP STYLING /////*/
 
 
@@ -1417,13 +1454,96 @@ body{
         @media (min-width: 768px) and (max-width: 991px){
             #windowWrapper{
                 min-height: 507px;
-            }            
+            }
+
+            /* CURTAINS */
+                .curtain-1{
+                    left: -10%;
+                }
+                .curtain-2{
+                    left: 10%;
+                }
+                .curtain-3{
+                    left: 30%;
+                }
+                .curtain-4{
+                    left: 50%;
+                }
+                .curtain-5{
+                    left: 70%;
+                }
+                .curtain-6{
+                    left: 90%;
+                }
+
+                .curtain-7, .curtain-8, .curtain-9{
+                    left: 100%;
+                }
+
+                #curtainDivision .curtains{
+                    width: 1.9px;
+                    opacity: .80;
+                    filter: alpha(opacity=80);
+                }
+
+                #curtainWrapper .curtains{
+                    width: 20%;
+                }
+            /* END CURTAINS */
+
+
+            /* MENU TITLES */
+                #titlesWrapper{
+                    width: 100%;
+                    height: 360px;
+                    left: 0%;
+                    top: 20%;
+                    bottom: auto;
+                }
+
+                    #titlesWrapper .fullMenuTitles{
+                        width: 40%;
+                        margin: auto;
+                        left: 0; right: 0;
+                        opacity: 1;
+                        filter: alpha(opacity=100);
+                    }
+
+                        #titlesWrapper .fullMenuTitles a{
+                            width: 100%;
+                            left: 0%;
+                        }
+
+                            #titlesWrapper .fullMenuTitles .innerMenuTitle h2{
+                                height: 5vw;
+                                font-size: 5vw;
+                                text-align: center;
+                            }
+
+                #rsWrapper{
+                    width: 40%;
+                    height: 240px;
+                    left: 0;
+                    right: 0;
+                    top: auto;
+                    bottom: 10%;
+                }
+
+                        #rsWrapper .fullRSTitles .innerRSTitles h5{
+                            font-size: 3.5vw;
+                            text-align: center;
+                        }
+            /* END MENU TITLES */
+
+
+            /* LANDING SCREEN */
+            /* END LANDING SCREEN */         
         }
 
         /*///// PORTRAIT SPECIAL TABLET STYLING /////*/
-        @media (min-width: 500px) and (max-width: 991px) and (orientation:portrait){}
+            @media (min-width: 500px) and (max-width: 991px) and (orientation:portrait){
+            }
         /*///// END PORTRAIT SPECIAL TABLET STYLING /////*/
-
     /*///// END TABLET STYLING /////*/
 
 
@@ -1449,7 +1569,9 @@ body{
    Helper classes
    ========================================================================== */
 
-
+.waitPlease{
+    cursor: wait !important;
+}
 
 .crystalProtection{
     position: absolute;
@@ -1472,8 +1594,8 @@ body{
 }
 
 .op10{
-    opacity: .1 !important;
-    filter: alpha(opacity=10) !important;
+    opacity: .08 !important;
+    filter: alpha(opacity=08) !important;
 }
 
 /*
