@@ -135,6 +135,9 @@ jQuery(document).ready(function($) {
 						$('.welcomeLogoToPush').addClass('pushWelcomeLogo');
 						$('.innerStartWeb').addClass('pushStartWeb');
 
+						// DISAPPEAR NEXT SLIDE MASTER SO YOU CAN CLICK ON INFO BUTTON
+						$('#nextSlideMaster').addClass('hidden');
+
 						setTimeout(function(){
 
 							$('#welcomePage').addClass('notHere');
@@ -360,6 +363,9 @@ jQuery(document).ready(function($) {
 						$('#clientSuccessYes').click(function() {
 							masterHideElement($('#clientSuccessOption1'),0);
 							masterHideElement($('#clientSuccessQuestion'),100);
+
+							// DISAPPEAR NEXT SLIDE MASTER SO YOU CAN CLICK ON INFO BUTTON
+							$('#nextSlideMaster').addClass('hidden');
 
 							setTimeout(function(){
 								$('#videoMasterWrapper').removeClass('notHere');
@@ -632,6 +638,9 @@ jQuery(document).ready(function($) {
 						masterHideElement($('#talentSuccessOption1'),200);
 						masterHideElement($('#talentSuccessQuestion'),350);
 
+						// DISAPPEAR NEXT SLIDE MASTER SO YOU CAN CLICK ON INFO BUTTON
+						$('#nextSlideMaster').addClass('hidden');
+
 						setTimeout(function(){
 							$('#videoMasterWrapper').removeClass('notHere');
 							$('#talentVideo').removeClass('notHere');
@@ -647,6 +656,9 @@ jQuery(document).ready(function($) {
 						masterHideElement($('#talentSuccessOption2'),0);
 						masterHideElement($('#talentSuccessOption1'),200);
 						masterHideElement($('#talentSuccessQuestion'),350);
+
+						// DISAPPEAR NEXT SLIDE MASTER SO YOU CAN CLICK ON INFO BUTTON
+						$('#nextSlideMaster').addClass('hidden');
 
 						setTimeout(function(){
 							$('#videoMasterWrapper').removeClass('notHere');
@@ -809,6 +821,9 @@ jQuery(document).ready(function($) {
 					setTimeout(function(){
 						$('#finalInfoClientWrapper').addClass('notHere');
 					},850);
+
+					// APPEAR NEXT SLIDE MASTER SO YOU CAN CLICK ON IT AGAIN
+					$('#nextSlideMaster').removeClass('hidden');
 				// END RESET CLIENT
 
 				// RESET COMPETITION FLOW
@@ -887,6 +902,9 @@ jQuery(document).ready(function($) {
 						setTimeout(function(){
 							$('#talentSuccessAdviceWrapper').addClass('notHere');
 						},850);
+
+						// APPEAR NEXT SLIDE MASTER SO YOU CAN CLICK ON IT AGAIN
+						$('#nextSlideMaster').removeClass('hidden');
 				
 				// END RESET TALENT
 			}

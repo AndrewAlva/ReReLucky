@@ -172,7 +172,7 @@ body{
         position: absolute;
         width: 100%;
         height: 100%;
-        min-height: 850px;
+        min-height: 600px;
         opacity: 1;
 
         -webkit-transition: all .8s ease-in-out;
@@ -489,6 +489,7 @@ body{
                                 width: 100%;
                                 height: 100%;
                                 margin: 0;
+                                font-size: 1.7em;
                                 line-height: 1.2em;
                             }
 
@@ -512,7 +513,7 @@ body{
                             /* SPECIFIC QUOTES STYLE*/
                                 /* ONE-LINE */
                                 #whoRUQuestion, #clientSuccessQuestion, #talentFirstQuestion, #talentSuccessQuestion{
-                                    height: 4.4vw;
+                                    height: 3.6vw;
                                 }
 
                                 /* TWO-LINE */
@@ -522,27 +523,27 @@ body{
 
                                 /* THREE-LINES */
                                 #clientThirdQuestion{
-                                    height: 14vw;
+                                    height: 10.9vw;
                                 }
 
                                 /* FOUR-LINES */
                                 #clientSecondQuestion{
-                                    height: 18vw;
+                                    height: 14.5vw;
                                 }
 
                                 /* FIVE-LINES */
                                 #clientFirstQuestion, #talentFirstAdvice{
-                                    height: 22vw;
+                                    height: 18.2vw;
                                 }
 
                                 /* SIX-LINES */
                                 #clientSecondAdvice, #clientThirdAdvice, #talentThirdAdvice{
-                                    height: 26vw;
+                                    height: 21.9vw;
                                 }
 
                                 /* SEVEN-LINES */
                                 #clientFirstAdvice, #talentSecondAdvice{
-                                    height: 30vw;
+                                    height: 25.5vw;
                                 }
                             /* END SPECIFIC QUOTES STYLE*/   
 
@@ -646,7 +647,7 @@ body{
                         #threeOptionsMaster{
                             position: absolute;
                             width: 100%;
-                            height: 681px;
+                            height: 600px;
                             margin: auto;
                             top: 0; bottom: 0;
                             overflow: hidden;
@@ -745,6 +746,7 @@ body{
                             height: 300px;
                             margin: auto;
                             top: 0; bottom: 0;
+                            z-index: 1;
                         }
 
                             #infoRSWrapper .fullInfoRSTitles{
@@ -932,7 +934,7 @@ body{
                     width: 66.66%;
                     height: 50px;
                     right: 16.66%;
-                    bottom: 100px;
+                    bottom: 5%;
                     color: #e5545e;
                     overflow: hidden;
 
@@ -1003,6 +1005,7 @@ body{
                     position: absolute;
                     width: 100%;
                     height: 100%;
+                    z-index: 1;
                 }
                     #videoMasterWrapper .videoBox{
                         position: absolute;
