@@ -266,6 +266,7 @@ body{
         width: 100%;
         height: 100%;
         z-index: 1;
+        overflow: hidden;
     }
     #curtainWrapper{
         position: absolute;
@@ -1467,9 +1468,9 @@ body{
 
     /*///// TABLET STYLING /////*/
         @media (min-width: 768px) and (max-width: 991px){
-            #windowWrapper{
+            /*#windowWrapper{
                 min-height: 507px;
-            }
+            }*/
 
             /* CURTAINS */
                 .curtain-1{
@@ -1502,15 +1503,21 @@ body{
                 }
 
                 #curtainWrapper .curtains{
-                    width: 20%;
+                    width: 20.1%;
                 }
             /* END CURTAINS */
+
+            /* MENU & LABEL */
+                #luckyLabel, #menuTrigger{
+                    left: 20px;
+                }
+            /* END MENU & LABEL */
 
 
             /* MENU TITLES */
                 #titlesWrapper{
                     width: 100%;
-                    height: 360px;
+                    height: 270px;
                     left: 0%;
                     top: 20%;
                     bottom: auto;
@@ -1537,7 +1544,7 @@ body{
 
                 #rsWrapper{
                     width: 40%;
-                    height: 240px;
+                    height: 160px;
                     left: 0;
                     right: 0;
                     top: auto;
@@ -1560,6 +1567,10 @@ body{
                         height: 3vw;
                         font-size: 3vw;
                     }
+
+                    .pushStartWeb{
+                        margin-top: 5vw !important;
+                    }
             /* END LANDING SCREEN */ 
 
 
@@ -1570,6 +1581,25 @@ body{
                 #quoteMaster{
                     width: 85.7%;
                     margin-left: 14.3%;
+                }
+
+                #quoteMaster .infoBox{
+                    height: 34vw;
+                }
+                #quoteMaster .infoBox h1{
+                    height: 3.6vw;
+                    font-size: 3.6vw;
+                }
+                #quoteMaster .infoBox h2{
+                    height: 3vw;
+                    font-size: 3vw;
+                }
+                #quoteMaster .infoBox h3{
+                    height: 2.5vw;
+                    font-size: 2.5vw;
+                }
+                #quoteMaster .infoBox a{
+                    font-size: 2.7vw;
                 }
 
                 #quoteMaster .quoteBox{
@@ -1585,7 +1615,7 @@ body{
                 }
 
                 #clientFirstQuestion, #talentFirstAdvice{
-                    height: 28vw;
+                    height: 27vw;
                 }
 
                 #clientFirstAdvice, #talentSecondAdvice{
@@ -1600,7 +1630,15 @@ body{
                     height: 32vw;
                 }
 
+                #competitionFirstQuestion, #competitionFirstAdvice, #talentSecondQuestion, #talentThirdQuestion, #talentSuccessAdvice{
+                    height: 10.6vw;
+                }
 
+                #quoteMaster #talentSuccessAdvice h5{
+                    height: 2.6vw;
+                    bottom: -3.2vw;
+                    font-size: 2.2vw;
+                }
             /* END INFO MASTER */
 
 
@@ -1615,19 +1653,39 @@ body{
                 }
 
                 #optionsMasterWrapper .placeAnimated .innerAnimateComment h3{
-                    font-size: 2.15vw;
+                    font-size: 1.6vw;
+                    padding-left: 20px;
                 }
 
                 #optionsMasterWrapper .placeAnimated .oneLine h3{
-                    height: 2.15vw;
+                    height: 2.25vw;
                 }
 
                 #optionsMasterWrapper .placeAnimated .fourLines h3{
-                    height: 10.5vw;
+                    height: 8vw;
                 }
 
                 #optionsMasterWrapper .placeAnimated .twoLines h3{
                     height: 5vw;
+                }
+
+                #optionsMasterWrapper #oneOptionMaster #talentAdviceCode h1{
+                    height: 2.6vw;
+                    font-size: 3vw;
+                    padding-left: 20px;
+                }
+
+                #optionsMasterWrapper .placeHolder h2{
+                    height: 3.2vw;
+                    font-size: 3vw;
+                }
+
+                #infoRSWrapper .fullInfoRSTitles{
+                    width: 66.66%;
+                }
+                #infoRSWrapper .fullInfoRSTitles .innerInfoRSTitles h5{
+                    height: 2.7vw;
+                    font-size: 2.5vw;
                 }
             /* END OPTIONS MASTER */
 
@@ -1636,6 +1694,9 @@ body{
                 #nextSlideMaster{
                     width: 85.7%;
                     right: 0;
+                }
+                #nextSlideMaster:hover{
+                    right: 3%;
                 }
 
                 #nextSlideMaster .nextSlideBox .nextSlideLeftBox{
@@ -1655,6 +1716,14 @@ body{
                     font-size: 1em;
                 }
             /* END NEXT SLIDER MASTER */
+
+
+            /* VIDEO MASTER */
+                #videoMasterWrapper .videoBox .videoWindow{
+                    width: 80%;
+                    height: 45vw;
+                }
+            /* END VIDEO MASTER */
         }
 
         /*///// PORTRAIT SPECIAL TABLET STYLING /////*/
