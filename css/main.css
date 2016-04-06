@@ -1447,8 +1447,20 @@ body{
                     #optionsMasterWrapper .placeAnimated .fourLines h3{
                         height: 7.2vw;
                     }
+
+                    #optionsMasterWrapper #oneOptionMaster #talentAdviceCode h1{
+                        height: 3.1vw;
+                        font-size: 3.2vw;
+                    }
                 /* END OPTIONS HOVER ANIMATE */
             /* END OPTIONS MASTER */
+
+
+            /* NEXT SLIDERS */
+                #nextSlideMaster .nextSlideBox .nextSlideLeftBox h5{
+                    font-size: 0.9em;
+                }
+            /* END NEXT SLIDERS */
         }
     /*///// END LAPTOP STYLING /////*/
 
@@ -1540,7 +1552,109 @@ body{
 
 
             /* LANDING SCREEN */
-            /* END LANDING SCREEN */         
+                #startWeb{
+                    width: 40%;
+                    height: 5vw;
+                }
+                    #startWeb .innerStartWeb p{
+                        height: 3vw;
+                        font-size: 3vw;
+                    }
+            /* END LANDING SCREEN */ 
+
+
+            /* INFO MASTER */
+                #infoMasterWrapper{
+                    width: 70%;
+                }
+                #quoteMaster{
+                    width: 85.7%;
+                    margin-left: 14.3%;
+                }
+
+                #quoteMaster .quoteBox{
+                    font-size: 2.8vw;
+                }
+
+                #quoteMaster .quoteBox h1{
+                    font-size: 1.6em;
+                }
+
+                #whoRUQuestion, #clientSuccessQuestion, #talentFirstQuestion, #talentSuccessQuestion{
+                    height: 5.6vw;
+                }
+
+                #clientFirstQuestion, #talentFirstAdvice{
+                    height: 28vw;
+                }
+
+                #clientFirstAdvice, #talentSecondAdvice{
+                    height: 38vw;
+                }
+
+                #clientSecondQuestion{
+                    height: 21.5vw;
+                }
+
+                #clientSecondAdvice, #clientThirdAdvice, #talentThirdAdvice{
+                    height: 32vw;
+                }
+
+
+            /* END INFO MASTER */
+
+
+            /* OPTIONS MASTER */
+                #optionsMasterWrapper{
+                    width: 30%;
+                }
+
+                #optionsMasterWrapper .placeHolder h2{
+                    height: 3.5vw;
+                    font-size: 3.5vw;
+                }
+
+                #optionsMasterWrapper .placeAnimated .innerAnimateComment h3{
+                    font-size: 2.15vw;
+                }
+
+                #optionsMasterWrapper .placeAnimated .oneLine h3{
+                    height: 2.15vw;
+                }
+
+                #optionsMasterWrapper .placeAnimated .fourLines h3{
+                    height: 10.5vw;
+                }
+
+                #optionsMasterWrapper .placeAnimated .twoLines h3{
+                    height: 5vw;
+                }
+            /* END OPTIONS MASTER */
+
+
+            /* NEXT SLIDER MASTER */
+                #nextSlideMaster{
+                    width: 85.7%;
+                    right: 0;
+                }
+
+                #nextSlideMaster .nextSlideBox .nextSlideLeftBox{
+                    width: 90%;
+                }
+
+                #nextSlideMaster .nextSlideBox .nextSlideRightBox{
+                    width: 10%;
+                }
+
+                #nextSlideMaster .nextSlideBox .nextSlideRightBox img{
+                    left: 0;
+                    right: 0;
+                }
+
+                #nextSlideMaster .nextSlideBox .nextSlideLeftBox h5{
+                    font-size: 1em;
+                }
+            /* END NEXT SLIDER MASTER */
         }
 
         /*///// PORTRAIT SPECIAL TABLET STYLING /////*/
