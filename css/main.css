@@ -274,6 +274,7 @@ body{
         height: 100%;
         z-index: 1000000;
         display: inline;
+        overflow: hidden;
     }
         .curtains{
             position: absolute;
@@ -386,7 +387,7 @@ body{
             #startWeb{
                 position: absolute;
                 width: 11.11%;
-                height: 2vw;
+                height: 3vw;
                 margin: auto;
                 right: 0; left: 0;
                 bottom: 70px;
@@ -436,7 +437,7 @@ body{
                 margin-top: 205px !important;
             }
             .pushStartWeb{
-                margin-top: 2vw !important;
+                margin-top: 3vw !important;
             }
     /*///// END WELCOME PAGE /////*/
 
@@ -1423,6 +1424,18 @@ body{
             /* END CURTAINS */
 
 
+            /* LANDING SCREEN */
+                    #startWeb{
+                        width: 33.33%;
+                        height: 3vw;
+                    }
+                        #startWeb .innerStartWeb p{
+                            height: 1.6vw;
+                            font-size: 1.6vw;
+                        }
+            /* END LANDING SCREEN */
+
+
             /* INFO MASTER */
                 /* CONTACTO FINAL CLIENTE */
                     #quoteMaster .infoBox a{
@@ -1643,6 +1656,11 @@ body{
 
 
             /* OPTIONS MASTER */
+
+                #twoOptionsMaster{
+                    height: 26.15vw;
+                }
+
                 #optionsMasterWrapper{
                     width: 30%;
                 }
@@ -1736,10 +1754,410 @@ body{
     /*///// MOBILE STYLING /////*/
         @media (max-width: 767px){
             #windowWrapper{
-                min-height: 320px;
+                min-height: 600px;
             }
+
+            /* CURTAINS */
+                .curtain-1{
+                    left: -10%;
+                }
+                .curtain-2{
+                    left: 10%;
+                }
+                .curtain-3{
+                    left: 30%;
+                }
+                .curtain-4{
+                    left: 50%;
+                }
+                .curtain-5{
+                    left: 70%;
+                }
+                .curtain-6{
+                    left: 90%;
+                }
+
+                .curtain-7, .curtain-8, .curtain-9{
+                    left: 100%;
+                }
+
+                #curtainDivision .curtains{
+                    width: 1.9px;
+                    opacity: .40;
+                    filter: alpha(opacity=40);
+                }
+
+                #curtainWrapper .curtains{
+                    width: 20.1%;
+                }
+            /* END CURTAINS */
+
+            /* MENU & LABEL */
+                #luckyLabel{
+                    position: fixed;
+                    width: 50px;
+                    height: 83px;
+                    top: -25px;
+                    left: 10px;
+                }
+
+                #menuTrigger{
+                    position: fixed;
+                    width: 50px;
+                    height: 50px;
+                    top: 70px;
+                    left: 10px;
+                }
+                    #menuTrigger .innerTrigger{
+                        width: 30px;
+                    }
+                        #menuTrigger .innerTrigger #threeLinesWrap{
+                            height: 20px;
+                        }
+                            #menuTrigger .innerTrigger #threeLinesWrap .menuLines{
+                                height: 3px;
+                            }
+                        #menuTrigger .innerTrigger #crossWrap{
+                            width: 20px;
+                            height: 20px;
+                        }
+                            #menuTrigger .innerTrigger #crossWrap img{
+                                width: 99%;
+                            }
+            /* END MENU & LABEL */
+
+            /* MENU TITLES */
+                #menuWindow{
+                    position: fixed;
+                }
+
+                #titlesWrapper{
+                    width: 100%;
+                    height: 40%;
+                    left: 0%;
+                    top: 10%;
+                    bottom: auto;
+                }
+
+                    #titlesWrapper .fullMenuTitles{
+                        width: 40%;
+                        margin: auto;
+                        left: 0; right: 0;
+                        opacity: 1;
+                        filter: alpha(opacity=100);
+                    }
+
+                        #titlesWrapper .fullMenuTitles a{
+                            width: 100%;
+                            left: 0%;
+                        }
+
+                            #titlesWrapper .fullMenuTitles .innerMenuTitle h2{
+                                height: 6vw;
+                                font-size: 6vw;
+                                text-align: center;
+
+                                -webkit-font-smoothing: antialiased;
+                                   -moz-font-smoothing: antialiased;
+                                    -ms-font-smoothing: antialiased;
+                                     -o-font-smoothing: antialiased;
+                                        font-smoothing: antialiased;
+                            }
+
+                #rsWrapper{
+                    width: 40%;
+                    height: 30%;
+                    left: 0;
+                    right: 0;
+                    top: 60%;
+                    bottom: auto;
+                }
+
+                        #rsWrapper .fullRSTitles .innerRSTitles h5{
+                            height: 4.5vw;
+                            font-size: 4.5vw;
+                            text-align: center;
+                        }
+            /* END MENU TITLES */
+
+            /* LANDING SCREEN */
+                #welcomePage{
+                    position: fixed;
+                }
+
+                #welcomeLogo{
+                    width: 60%;
+                    height: 20.5vw;
+                }
+
+                #startWeb{
+                    width: 40%;
+                    height: 8vw;
+                    top: 80%;
+                    bottom: auto;
+                }
+                    #startWeb .innerStartWeb p{
+                        height: 4.5vw;
+                        font-size: 4.5vw;
+                    }
+                    .pushStartWeb{
+                        margin-top: 10vw !important;
+                    }
+            /* END LANDING SCREEN */
+
+
+            /* INFO MASTER */
+                #infoMasterWrapper{
+                    width: 100%;
+                    height: 60%;
+                    left: 0;
+                }
+                    #quoteMaster{
+                        width: 80%;
+                        height: 100%;
+                        margin-left: 10%;
+                    }
+                        #quoteMaster .quoteBox{
+                            font-size: 3.6vw;
+                            top: auto;
+
+                            -webkit-font-smoothing: antialiased;
+                               -moz-font-smoothing: antialiased;
+                                -ms-font-smoothing: antialiased;
+                                 -o-font-smoothing: antialiased;
+                                    font-smoothing: antialiased;
+                        }
+
+                        #whoRUQuestion, #clientSuccessQuestion, #talentFirstQuestion, #talentSuccessQuestion{
+                            bottom: 36% !important;
+                            height: 7.4vw;
+                        }
+
+                        #clientFirstQuestion, #talentFirstAdvice{
+                            height: 35.2vw;
+                            bottom: 25% !important;
+                        }
+
+                        #clientFirstAdvice, #talentSecondAdvice{
+                            height: 50.5vw;
+                            bottom: 20% !important;
+                        }
+
+                        #clientSecondAdvice, #clientThirdAdvice, #talentThirdAdvice{
+                            height: 44vw;
+                            bottom: 23% !important;
+                        }
+
+                        #clientSecondQuestion{
+                            bottom: 40% !important;
+                        }
+
+                        #clientThirdQuestion{
+                            height: 22vw;
+                            bottom: 32% !important;
+                        }
+
+                        #competitionFirstQuestion, #competitionFirstAdvice, #talentSecondQuestion, #talentThirdQuestion, #talentSuccessAdvice{
+                            height: 14.4vw;
+                            bottom: 33% !important;
+                        }
+
+                        #competitionAnywayOption1 .placeHolder h2{
+                            color: #9ca0a4 !important;
+                        }
+                        #competitionAnywayOption1 .placeAnimated .innerAnimateComment, #talentSuccessOptions .placeAnimated .innerAnimateComment{
+                            width: 100% !important;
+                        }
+
+
+                    #quoteMaster .infoBox{
+                        height: 106vw;
+                        top: 35%;
+                        bottom: auto;
+                    }
+                        #quoteMaster .infoBox h1{
+                            height: 6.5vw;
+                            font-size: 6.5vw;
+                            margin: 0 0 3px 0;
+                        }
+                        #quoteMaster .infoBox h2{
+                            height: 5vw;
+                            font-size: 5vw;
+                            margin: 0px 0 20px 0;
+                        }
+                        #quoteMaster .infoBox h3{
+                            height: 4.7vw;
+                            font-size: 4.7vw;
+                        }
+                        #quoteMaster .infoBox a{
+                            margin: 20px 0;
+                            padding: 5px 10px;
+                            height: 4.5vw;
+                            font-size: 4.5vw;
+                            font-weight: 300;
+                        }
+
+
+                        #quoteMaster .backToVideo{
+                            -webkit-transform: rotate(90deg);
+                               -moz-transform: rotate(90deg);
+                                -ms-transform: rotate(90deg);
+                                 -o-transform: rotate(90deg);
+                                    transform: rotate(90deg);
+
+                            right: 5%;
+                            top: 65%;
+                        }
+                        #infoRSWrapper{
+                            height: 70%;
+                        }
+                            #infoRSWrapper .fullInfoRSTitles{
+                                width: 100%;
+                            }
+                                #infoRSWrapper .fullInfoRSTitles .innerInfoRSTitles h5{
+                                    height: 3.8vw;
+                                    font-size: 3.8vw;
+                                }
+
+
+                        #quoteMaster #talentSuccessAdvice h5{
+                            width: 50%;
+                            height: 8.8vw;
+                            bottom: -14.2vw;
+                            font-size: 4.4vw;
+                            line-height: 1.1em;
+                        }
+            /* END INFO MASTER */
+
+            /* NEXT SLIDE MASTER */
+                #nextSlideMaster{
+                    width: 100%;
+                    height: 20%;
+                    bottom: 0;
+                    right: 0;
+                }
+                #nextSlideMaster:hover{
+                    right: 7%;
+                }
+                    #nextSlideMaster .nextSlideBox .nextSlideLeftBox{
+                        width: 90%;
+                    }
+                    #nextSlideMaster .nextSlideBox .nextSlideRightBox{
+                        width: 10%;
+                    }
+                        #nextSlideMaster .nextSlideBox .nextSlideLeftBox h5{
+                            font-size: 0.8em;
+                            height: 1.4em;
+                        }
+                        #nextSlideMaster .nextSlideBox .nextSlideRightBox img{
+                            height: 5vw;
+                            left: 0; right: 0;
+                        }
+            /* END NEXT SLIDE MASTER */
+
+            /* OPTIONS MASTER */
+                #optionsMasterWrapper{
+                    width: 70%;
+                    height: 37%;
+                    float: right;
+                }
+
+                    #threeOptionsMaster{
+                        height: 100%;
+                    }
+                        #threeOptionsMaster .threeOptionsBox .threeOptionsSingle{
+                            background-color: #0c1f28;
+                        }
+                        #threeOptionsMaster .threeOptionsBox .threeOptionsSingle:nth-child(2){
+                            background-color: #9b9fa3 !important;
+                        }
+                            #optionsMasterWrapper .placeHolder h2{
+                                color: #fff;
+                                height: 5vw;
+                                font-size: 5vw;
+                                padding-left: 10px;
+
+                                -webkit-font-smoothing: antialiased;
+                                   -moz-font-smoothing: antialiased;
+                                    -ms-font-smoothing: antialiased;
+                                     -o-font-smoothing: antialiased;
+                                        font-smoothing: antialiased;
+                            }
+
+
+                            #optionsMasterWrapper .placeAnimated .oneLine h3{
+                                height: 4.35vw;
+                            }
+                            #optionsMasterWrapper .placeAnimated .fourLines h3{
+                                height: 61px;
+                            }
+
+                            #optionsMasterWrapper .placeAnimated .innerAnimateComment h3{
+                                font-size: 13px;
+                                padding-left: 10px;
+                                width: 60vw;
+                            }
+
+                        #twoOptionsMaster{
+                            height: 61.03vw;
+                        }
+
+                        #oneOptionMaster{
+                            height: 30.05vw;
+                        }
+
+                        #optionsMasterWrapper #oneOptionMaster #talentAdviceCode h1{
+                            height: 6.5vw;
+                            font-size: 6.5vw;
+                            padding-left: 20px;
+                        }
+            /* END OPTIONS MASTER */
+
+            /* VIDEO MASTER */
+                #videoMasterWrapper .videoBox .videoWindow{
+                    width: 80%;
+                    height: 45vw;
+                    bottom: auto;
+                    top: 30%;
+                }
+
+                #videoMasterWrapper .videoBox .infoHere{
+                    width: 40%;
+                    height: 60px;
+                    font-size: 4.5vw;
+                    bottom: auto;
+                    top: 65%;
+                }
+
+                #videoMasterWrapper .videoBox .infoHere:hover{
+                    bottom: auto !important;
+                }
+            /* END VIDEO MASTER */
+
+
+            /* HELPERS */
+                .w100Mobile{
+                    width: 100% !important;
+                    border-top: 1px solid rgba(255,255,255,0.3);
+                }
+                .boldMobile{
+                    font-weight: 700 !important;
+                }
+            /* END HELPERS */
         }
     /*///// END MOBILE STYLING /////*/
+
+    /*///// MOBILE LANDSCAPE STYLING /////*/
+        @media (max-width: 767px) and (orientation:landscape){
+            #windowWrapper{
+                min-height: 700px;
+            }
+
+            #quoteMaster{
+                height: 110%;
+            }
+        }
+    /*///// END MOBILE LANDSCAPE STYLING /////*/
 /*///// END RESPONSIVE STYLING /////*/
 
 
