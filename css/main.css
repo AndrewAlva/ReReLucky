@@ -1918,8 +1918,8 @@ body{
                         margin-left: 10%;
                     }
                         #quoteMaster .quoteBox{
-                            font-size: 3.6vw;
-                            top: auto;
+                            font-size: 11px;
+                            bottom: auto;
 
                             -webkit-font-smoothing: antialiased;
                                -moz-font-smoothing: antialiased;
@@ -1928,38 +1928,39 @@ body{
                                     font-smoothing: antialiased;
                         }
 
-                        #whoRUQuestion, #clientSuccessQuestion, #talentFirstQuestion, #talentSuccessQuestion{
-                            bottom: 36% !important;
-                            height: 7.4vw;
-                        }
-
-                        #clientFirstQuestion, #talentFirstAdvice{
-                            height: 35.2vw;
-                            bottom: 25% !important;
-                        }
-
                         #clientFirstAdvice, #talentSecondAdvice{
-                            height: 50.5vw;
-                            bottom: 20% !important;
+                            height: 153px;
+                            top: 140px !important;
                         }
 
                         #clientSecondAdvice, #clientThirdAdvice, #talentThirdAdvice{
-                            height: 44vw;
-                            bottom: 23% !important;
+                            height: 133px;
+                            top: 170px !important;
+                        }
+
+                        #clientFirstQuestion, #talentFirstAdvice{
+                            height: 110px;
+                            top: 150px !important;
                         }
 
                         #clientSecondQuestion{
-                            bottom: 40% !important;
+                            height: 88px;
+                            top: 160px !important;
                         }
 
                         #clientThirdQuestion{
-                            height: 22vw;
-                            bottom: 32% !important;
+                            height: 67px;
+                            top: 180px !important;
                         }
 
                         #competitionFirstQuestion, #competitionFirstAdvice, #talentSecondQuestion, #talentThirdQuestion, #talentSuccessAdvice{
-                            height: 14.4vw;
-                            bottom: 33% !important;
+                            height: 45px;
+                            top: 190px !important;
+                        }
+
+                        #whoRUQuestion, #clientSuccessQuestion, #talentFirstQuestion, #talentSuccessQuestion{
+                            height: 23px;
+                            top: 200px !important;
                         }
 
                         #competitionAnywayOption1 .placeHolder h2{
@@ -2010,6 +2011,7 @@ body{
                         }
                         #infoRSWrapper{
                             height: 70%;
+                            top: auto;
                         }
                             #infoRSWrapper .fullInfoRSTitles{
                                 width: 100%;
@@ -2024,7 +2026,7 @@ body{
                             width: 50%;
                             height: 8.8vw;
                             bottom: -14.2vw;
-                            font-size: 4.4vw;
+                            font-size: 14px;
                             line-height: 1.1em;
                         }
             /* END INFO MASTER */
@@ -2060,6 +2062,7 @@ body{
                     width: 70%;
                     height: 37%;
                     float: right;
+                    overflow: hidden;
                 }
 
                     #threeOptionsMaster{
@@ -2086,7 +2089,7 @@ body{
 
 
                             #optionsMasterWrapper .placeAnimated .oneLine h3{
-                                height: 4.35vw;
+                                height: 15px;
                             }
                             #optionsMasterWrapper .placeAnimated .fourLines h3{
                                 height: 61px;
@@ -2124,13 +2127,13 @@ body{
                 #videoMasterWrapper .videoBox .infoHere{
                     width: 40%;
                     height: 60px;
-                    font-size: 4.5vw;
-                    bottom: auto;
-                    top: 65%;
+                    font-size: 22px;
+                    top: auto;
+                    bottom: 10%;
                 }
 
                 #videoMasterWrapper .videoBox .infoHere:hover{
-                    bottom: auto !important;
+                    bottom: 10% !important;
                 }
             /* END VIDEO MASTER */
 
